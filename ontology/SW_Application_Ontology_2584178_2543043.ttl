@@ -1,0 +1,258 @@
+@prefix : <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> .
+
+<http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/country
+
+dbo:country rdf:type owl:ObjectProperty ;
+            
+            rdfs:range dbr:Country .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#area
+
+:area rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#point
+
+:point rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/property/dissipated
+
+<http://dbpedia.org/property/dissipated> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://dbpedia.org/property/formed
+
+<http://dbpedia.org/property/formed> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#GNP_per_person
+
+:GNP_per_person rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#damages
+
+:damages rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#deaths
+
+:deaths rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#doctors_per_patient
+
+:doctors_per_patient rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/City
+
+dbo:City rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/resource/Country
+
+dbr:Country rdf:type owl:Class ;
+            
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :doctors_per_patient ;
+                                  owl:someValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :GNP_per_person ;
+                                  owl:someValuesFrom xsd:integer
+                                ] .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Blizzard
+
+:Blizzard rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Recent_Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Earthquake
+
+:Earthquake rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Recent_Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Flood
+
+:Flood rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Recent_Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Risk_City
+
+:High_Risk_City rdf:type owl:Class ;
+                
+                rdfs:subClassOf dbo:City .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Hurricane
+
+:Hurricane rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Recent_Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Risk_City
+
+:Low_Risk_City rdf:type owl:Class ;
+               
+               rdfs:subClassOf dbo:City .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medium_Risk_City
+
+:Medium_Risk_City rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf dbo:City .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#No_Risk_City
+
+:No_Risk_City rdf:type owl:Class ;
+              
+              rdfs:subClassOf dbo:City .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Poor_Country
+
+:Poor_Country rdf:type owl:Class ;
+              
+              rdfs:subClassOf dbr:Country .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Recent_Natural_Disaster
+
+:Recent_Natural_Disaster rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Rich_Country
+
+:Rich_Country rdf:type owl:Class ;
+              
+              rdfs:subClassOf dbr:Country .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Volcanic_Eruption
+
+:Volcanic_Eruption rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Recent_Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Wealthy_Country
+
+:Wealthy_Country rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf dbr:Country .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/USA
+
+dbo:USA rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Katrina
+
+:Katrina rdf:type :Hurricane ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#New_Orleans
+
+:New_Orleans rdf:type owl:NamedIndividual ;
+             
+             dbo:country dbo:USA .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Unknown
+
+:Unknown rdf:type owl:NamedIndividual ;
+         
+         :GNP_per_person 2 .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+
