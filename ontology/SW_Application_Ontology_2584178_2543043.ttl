@@ -22,13 +22,27 @@
 
 dbo:country rdf:type owl:ObjectProperty ;
             
-            rdfs:range dbr:Country .
+            rdfs:range dbo:Country .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#area
 
 :area rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hit
+
+:hit rdf:type owl:ObjectProperty ;
+     
+     owl:inverseOf :hitBy .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hitBy
+
+:hitBy rdf:type owl:ObjectProperty .
 
 
 
@@ -59,27 +73,21 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#GNP_per_person
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#GNI_per_capita
 
-:GNP_per_person rdf:type owl:DatatypeProperty .
+:GNI_per_capita rdf:type owl:DatatypeProperty .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#damages
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#damage
 
-:damages rdf:type owl:DatatypeProperty .
+:damage rdf:type owl:DatatypeProperty .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#deaths
 
 :deaths rdf:type owl:DatatypeProperty .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#doctors_per_patient
-
-:doctors_per_patient rdf:type owl:DatatypeProperty .
 
 
 
@@ -92,24 +100,15 @@ dbo:country rdf:type owl:ObjectProperty ;
 #################################################################
 
 
-###  http://dbpedia.org/ontology/City
+###  http://dbpedia.org/ontology/Country
 
-dbo:City rdf:type owl:Class .
+dbo:Country rdf:type owl:Class .
 
 
 
-###  http://dbpedia.org/resource/Country
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Area
 
-dbr:Country rdf:type owl:Class ;
-            
-            owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :doctors_per_patient ;
-                                  owl:someValuesFrom xsd:integer
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :GNP_per_person ;
-                                  owl:someValuesFrom xsd:integer
-                                ] .
+:Area rdf:type owl:Class .
 
 
 
@@ -117,7 +116,7 @@ dbr:Country rdf:type owl:Class ;
 
 :Blizzard rdf:type owl:Class ;
           
-          rdfs:subClassOf :Recent_Natural_Disaster .
+          rdfs:subClassOf :Natural_Disaster .
 
 
 
@@ -125,7 +124,7 @@ dbr:Country rdf:type owl:Class ;
 
 :Earthquake rdf:type owl:Class ;
             
-            rdfs:subClassOf :Recent_Natural_Disaster .
+            rdfs:subClassOf :Natural_Disaster .
 
 
 
@@ -133,15 +132,15 @@ dbr:Country rdf:type owl:Class ;
 
 :Flood rdf:type owl:Class ;
        
-       rdfs:subClassOf :Recent_Natural_Disaster .
+       rdfs:subClassOf :Natural_Disaster .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Risk_City
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Risk_Area
 
-:High_Risk_City rdf:type owl:Class ;
+:High_Risk_Area rdf:type owl:Class ;
                 
-                rdfs:subClassOf dbo:City .
+                rdfs:subClassOf :Area .
 
 
 
@@ -149,45 +148,86 @@ dbr:Country rdf:type owl:Class ;
 
 :Hurricane rdf:type owl:Class ;
            
-           rdfs:subClassOf :Recent_Natural_Disaster .
+           rdfs:subClassOf :Natural_Disaster .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Risk_City
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Income_Country
 
-:Low_Risk_City rdf:type owl:Class ;
+:Low_Income_Country rdf:type owl:Class ;
+                    
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :GNI_per_capita ;
+                                          owl:maxQualifiedCardinality "1045"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] ;
+                    
+                    rdfs:subClassOf dbo:Country .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Risk_Area
+
+:Low_Risk_Area rdf:type owl:Class ;
                
-               rdfs:subClassOf dbo:City .
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hitBy ;
+                                                            owl:someValuesFrom :Natural_Disaster
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty dbo:country ;
+                                                            owl:onClass :Rich_Country ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                          ]
+                                                        )
+                                   ] ;
+               
+               rdfs:subClassOf :Area .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medium_Risk_City
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medium_Risk_Area
 
-:Medium_Risk_City rdf:type owl:Class ;
+:Medium_Risk_Area rdf:type owl:Class ;
                   
-                  rdfs:subClassOf dbo:City .
+                  rdfs:subClassOf :Area .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#No_Risk_City
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Middle_Income_Country
 
-:No_Risk_City rdf:type owl:Class ;
+:Middle_Income_Country rdf:type owl:Class ;
+                       
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :GNI_per_capita ;
+                                                                    owl:minQualifiedCardinality "1046"^^xsd:nonNegativeInteger ;
+                                                                    owl:onDataRange xsd:integer
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :GNI_per_capita ;
+                                                                    owl:maxQualifiedCardinality "12735"^^xsd:nonNegativeInteger ;
+                                                                    owl:onDataRange xsd:integer
+                                                                  ]
+                                                                )
+                                           ] ;
+                       
+                       rdfs:subClassOf dbo:Country .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Natural_Disaster
+
+:Natural_Disaster rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#No_Risk_Area
+
+:No_Risk_Area rdf:type owl:Class ;
               
-              rdfs:subClassOf dbo:City .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Poor_Country
-
-:Poor_Country rdf:type owl:Class ;
-              
-              rdfs:subClassOf dbr:Country .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Recent_Natural_Disaster
-
-:Recent_Natural_Disaster rdf:type owl:Class .
+              rdfs:subClassOf :Area .
 
 
 
@@ -195,7 +235,13 @@ dbr:Country rdf:type owl:Class ;
 
 :Rich_Country rdf:type owl:Class ;
               
-              rdfs:subClassOf dbr:Country .
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :GNI_per_capita ;
+                                    owl:minQualifiedCardinality "12736"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:integer
+                                  ] ;
+              
+              rdfs:subClassOf dbo:Country .
 
 
 
@@ -203,15 +249,15 @@ dbr:Country rdf:type owl:Class ;
 
 :Volcanic_Eruption rdf:type owl:Class ;
                    
-                   rdfs:subClassOf :Recent_Natural_Disaster .
+                   rdfs:subClassOf :Natural_Disaster .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Wealthy_Country
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Wildfire
 
-:Wealthy_Country rdf:type owl:Class ;
-                 
-                 rdfs:subClassOf dbr:Country .
+:Wildfire rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Natural_Disaster .
 
 
 
@@ -230,10 +276,37 @@ dbo:USA rdf:type owl:NamedIndividual .
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Downtown
+
+:Downtown rdf:type :Area ,
+                   owl:NamedIndividual ;
+          
+          dbo:country :Netherlands .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Katrina
 
 :Katrina rdf:type :Hurricane ,
                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Madness
+
+:Madness rdf:type :Natural_Disaster ,
+                  owl:NamedIndividual ;
+         
+         :damage 4000 ;
+         
+         :hit :Downtown .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Netherlands
+
+:Netherlands rdf:type :Rich_Country ,
+                      owl:NamedIndividual .
 
 
 
@@ -247,9 +320,7 @@ dbo:USA rdf:type owl:NamedIndividual .
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Unknown
 
-:Unknown rdf:type owl:NamedIndividual ;
-         
-         :GNP_per_person 2 .
+:Unknown rdf:type owl:NamedIndividual .
 
 
 
