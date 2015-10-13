@@ -1,0 +1,1155 @@
+@prefix : <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix key: <http://rdf.freebase.com/key/>.
+@prefix ns: <http://rdf.freebase.com/ns/>.
+@base <http://www.semanticweb.org/daan_julien/ontologies/freebase_disaster> .
+
+<http://www.semanticweb.org/daan_julien/ontologies/freebase_disaster> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hit
+
+:hit rdf:type owl:ObjectProperty ;
+     
+     owl:inverseOf :hitBy .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hitBy
+
+:hitBy rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/property/end_date
+
+<http://dbpedia.org/property/end_date> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://dbpedia.org/property/start_date
+
+<http://dbpedia.org/property/start_date> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#damage
+
+:damage rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#fatalities
+
+:fatalities rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#injuries
+
+:injuries rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#disaster_type
+
+:disaster_type rdf:type owl:DatatypeProperty .
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Area
+
+:Area rdf:type owl:Class .
+
+
+
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+    :Hunters_Brooke_arson rdf:type owl:NamedIndividual ;
+    :hit :Indian_Head .
+    :Indian_Head rdf:type :Area , owl:NamedIndividual .
+    :2004_Indian_Ocean_earthquake_and_tsunami rdf:type owl:NamedIndividual ;
+    :hit :Indonesia ;
+    :hit :Sri_Lanka ;
+    :hit :India ;
+    :hit :Thailand ;
+    :hit :Maldives ;
+    :hit :Somalia .
+    :Indonesia rdf:type :Area , owl:NamedIndividual .
+    :Sri_Lanka rdf:type :Area , owl:NamedIndividual .
+    :India rdf:type :Area , owl:NamedIndividual .
+    :Thailand rdf:type :Area , owl:NamedIndividual .
+    :Maldives rdf:type :Area , owl:NamedIndividual .
+    :Somalia rdf:type :Area , owl:NamedIndividual .
+    :United_Airlines_Flight_175 rdf:type owl:NamedIndividual ;
+    :hit :World_Trade_Center .
+    :World_Trade_Center rdf:type :Area , owl:NamedIndividual .
+    :American_Airlines_Flight_77 rdf:type owl:NamedIndividual ;
+    :hit :The_Pentagon .
+    :The_Pentagon rdf:type :Area , owl:NamedIndividual .
+    :American_Airlines_Flight_587 rdf:type owl:NamedIndividual ;
+    :hit :Queens .
+    :Queens rdf:type :Area , owl:NamedIndividual .
+    :American_Airlines_Flight_11 rdf:type owl:NamedIndividual ;
+    :hit :World_Trade_Center .
+    :World_Trade_Center rdf:type :Area , owl:NamedIndividual .
+    :Turkish_Airlines_Flight_1476 rdf:type owl:NamedIndividual ;
+    :hit :Greece ;
+    :hit :Brindisi .
+    :Greece rdf:type :Area , owl:NamedIndividual .
+    :Brindisi rdf:type :Area , owl:NamedIndividual .
+    :Alaska_Airlines_Flight_261 rdf:type owl:NamedIndividual ;
+    :hit :Anacapa_Island .
+    :Anacapa_Island rdf:type :Area , owl:NamedIndividual .
+    :China_Airlines_Flight_611 rdf:type owl:NamedIndividual ;
+    :hit :Taiwan_Strait .
+    :Taiwan_Strait rdf:type :Area , owl:NamedIndividual .
+    :Singapore_Airlines_Flight_006 rdf:type owl:NamedIndividual ;
+    :hit :Taiwan_Taoyuan_International_Airport .
+    :Taiwan_Taoyuan_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :British_Airways_Flight_38 rdf:type owl:NamedIndividual ;
+    :hit :London_Heathrow_Airport .
+    :London_Heathrow_Airport rdf:type :Area , owl:NamedIndividual .
+    :China_Airlines_Flight_120 rdf:type owl:NamedIndividual ;
+    :hit :Naha_Airport .
+    :Naha_Airport rdf:type :Area , owl:NamedIndividual .
+    :Southwest_Airlines_Flight_1455 rdf:type owl:NamedIndividual ;
+    :hit :Bob_Hope_Airport .
+    :Bob_Hope_Airport rdf:type :Area , owl:NamedIndividual .
+    :Southwest_Airlines_Flight_1248 rdf:type owl:NamedIndividual ;
+    :hit :Chicago_Midway_International_Airport .
+    :Chicago_Midway_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Delta_Air_Lines_Flight_191 rdf:type owl:NamedIndividual ;
+    :hit :Dallas .
+    :Dallas rdf:type :Area , owl:NamedIndividual .
+    :Air_France_Flight_4590 rdf:type owl:NamedIndividual ;
+    :hit :Gonesse ;
+    :hit :Paris .
+    :Gonesse rdf:type :Area , owl:NamedIndividual .
+    :Paris rdf:type :Area , owl:NamedIndividual .
+    :UTAGE_Flight_141 rdf:type owl:NamedIndividual ;
+    :hit :Cadjehoun_Airport .
+    :Cadjehoun_Airport rdf:type :Area , owl:NamedIndividual .
+    :Flash_Airlines_Flight_604 rdf:type owl:NamedIndividual ;
+    :hit :Sharm_el-Sheikh .
+    :Sharm_el-Sheikh rdf:type :Area , owl:NamedIndividual .
+    :Siberia_Airlines_Flight_1812 rdf:type owl:NamedIndividual ;
+    :hit :Black_Sea .
+    :Black_Sea rdf:type :Area , owl:NamedIndividual .
+    :2004_Russian_aircraft_bombings rdf:type owl:NamedIndividual ;
+    :hit :Tula_Oblast ;
+    :hit :Rostov_Oblast .
+    :Tula_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Rostov_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Corporate_Airlines_Flight_5966 rdf:type owl:NamedIndividual ;
+    :hit :Kirksville .
+    :Kirksville rdf:type :Area , owl:NamedIndividual .
+    :Air_China_Flight_129 rdf:type owl:NamedIndividual ;
+    :hit :Busan .
+    :Busan rdf:type :Area , owl:NamedIndividual .
+    :China_Eastern_Airlines_Flight_5210 rdf:type owl:NamedIndividual ;
+    :hit :Baotou .
+    :Baotou rdf:type :Area , owl:NamedIndividual .
+    :China_Northern_Airlines_Flight_6136 rdf:type owl:NamedIndividual ;
+    :hit :Dalian .
+    :Dalian rdf:type :Area , owl:NamedIndividual .
+    :Kam_Air_Flight_904 rdf:type owl:NamedIndividual ;
+    :hit :Pamir_Mountains .
+    :Pamir_Mountains rdf:type :Area , owl:NamedIndividual .
+    :Crossair_Flight_3597 rdf:type owl:NamedIndividual ;
+    :hit :Bassersdorf .
+    :Bassersdorf rdf:type :Area , owl:NamedIndividual .
+    :Air_France_Flight_358 rdf:type owl:NamedIndividual ;
+    :hit :Toronto_Pearson_International_Airport .
+    :Toronto_Pearson_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Copterline_Flight_103 rdf:type owl:NamedIndividual ;
+    :hit :Gulf_of_Finland .
+    :Gulf_of_Finland rdf:type :Area , owl:NamedIndividual .
+    :Helios_Airways_Flight_522 rdf:type owl:NamedIndividual ;
+    :hit :Marathon .
+    :Marathon rdf:type :Area , owl:NamedIndividual .
+    :West_Caribbean_Airways_Flight_708 rdf:type owl:NamedIndividual ;
+    :hit :Machiques .
+    :Machiques rdf:type :Area , owl:NamedIndividual .
+    :Lion_Air_Flight_386 rdf:type owl:NamedIndividual ;
+    :hit :Sultan_Syarif_Kasim_II_International_Airport .
+    :Sultan_Syarif_Kasim_II_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Lion_Air_Flight_538 rdf:type owl:NamedIndividual ;
+    :hit :Surakarta .
+    :Surakarta rdf:type :Area , owl:NamedIndividual .
+    :Mandala_Airlines_Flight_091 rdf:type owl:NamedIndividual ;
+    :hit :Medan .
+    :Medan rdf:type :Area , owl:NamedIndividual .
+    :JetBlue_Airways_Flight_292 rdf:type owl:NamedIndividual ;
+    :hit :Los_Angeles .
+    :Los_Angeles rdf:type :Area , owl:NamedIndividual .
+    :2002_Khankala_Mi-26_crash rdf:type owl:NamedIndividual ;
+    :hit :Khankala .
+    :Khankala rdf:type :Area , owl:NamedIndividual .
+    :Bellview_Airlines_Flight_210 rdf:type owl:NamedIndividual ;
+    :hit :Lagos .
+    :Lagos rdf:type :Area , owl:NamedIndividual .
+    :2005_Iranian_Air_Force_C-130_crash rdf:type owl:NamedIndividual ;
+    :hit :Tehran .
+    :Tehran rdf:type :Area , owl:NamedIndividual .
+    :Sosoliso_Airlines_Flight_1145 rdf:type owl:NamedIndividual ;
+    :hit :Port_Harcourt_International_Airport .
+    :Port_Harcourt_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Pinnacle_Airlines_Flight_3701 rdf:type owl:NamedIndividual ;
+    :hit :Jefferson_City .
+    :Jefferson_City rdf:type :Area , owl:NamedIndividual .
+    :Chalks_Ocean_Airways_Flight_101 rdf:type owl:NamedIndividual ;
+    :hit :Miami_Beach .
+    :Miami_Beach rdf:type :Area , owl:NamedIndividual .
+    :Armavia_Flight_967 rdf:type owl:NamedIndividual ;
+    :hit :Sochi_International_Airport .
+    :Sochi_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :2003_Baghdad_DHL_attempted_shootdown_incident rdf:type owl:NamedIndividual ;
+    :hit :Baghdad_International_Airport .
+    :Baghdad_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Philippine_Airlines_Flight_812 rdf:type owl:NamedIndividual ;
+    :hit :Davao .
+    :Davao rdf:type :Area , owl:NamedIndividual .
+    :S7_Airlines_Flight_778 rdf:type owl:NamedIndividual ;
+    :hit :Irkutsk .
+    :Irkutsk rdf:type :Area , owl:NamedIndividual .
+    :Air_Tahoma_Flight_185 rdf:type owl:NamedIndividual ;
+    :hit :Florence .
+    :Florence rdf:type :Area , owl:NamedIndividual .
+    :2002_Pirelli_Tower_airplane_crash rdf:type owl:NamedIndividual ;
+    :hit :Milan .
+    :Milan rdf:type :Area , owl:NamedIndividual .
+    :Pulkovo_Aviation_Enterprise_Flight_612 rdf:type owl:NamedIndividual ;
+    :hit :Donetsk_Oblast .
+    :Donetsk_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Comair_Flight_5191 rdf:type owl:NamedIndividual ;
+    :hit :Blue_Grass_Airport .
+    :Blue_Grass_Airport rdf:type :Area , owl:NamedIndividual .
+    :FedEx_Express_Flight_647 rdf:type owl:NamedIndividual ;
+    :hit :Memphis_International_Airport .
+    :Memphis_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Airwork_Flight_23 rdf:type owl:NamedIndividual ;
+    :hit :Stratford .
+    :Stratford rdf:type :Area , owl:NamedIndividual .
+    :Atlantic_Airways_Flight_670 rdf:type owl:NamedIndividual ;
+    :hit :Stord_Airport .
+    :Stord_Airport rdf:type :Area , owl:NamedIndividual .
+    :Comair_Flight_5054 rdf:type owl:NamedIndividual ;
+    :hit :West_Palm_Beach .
+    :West_Palm_Beach rdf:type :Area , owl:NamedIndividual .
+    :Adam_Air_Flight_574 rdf:type owl:NamedIndividual ;
+    :hit :Makassar_Strait .
+    :Makassar_Strait rdf:type :Area , owl:NamedIndividual .
+    :Qantas_Flight_1737 rdf:type owl:NamedIndividual ;
+    :hit :Bass_Strait .
+    :Bass_Strait rdf:type :Area , owl:NamedIndividual .
+    :2007_Balad_aircraft_crash rdf:type owl:NamedIndividual ;
+    :hit :Balad .
+    :Balad rdf:type :Area , owl:NamedIndividual .
+    :Air_West_Flight_612 rdf:type owl:NamedIndividual ;
+    :hit :NDjamena .
+    :NDjamena rdf:type :Area , owl:NamedIndividual .
+    :Adam_Air_Flight_172 rdf:type owl:NamedIndividual ;
+    :hit :Juanda_International_Airport .
+    :Juanda_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Garuda_Indonesia_Flight_200 rdf:type owl:NamedIndividual ;
+    :hit :Adisucipto_International_Airport .
+    :Adisucipto_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :UTair_Flight_471 rdf:type owl:NamedIndividual ;
+    :hit :Kurumoch_International_Airport .
+    :Kurumoch_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :2007_Mogadishu_TransAVIAexport_Airlines_Il-76_crash rdf:type owl:NamedIndividual ;
+    :hit :Mogadishu .
+    :Mogadishu rdf:type :Area , owl:NamedIndividual .
+    :2007_Air_Mauritanie_hijacking rdf:type owl:NamedIndividual ;
+    :hit :Las_Palmas .
+    :Las_Palmas rdf:type :Area , owl:NamedIndividual .
+    :2007_Blue_Angels_South_Carolina_crash rdf:type owl:NamedIndividual ;
+    :hit :Marine_Corps_Air_Station_Beaufort .
+    :Marine_Corps_Air_Station_Beaufort rdf:type :Area , owl:NamedIndividual .
+    :Alliance_Air_Flight_7412 rdf:type owl:NamedIndividual ;
+    :hit :Patna .
+    :Patna rdf:type :Area , owl:NamedIndividual .
+    :2007_Shatoy_Mi-8_crash rdf:type owl:NamedIndividual ;
+    :hit :Shatoy .
+    :Shatoy rdf:type :Area , owl:NamedIndividual .
+    :Kenya_Airways_Flight_507 rdf:type owl:NamedIndividual ;
+    :hit :Douala_International_Airport .
+    :Douala_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :2007_Hukou_F-5F_crash rdf:type owl:NamedIndividual ;
+    :hit :Hukou .
+    :Hukou rdf:type :Area , owl:NamedIndividual .
+    :2007_Sudan_Airways_hijacking rdf:type owl:NamedIndividual ;
+    :hit :Khartoum .
+    :Khartoum rdf:type :Area , owl:NamedIndividual .
+    :2007_Paramount_Airlines_Mil_Mi-8_crash rdf:type owl:NamedIndividual ;
+    :hit :Lungi .
+    :Lungi rdf:type :Area , owl:NamedIndividual .
+    :2006_Eagle_III_accident rdf:type owl:NamedIndividual ;
+    :hit :Green_Bay .
+    :Green_Bay rdf:type :Area , owl:NamedIndividual .
+    :2006_Mercy_Air_Bell_412_crash rdf:type owl:NamedIndividual ;
+    :hit :Cajon_Pass .
+    :Cajon_Pass rdf:type :Area , owl:NamedIndividual .
+    :PMTair_Flight_241 rdf:type owl:NamedIndividual ;
+    :hit :Kampot_Province .
+    :Kampot_Province rdf:type :Area , owl:NamedIndividual .
+    :TAM_Airlines_Flight_3054 rdf:type owl:NamedIndividual ;
+    :hit :São_Paulo .
+    :São_Paulo rdf:type :Area , owl:NamedIndividual .
+    :Air_Moorea_Flight_1121 rdf:type owl:NamedIndividual ;
+    :hit :Moorea .
+    :Moorea rdf:type :Area , owl:NamedIndividual .
+    :Dash_8_landing_gear_incidents rdf:type owl:NamedIndividual ;
+    :hit :Aalborg ;
+    :hit :Copenhagen_Airport ;
+    :hit :Vilnius_Airport .
+    :Aalborg rdf:type :Area , owl:NamedIndividual .
+    :Copenhagen_Airport rdf:type :Area , owl:NamedIndividual .
+    :Vilnius_Airport rdf:type :Area , owl:NamedIndividual .
+    :One-Two-GO_Airlines_Flight_269 rdf:type owl:NamedIndividual ;
+    :hit :Phuket_International_Airport .
+    :Phuket_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :2002_Shelkovskaya_Mi-8_crash rdf:type owl:NamedIndividual ;
+    :hit :Shelkovskaya .
+    :Shelkovskaya rdf:type :Area , owl:NamedIndividual .
+    :2006_Vladikavkaz_Mi-8_crash rdf:type owl:NamedIndividual ;
+    :hit :Vladikavkaz .
+    :Vladikavkaz rdf:type :Area , owl:NamedIndividual .
+    :2001_Grozny_Mi-8_crash rdf:type owl:NamedIndividual ;
+    :hit :Grozny .
+    :Grozny rdf:type :Area , owl:NamedIndividual .
+    :2007_TAAG_Angola_Airlines_crash rdf:type owl:NamedIndividual ;
+    :hit :Mbanza-Kongo .
+    :Mbanza-Kongo rdf:type :Area , owl:NamedIndividual .
+    :2007_Africa_One_Antonov_An-26_crash rdf:type owl:NamedIndividual ;
+    :hit :Kinshasa .
+    :Kinshasa rdf:type :Area , owl:NamedIndividual .
+    :2007_Romanian_Air_Force_IAR-330_SOCAT_crash rdf:type owl:NamedIndividual ;
+    :hit :Pitești .
+    :Pitești rdf:type :Area , owl:NamedIndividual .
+    :Atlasjet_Flight_4203 rdf:type owl:NamedIndividual ;
+    :hit :Keçiborlu .
+    :Keçiborlu rdf:type :Area , owl:NamedIndividual .
+    :2008_Los_Roques_archipelago_Transaven_Let_L-410_crash rdf:type owl:NamedIndividual ;
+    :hit :Venezuela .
+    :Venezuela rdf:type :Area , owl:NamedIndividual .
+    :Air_Canada_Flight_190 rdf:type owl:NamedIndividual ;
+    :hit :Rocky_Mountains .
+    :Rocky_Mountains rdf:type :Area , owl:NamedIndividual .
+    :Asian_Spirit_Flight_123 rdf:type owl:NamedIndividual ;
+    :hit :Moises_R._Espinosa_Airport .
+    :Moises_R._Espinosa_Airport rdf:type :Area , owl:NamedIndividual .
+    :2008_Macedonian_Armed_Forces_Mil_Mi-17_crash rdf:type owl:NamedIndividual ;
+    :hit :Skopje ;
+    :hit :Blace .
+    :Skopje rdf:type :Area , owl:NamedIndividual .
+    :Blace rdf:type :Area , owl:NamedIndividual .
+    :Eagle_Airways_Flight_2279 rdf:type owl:NamedIndividual ;
+    :hit :New_Zealand .
+    :New_Zealand rdf:type :Area , owl:NamedIndividual .
+    :Belavia_Flight_1834 rdf:type owl:NamedIndividual ;
+    :hit :Zvartnots_International_Airport .
+    :Zvartnots_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :Santa_Bárbara_Airlines_Flight_518 rdf:type owl:NamedIndividual ;
+    :hit :Venezuela .
+    :Venezuela rdf:type :Area , owl:NamedIndividual .
+    :2008_Biggin_Hill_Cessna_Citation_crash rdf:type owl:NamedIndividual ;
+    :hit :Farnborough .
+    :Farnborough rdf:type :Area , owl:NamedIndividual .
+    :Malév_Flight_262 rdf:type owl:NamedIndividual ;
+    :hit :Thessaloniki_International_Airport .
+    :Thessaloniki_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :KLM_Flight_1673 rdf:type owl:NamedIndividual ;
+    :hit :Barcelona .
+    :Barcelona rdf:type :Area , owl:NamedIndividual .
+    :Vladivostok_Air_Flight_352 rdf:type owl:NamedIndividual ;
+    :hit :Irkutsk_Oblast .
+    :Irkutsk_Oblast rdf:type :Area , owl:NamedIndividual .
+    :2002_Bristow_Helicopters_Sikorsky_S-76A_crash rdf:type owl:NamedIndividual ;
+    :hit :Cromer .
+    :Cromer rdf:type :Area , owl:NamedIndividual .
+    :Spanair_Flight_5022 rdf:type owl:NamedIndividual ;
+    :hit :Adolfo_Suárez_Madrid .
+    :Adolfo_Suárez_Madrid rdf:type :Area , owl:NamedIndividual .
+    :2008_Piper_PA_28_plane_crash rdf:type owl:NamedIndividual ;
+    :hit :Wicklow_Mountains .
+    :Wicklow_Mountains rdf:type :Area , owl:NamedIndividual .
+    :XL_Airways_Germany_Flight_888T rdf:type owl:NamedIndividual ;
+    :hit :Mediterranean_Sea .
+    :Mediterranean_Sea rdf:type :Area , owl:NamedIndividual .
+    :US_Airways_Flight_1549 rdf:type owl:NamedIndividual ;
+    :hit :Hudson_River .
+    :Hudson_River rdf:type :Area , owl:NamedIndividual .
+    :2003_Bendigo_tornado rdf:type owl:NamedIndividual ;
+    :hit :Bendigo .
+    :Bendigo rdf:type :Area , owl:NamedIndividual .
+    :Bozeman_Explosion rdf:type owl:NamedIndividual ;
+    :hit :Bozeman .
+    :Bozeman rdf:type :Area , owl:NamedIndividual .
+    :Colgan_Air_Flight_3407 rdf:type owl:NamedIndividual ;
+    :hit :Clarence_Center .
+    :Clarence_Center rdf:type :Area , owl:NamedIndividual .
+    :Turkish_Airlines_Flight_1951 rdf:type owl:NamedIndividual ;
+    :hit :Amsterdam_Airport_Schiphol .
+    :Amsterdam_Airport_Schiphol rdf:type :Area , owl:NamedIndividual .
+    :2009_LAquila_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Abruzzo .
+    :Abruzzo rdf:type :Area , owl:NamedIndividual .
+    :Mena rdf:type owl:NamedIndividual ;
+    :hit :Mena ;
+    :hit :Ouachita_Mountains ;
+    :hit :Polk_County .
+    :Mena rdf:type :Area , owl:NamedIndividual .
+    :Ouachita_Mountains rdf:type :Area , owl:NamedIndividual .
+    :Polk_County rdf:type :Area , owl:NamedIndividual .
+    :Stoneburg_and_Sunset_Wildfires rdf:type owl:NamedIndividual ;
+    :hit :Stoneburg ;
+    :hit :Sunset .
+    :Stoneburg rdf:type :Area , owl:NamedIndividual .
+    :Sunset rdf:type :Area , owl:NamedIndividual .
+    :Murfreesboro_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Murfreesboro .
+    :Murfreesboro rdf:type :Area , owl:NamedIndividual .
+    :Tuninter_Flight_1153 rdf:type owl:NamedIndividual ;
+    :hit :Mediterranean_Sea .
+    :Mediterranean_Sea rdf:type :Area , owl:NamedIndividual .
+    :2009_Samoa_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Tonga ;
+    :hit :Samoa ;
+    :hit :American_Samoa .
+    :Tonga rdf:type :Area , owl:NamedIndividual .
+    :Samoa rdf:type :Area , owl:NamedIndividual .
+    :American_Samoa rdf:type :Area , owl:NamedIndividual .
+    :2009_Makhachkala_Il-76_collision rdf:type owl:NamedIndividual ;
+    :hit :Uytash_Airport .
+    :Uytash_Airport rdf:type :Area , owl:NamedIndividual .
+    :TANS_Perú_Flight_222 rdf:type owl:NamedIndividual ;
+    :hit :Chachapoyas .
+    :Chachapoyas rdf:type :Area , owl:NamedIndividual .
+    :2009_Indonesian_Air_Force_L-100-30_crash rdf:type owl:NamedIndividual ;
+    :hit :Magetan_Regency .
+    :Magetan_Regency rdf:type :Area , owl:NamedIndividual .
+    :TAME_Flight_120 rdf:type owl:NamedIndividual ;
+    :hit :Cumbal_Volcano .
+    :Cumbal_Volcano rdf:type :Area , owl:NamedIndividual .
+    :2009_Serbian_Air_Force_MiG-29_crash rdf:type owl:NamedIndividual ;
+    :hit :Belgrade .
+    :Belgrade rdf:type :Area , owl:NamedIndividual .
+    :Northwest_Airlines_Flight_188 rdf:type owl:NamedIndividual ;
+    :hit :Minneapolis .
+    :Minneapolis rdf:type :Area , owl:NamedIndividual .
+    :EgyptAir_Flight_843 rdf:type owl:NamedIndividual ;
+    :hit :Tunis .
+    :Tunis rdf:type :Area , owl:NamedIndividual .
+    :Rico_Linhas_Aéreas_Flight_4815 rdf:type owl:NamedIndividual ;
+    :hit :Manaus .
+    :Manaus rdf:type :Area , owl:NamedIndividual .
+    :2006_Morecambe_Bay_helicopter_crash rdf:type owl:NamedIndividual ;
+    :hit :Morecambe_Bay .
+    :Morecambe_Bay rdf:type :Area , owl:NamedIndividual .
+    :BA_CityFlyer_Flight_8456 rdf:type owl:NamedIndividual ;
+    :hit :London .
+    :London rdf:type :Area , owl:NamedIndividual .
+    :2009_Montana_Pilatus_PC-12_crash rdf:type owl:NamedIndividual ;
+    :hit :Butte .
+    :Butte rdf:type :Area , owl:NamedIndividual .
+    :Air_France_Flight_447 rdf:type owl:NamedIndividual ;
+    :hit :Atlantic_Ocean .
+    :Atlantic_Ocean rdf:type :Area , owl:NamedIndividual .
+    :Airlink_Flight_8911 rdf:type owl:NamedIndividual ;
+    :hit :Durban .
+    :Durban rdf:type :Area , owl:NamedIndividual .
+    :Deepwater_Horizon_oil_spill rdf:type owl:NamedIndividual ;
+    :hit :Gulf_of_Mexico .
+    :Gulf_of_Mexico rdf:type :Area , owl:NamedIndividual .
+    :2011_Tōhoku_earthquake_and_tsunami rdf:type owl:NamedIndividual ;
+    :hit :Japan ;
+    :hit :Fukushima_Prefecture .
+    :Japan rdf:type :Area , owl:NamedIndividual .
+    :Fukushima_Prefecture rdf:type :Area , owl:NamedIndividual .
+    :United_Airlines_Flight_93 rdf:type owl:NamedIndividual ;
+    :hit :The_Pentagon .
+    :The_Pentagon rdf:type :Area , owl:NamedIndividual .
+    :Hayman_Fire rdf:type owl:NamedIndividual ;
+    :hit :Douglas_County ;
+    :hit :Jefferson_County ;
+    :hit :Park_County ;
+    :hit :Teller_County .
+    :Douglas_County rdf:type :Area , owl:NamedIndividual .
+    :Jefferson_County rdf:type :Area , owl:NamedIndividual .
+    :Park_County rdf:type :Area , owl:NamedIndividual .
+    :Teller_County rdf:type :Area , owl:NamedIndividual .
+    :2011_Christchurch_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Christchurch .
+    :Christchurch rdf:type :Area , owl:NamedIndividual .
+    :Port_Said_Stadium_disaster rdf:type owl:NamedIndividual ;
+    :hit :Port_Said_Stadium .
+    :Port_Said_Stadium rdf:type :Area , owl:NamedIndividual .
+    :2012_Philippines_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Philippines ;
+    :hit :Negros ;
+    :hit :Cebu .
+    :Philippines rdf:type :Area , owl:NamedIndividual .
+    :Negros rdf:type :Area , owl:NamedIndividual .
+    :Cebu rdf:type :Area , owl:NamedIndividual .
+    :February_24 rdf:type owl:NamedIndividual ;
+    :hit :South_Sumatra .
+    :South_Sumatra rdf:type :Area , owl:NamedIndividual .
+    :March_02 rdf:type owl:NamedIndividual ;
+    :hit :Hawaii .
+    :Hawaii rdf:type :Area , owl:NamedIndividual .
+    :February_19 rdf:type owl:NamedIndividual ;
+    :hit :San_José .
+    :San_José rdf:type :Area , owl:NamedIndividual .
+    :2012_Visayas_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Negros_Oriental .
+    :Negros_Oriental rdf:type :Area , owl:NamedIndividual .
+    :Brazzaville_arms_dump_blasts rdf:type owl:NamedIndividual ;
+    :hit :Brazzaville .
+    :Brazzaville rdf:type :Area , owl:NamedIndividual .
+    :2012_Henryville_Indiana_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Henryville ;
+    :hit :Louisville .
+    :Henryville rdf:type :Area , owl:NamedIndividual .
+    :Louisville rdf:type :Area , owl:NamedIndividual .
+    :March_2012_West_Liberty_Tornadoes rdf:type owl:NamedIndividual ;
+    :hit :West_Liberty .
+    :West_Liberty rdf:type :Area , owl:NamedIndividual .
+    :2012_Japan_Earthquakes rdf:type owl:NamedIndividual ;
+    :hit :Tokyo ;
+    :hit :Hokkaido ;
+    :hit :Honshu .
+    :Tokyo rdf:type :Area , owl:NamedIndividual .
+    :Hokkaido rdf:type :Area , owl:NamedIndividual .
+    :Honshu rdf:type :Area , owl:NamedIndividual .
+    :March_2012_Dominican_Republic_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :El_Seibo_Province ;
+    :hit :Santo_Domingo ;
+    :hit :Higüey ;
+    :hit :Dominican_Republic ;
+    :hit :La_Romana .
+    :El_Seibo_Province rdf:type :Area , owl:NamedIndividual .
+    :Santo_Domingo rdf:type :Area , owl:NamedIndividual .
+    :Higüey rdf:type :Area , owl:NamedIndividual .
+    :Dominican_Republic rdf:type :Area , owl:NamedIndividual .
+    :La_Romana rdf:type :Area , owl:NamedIndividual .
+    :March_2012_North_Platte rdf:type owl:NamedIndividual ;
+    :hit :North_Platte .
+    :North_Platte rdf:type :Area , owl:NamedIndividual .
+    :March_2012_Mexico_City_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Oaxaca ;
+    :hit :Guerrero .
+    :Oaxaca rdf:type :Area , owl:NamedIndividual .
+    :Guerrero rdf:type :Area , owl:NamedIndividual .
+    :Cyclone_Irina rdf:type owl:NamedIndividual ;
+    :hit :Madagascar .
+    :Madagascar rdf:type :Area , owl:NamedIndividual .
+    :March_2012_Santiago_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Santiago .
+    :Santiago rdf:type :Area , owl:NamedIndividual .
+    :April_2012_Dallas_Tornadoes rdf:type owl:NamedIndividual ;
+    :hit :Dallas .
+    :Dallas rdf:type :Area , owl:NamedIndividual .
+    :2012_Oklahoma_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Kansas ;
+    :hit :Nebraska ;
+    :hit :Oklahoma .
+    :Kansas rdf:type :Area , owl:NamedIndividual .
+    :Nebraska rdf:type :Area , owl:NamedIndividual .
+    :Oklahoma rdf:type :Area , owl:NamedIndividual .
+    :May_2012_Northern_Italy_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Milan ;
+    :hit :Florence ;
+    :hit :Central_Italy ;
+    :hit :Emilia-Romagna ;
+    :hit :Modena ;
+    :hit :Medolla .
+    :Milan rdf:type :Area , owl:NamedIndividual .
+    :Florence rdf:type :Area , owl:NamedIndividual .
+    :Central_Italy rdf:type :Area , owl:NamedIndividual .
+    :Emilia-Romagna rdf:type :Area , owl:NamedIndividual .
+    :Modena rdf:type :Area , owl:NamedIndividual .
+    :Medolla rdf:type :Area , owl:NamedIndividual .
+    :Whitewater-Baldy_Complex_Fire rdf:type owl:NamedIndividual ;
+    :hit :Gila_National_Forest ;
+    :hit :Whitewater_Baldy .
+    :Gila_National_Forest rdf:type :Area , owl:NamedIndividual .
+    :Whitewater_Baldy rdf:type :Area , owl:NamedIndividual .
+    :June_11 rdf:type owl:NamedIndividual ;
+    :hit :Afghanistan .
+    :Afghanistan rdf:type :Area , owl:NamedIndividual .
+    :Waldo_Canyon_Fire rdf:type owl:NamedIndividual ;
+    :hit :Flying_W_Ranch .
+    :Flying_W_Ranch rdf:type :Area , owl:NamedIndividual .
+    :2012_Oak_Creek_shooting rdf:type owl:NamedIndividual ;
+    :hit :Oak_Creek .
+    :Oak_Creek rdf:type :Area , owl:NamedIndividual .
+    :2012_Iran_earthquakes rdf:type owl:NamedIndividual ;
+    :hit :Iran .
+    :Iran rdf:type :Area , owl:NamedIndividual .
+    :2012_East_Azerbaijan_earthquakes rdf:type owl:NamedIndividual ;
+    :hit :East_Azerbaidjan .
+    :East_Azerbaidjan rdf:type :Area , owl:NamedIndividual .
+    :September_5 rdf:type owl:NamedIndividual ;
+    :hit :Costa_Rica .
+    :Costa_Rica rdf:type :Area , owl:NamedIndividual .
+    :2012_Yunnan_earthquakes rdf:type owl:NamedIndividual ;
+    :hit :Yunnan .
+    :Yunnan rdf:type :Area , owl:NamedIndividual .
+    :Karachi_garment_factory_fire rdf:type owl:NamedIndividual ;
+    :hit :Karachi .
+    :Karachi rdf:type :Area , owl:NamedIndividual .
+    :2012_Karachi_Fire rdf:type owl:NamedIndividual ;
+    :hit :Karachi .
+    :Karachi rdf:type :Area , owl:NamedIndividual .
+    :2012_Lahore_Fire rdf:type owl:NamedIndividual ;
+    :hit :Lahore .
+    :Lahore rdf:type :Area , owl:NamedIndividual .
+    :2012_Haida_Gwaii_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Haida_Gwaii .
+    :Haida_Gwaii rdf:type :Area , owl:NamedIndividual .
+    :2012_Guatemala_earthquake rdf:type owl:NamedIndividual ;
+    :hit :San_Marcos_Department ;
+    :hit :Quetzaltenango_Department ;
+    :hit :Sololá_Department ;
+    :hit :Totonicapán_Department ;
+    :hit :Quiché_Department ;
+    :hit :Huehuetenango_Department ;
+    :hit :Chiapas .
+    :San_Marcos_Department rdf:type :Area , owl:NamedIndividual .
+    :Quetzaltenango_Department rdf:type :Area , owl:NamedIndividual .
+    :Sololá_Department rdf:type :Area , owl:NamedIndividual .
+    :Totonicapán_Department rdf:type :Area , owl:NamedIndividual .
+    :Quiché_Department rdf:type :Area , owl:NamedIndividual .
+    :Huehuetenango_Department rdf:type :Area , owl:NamedIndividual .
+    :Chiapas rdf:type :Area , owl:NamedIndividual .
+    :Sandy_Hook_Elementary_School_shooting rdf:type owl:NamedIndividual ;
+    :hit :Sandy_Hook_Elementary_School .
+    :Sandy_Hook_Elementary_School rdf:type :Area , owl:NamedIndividual .
+    :2013_Solomon_Islands_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Solomon_Islands ;
+    :hit :New_Caledonia ;
+    :hit :Vanuatu .
+    :Solomon_Islands rdf:type :Area , owl:NamedIndividual .
+    :New_Caledonia rdf:type :Area , owl:NamedIndividual .
+    :Vanuatu rdf:type :Area , owl:NamedIndividual .
+    :Chelyabinsk_Event rdf:type owl:NamedIndividual ;
+    :hit :Chelyabinsk_Oblast ;
+    :hit :Orenburg_Oblast ;
+    :hit :Bashkortostan ;
+    :hit :Sverdlovskaya_Oblast ;
+    :hit :Tyumen_Oblast ;
+    :hit :Kazakhstan ;
+    :hit :Aktobe_Region ;
+    :hit :Kostanay_Region ;
+    :hit :Chelyabinsk .
+    :Chelyabinsk_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Orenburg_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Bashkortostan rdf:type :Area , owl:NamedIndividual .
+    :Sverdlovskaya_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Tyumen_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Kazakhstan rdf:type :Area , owl:NamedIndividual .
+    :Aktobe_Region rdf:type :Area , owl:NamedIndividual .
+    :Kostanay_Region rdf:type :Area , owl:NamedIndividual .
+    :Chelyabinsk rdf:type :Area , owl:NamedIndividual .
+    :2013_Hyderabad_blasts rdf:type owl:NamedIndividual ;
+    :hit :Dilsukhnagar .
+    :Dilsukhnagar rdf:type :Area , owl:NamedIndividual .
+    :2013_Bushehr_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Bushehr_Province .
+    :Bushehr_Province rdf:type :Area , owl:NamedIndividual .
+    :2013_Moore_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Moore ;
+    :hit :Oklahoma_City ;
+    :hit :Edmond .
+    :Moore rdf:type :Area , owl:NamedIndividual .
+    :Oklahoma_City rdf:type :Area , owl:NamedIndividual .
+    :Edmond rdf:type :Area , owl:NamedIndividual .
+    :May_18 rdf:type owl:NamedIndividual ;
+    :hit :Great_Plains ;
+    :hit :Midwestern_United_States .
+    :Great_Plains rdf:type :Area , owl:NamedIndividual .
+    :Midwestern_United_States rdf:type :Area , owl:NamedIndividual .
+    :2013_Lushan_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Lushan_County ;
+    :hit :Sichuan ;
+    :hit :Chongqing ;
+    :hit :Shaanxi .
+    :Lushan_County rdf:type :Area , owl:NamedIndividual .
+    :Sichuan rdf:type :Area , owl:NamedIndividual .
+    :Chongqing rdf:type :Area , owl:NamedIndividual .
+    :Shaanxi rdf:type :Area , owl:NamedIndividual .
+    :2013_El_Reno_tornado rdf:type owl:NamedIndividual ;
+    :hit :Canadian_County ;
+    :hit :El_Reno .
+    :Canadian_County rdf:type :Area , owl:NamedIndividual .
+    :El_Reno rdf:type :Area , owl:NamedIndividual .
+    :2013_Philadelphia_building_collapse rdf:type owl:NamedIndividual ;
+    :hit :Philadelphia .
+    :Philadelphia rdf:type :Area , owl:NamedIndividual .
+    :2013_Santa_Monica_shooting rdf:type owl:NamedIndividual ;
+    :hit :Santa_Monica .
+    :Santa_Monica rdf:type :Area , owl:NamedIndividual .
+    :Mountain_Fire rdf:type owl:NamedIndividual ;
+    :hit :Riverside_County .
+    :Riverside_County rdf:type :Area , owl:NamedIndividual .
+    :2013_Seddon_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Cook_Strait ;
+    :hit :Marlborough ;
+    :hit :Wellington .
+    :Cook_Strait rdf:type :Area , owl:NamedIndividual .
+    :Marlborough rdf:type :Area , owl:NamedIndividual .
+    :Wellington rdf:type :Area , owl:NamedIndividual .
+    :Rim_Fire rdf:type owl:NamedIndividual ;
+    :hit :Sierra_Nevada .
+    :Sierra_Nevada rdf:type :Area , owl:NamedIndividual .
+    :Ghouta_chemical_attack rdf:type owl:NamedIndividual ;
+    :hit :Ghouta .
+    :Ghouta rdf:type :Area , owl:NamedIndividual .
+    :2013_Spring_High_School_stabbing rdf:type owl:NamedIndividual ;
+    :hit :Spring .
+    :Spring rdf:type :Area , owl:NamedIndividual .
+    :September_2013_Colorado_floods rdf:type owl:NamedIndividual ;
+    :hit :Colorado_Springs ;
+    :hit :Denver ;
+    :hit :Fort_Collins ;
+    :hit :Greeley ;
+    :hit :Aurora ;
+    :hit :Boulder .
+    :Colorado_Springs rdf:type :Area , owl:NamedIndividual .
+    :Denver rdf:type :Area , owl:NamedIndividual .
+    :Fort_Collins rdf:type :Area , owl:NamedIndividual .
+    :Greeley rdf:type :Area , owl:NamedIndividual .
+    :Aurora rdf:type :Area , owl:NamedIndividual .
+    :Boulder rdf:type :Area , owl:NamedIndividual .
+    :2013_Pakistan_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Awaran .
+    :Awaran rdf:type :Area , owl:NamedIndividual .
+    :2013_Bohol_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Bohol ;
+    :hit :Cebu .
+    :Bohol rdf:type :Area , owl:NamedIndividual .
+    :Cebu rdf:type :Area , owl:NamedIndividual .
+    :2013_New_South_Wales_bushfires rdf:type owl:NamedIndividual ;
+    :hit :New_South_Wales .
+    :New_South_Wales rdf:type :Area , owl:NamedIndividual .
+    :Wallow_Fire rdf:type owl:NamedIndividual ;
+    :hit :Arizona ;
+    :hit :New_Mexico .
+    :Arizona rdf:type :Area , owl:NamedIndividual .
+    :New_Mexico rdf:type :Area , owl:NamedIndividual .
+    :2013_Glasgow_helicopter_crash rdf:type owl:NamedIndividual ;
+    :hit :Glasgow .
+    :Glasgow rdf:type :Area , owl:NamedIndividual .
+    :Santiago_de_Compostela_rail_disaster rdf:type owl:NamedIndividual ;
+    :hit :Santiago_de_Compostela .
+    :Santiago_de_Compostela rdf:type :Area , owl:NamedIndividual .
+    :Yarnell_Hill_Fire rdf:type owl:NamedIndividual ;
+    :hit :Yavapai_County .
+    :Yavapai_County rdf:type :Area , owl:NamedIndividual .
+    :2013_Volgograd_trolleybus_bombing rdf:type owl:NamedIndividual ;
+    :hit :Volgograd .
+    :Volgograd rdf:type :Area , owl:NamedIndividual .
+    :2012_Benghazi_attack rdf:type owl:NamedIndividual ;
+    :hit :Benghazi .
+    :Benghazi rdf:type :Area , owl:NamedIndividual .
+    :2010_Chile_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Maule_Region .
+    :Maule_Region rdf:type :Area , owl:NamedIndividual .
+    :2014_California_wildfires rdf:type owl:NamedIndividual ;
+    :hit :Glendora .
+    :Glendora rdf:type :Area , owl:NamedIndividual .
+    :2014_Harlem_buildings_explosion_and_collapse rdf:type owl:NamedIndividual ;
+    :hit :East_Harlem .
+    :East_Harlem rdf:type :Area , owl:NamedIndividual .
+    :January_2014_Gulf_Coast_winter_storm rdf:type owl:NamedIndividual ;
+    :hit :Gulf_Coast_of_the_United_States .
+    :Gulf_Coast_of_the_United_States rdf:type :Area , owl:NamedIndividual .
+    :February rdf:type owl:NamedIndividual ;
+    :hit :Kansas ;
+    :hit :Missouri ;
+    :hit :Illinois ;
+    :hit :Kentucky ;
+    :hit :Deep_South .
+    :Kansas rdf:type :Area , owl:NamedIndividual .
+    :Missouri rdf:type :Area , owl:NamedIndividual .
+    :Illinois rdf:type :Area , owl:NamedIndividual .
+    :Kentucky rdf:type :Area , owl:NamedIndividual .
+    :Deep_South rdf:type :Area , owl:NamedIndividual .
+    :2014_West_Africa_Ebola_outbreak rdf:type owl:NamedIndividual ;
+    :hit :Guinea ;
+    :hit :Sierra_Leone ;
+    :hit :Liberia ;
+    :hit :Nigeria ;
+    :hit :Senegal ;
+    :hit :United_States_of_America .
+    :Guinea rdf:type :Area , owl:NamedIndividual .
+    :Sierra_Leone rdf:type :Area , owl:NamedIndividual .
+    :Liberia rdf:type :Area , owl:NamedIndividual .
+    :Nigeria rdf:type :Area , owl:NamedIndividual .
+    :Senegal rdf:type :Area , owl:NamedIndividual .
+    :United_States_of_America rdf:type :Area , owl:NamedIndividual .
+    :2014_Iquique_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Chile ;
+    :hit :Bolivia ;
+    :hit :Peru ;
+    :hit :Iquique_Province ;
+    :hit :Alto_Hospicio .
+    :Chile rdf:type :Area , owl:NamedIndividual .
+    :Bolivia rdf:type :Area , owl:NamedIndividual .
+    :Peru rdf:type :Area , owl:NamedIndividual .
+    :Iquique_Province rdf:type :Area , owl:NamedIndividual .
+    :Alto_Hospicio rdf:type :Area , owl:NamedIndividual .
+    :2005_Eureka_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Cape_Mendocino .
+    :Cape_Mendocino rdf:type :Area , owl:NamedIndividual .
+    :2014_Mariupol_Base_Shooting rdf:type owl:NamedIndividual ;
+    :hit :Mariupol .
+    :Mariupol rdf:type :Area , owl:NamedIndividual .
+    :2014_Oso_mudslide rdf:type owl:NamedIndividual ;
+    :hit :Oso .
+    :Oso rdf:type :Area , owl:NamedIndividual .
+    :April_27 rdf:type owl:NamedIndividual ;
+    :hit :Baxter_Springs ;
+    :hit :Little_Rock ;
+    :hit :Great_Plains ;
+    :hit :Southern_United_States ;
+    :hit :Arkansas ;
+    :hit :Alabama ;
+    :hit :Mississippi ;
+    :hit :Tupelo ;
+    :hit :Yazoo_City ;
+    :hit :Lodi .
+    :Baxter_Springs rdf:type :Area , owl:NamedIndividual .
+    :Little_Rock rdf:type :Area , owl:NamedIndividual .
+    :Great_Plains rdf:type :Area , owl:NamedIndividual .
+    :Southern_United_States rdf:type :Area , owl:NamedIndividual .
+    :Arkansas rdf:type :Area , owl:NamedIndividual .
+    :Alabama rdf:type :Area , owl:NamedIndividual .
+    :Mississippi rdf:type :Area , owl:NamedIndividual .
+    :Tupelo rdf:type :Area , owl:NamedIndividual .
+    :Yazoo_City rdf:type :Area , owl:NamedIndividual .
+    :Lodi rdf:type :Area , owl:NamedIndividual .
+    :Escambia_County_Jail_Explosion rdf:type owl:NamedIndividual ;
+    :hit :Escambia_County_Jail .
+    :Escambia_County_Jail rdf:type :Area , owl:NamedIndividual .
+    :April_2014_Abuja_bombing rdf:type owl:NamedIndividual ;
+    :hit :Abuja .
+    :Abuja rdf:type :Area , owl:NamedIndividual .
+    :2010_Fathers_Day_tornado rdf:type owl:NamedIndividual ;
+    :hit :Yellowstone_County .
+    :Yellowstone_County rdf:type :Area , owl:NamedIndividual .
+    :2014_Nigeria_Immigration_Recruitment_Tragedy rdf:type owl:NamedIndividual ;
+    :hit :Nigeria .
+    :Nigeria rdf:type :Area , owl:NamedIndividual .
+    :2014_Soma_Mine_Explosion rdf:type owl:NamedIndividual ;
+    :hit :Soma .
+    :Soma rdf:type :Area , owl:NamedIndividual .
+    :May_2014_Cocos_Fire rdf:type owl:NamedIndividual ;
+    :hit :San_Marcos .
+    :San_Marcos rdf:type :Area , owl:NamedIndividual .
+    :May_2014_San_Diego_County_wildfires rdf:type owl:NamedIndividual ;
+    :hit :San_Diego_County .
+    :San_Diego_County rdf:type :Area , owl:NamedIndividual .
+    :Poinsettia_Fire rdf:type owl:NamedIndividual ;
+    :hit :Carlsbad .
+    :Carlsbad rdf:type :Area , owl:NamedIndividual .
+    :Sinking_of_the_MV_Miraj-4 rdf:type owl:NamedIndividual ;
+    :hit :Meghna_River .
+    :Meghna_River rdf:type :Area , owl:NamedIndividual .
+    :Great_Fire_of_Valparaíso rdf:type owl:NamedIndividual ;
+    :hit :Valparaíso .
+    :Valparaíso rdf:type :Area , owl:NamedIndividual .
+    :2014_Southeast_Europe_floods rdf:type owl:NamedIndividual ;
+    :hit :Serbia ;
+    :hit :Bosnia_and_Herzegovina .
+    :Serbia rdf:type :Area , owl:NamedIndividual .
+    :Bosnia_and_Herzegovina rdf:type :Area , owl:NamedIndividual .
+    :2014_Taiwan_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Taiwan .
+    :Taiwan rdf:type :Area , owl:NamedIndividual .
+    :2014_Badakhshan_mudslides rdf:type owl:NamedIndividual ;
+    :hit :Argo_District .
+    :Argo_District rdf:type :Area , owl:NamedIndividual .
+    :2014_Ürümqi_Attack rdf:type owl:NamedIndividual ;
+    :hit :Ürümqi .
+    :Ürümqi rdf:type :Area , owl:NamedIndividual .
+    :2014_Jos_bombings rdf:type owl:NamedIndividual ;
+    :hit :Jos .
+    :Jos rdf:type :Area , owl:NamedIndividual .
+    :May_2014_Ürümqi_attack rdf:type owl:NamedIndividual ;
+    :hit :Ürümqi .
+    :Ürümqi rdf:type :Area , owl:NamedIndividual .
+    :2014_Aegean_Sea_Earthquake rdf:type owl:NamedIndividual ;
+    :hit :Bulgaria ;
+    :hit :Greece ;
+    :hit :Turkey .
+    :Bulgaria rdf:type :Area , owl:NamedIndividual .
+    :Greece rdf:type :Area , owl:NamedIndividual .
+    :Turkey rdf:type :Area , owl:NamedIndividual .
+    :Mesa_County_mudslide rdf:type owl:NamedIndividual ;
+    :hit :Mesa_County .
+    :Mesa_County rdf:type :Area , owl:NamedIndividual .
+    :2014_Colorado_Mudslide rdf:type owl:NamedIndividual ;
+    :hit :Mesa_County ;
+    :hit :Collbran .
+    :Mesa_County rdf:type :Area , owl:NamedIndividual .
+    :Collbran rdf:type :Area , owl:NamedIndividual .
+    :2014_Isla_Vista_massacre rdf:type owl:NamedIndividual ;
+    :hit :Isla_Vista .
+    :Isla_Vista rdf:type :Area , owl:NamedIndividual .
+    :2014_Garyville_tornado rdf:type owl:NamedIndividual ;
+    :hit :Garyville .
+    :Garyville rdf:type :Area , owl:NamedIndividual .
+    :2014_Hanscom_Field_Air_Crash rdf:type owl:NamedIndividual ;
+    :hit :Hanscom_Field .
+    :Hanscom_Field rdf:type :Area , owl:NamedIndividual .
+    :2014_North_Texas_Tornado rdf:type owl:NamedIndividual ;
+    :hit :North_Texas .
+    :North_Texas rdf:type :Area , owl:NamedIndividual .
+    :June_2014_Huerfano_County_wildfire rdf:type owl:NamedIndividual ;
+    :hit :Huerfano_County .
+    :Huerfano_County rdf:type :Area , owl:NamedIndividual .
+    :2014_Taipei_Metro_attack rdf:type owl:NamedIndividual ;
+    :hit :New_Taipei .
+    :New_Taipei rdf:type :Area , owl:NamedIndividual .
+    :2014_Downtown_Pueblo_Fire rdf:type owl:NamedIndividual ;
+    :hit :Pueblo .
+    :Pueblo rdf:type :Area , owl:NamedIndividual .
+    :2014_Gamboru_Ngala_attack rdf:type owl:NamedIndividual ;
+    :hit :Ngala .
+    :Ngala rdf:type :Area , owl:NamedIndividual .
+    :2014_Rosebank_fire rdf:type owl:NamedIndividual ;
+    :hit :Staten_Island .
+    :Staten_Island rdf:type :Area , owl:NamedIndividual .
+    :2014_Seattle_Pacific_University_shooting rdf:type owl:NamedIndividual ;
+    :hit :Seattle_Pacific_University .
+    :Seattle_Pacific_University rdf:type :Area , owl:NamedIndividual .
+    :Two_Bulls_Fire rdf:type owl:NamedIndividual ;
+    :hit :Bend .
+    :Bend rdf:type :Area , owl:NamedIndividual .
+    :2014_Jinnah_International_Airport_attack rdf:type owl:NamedIndividual ;
+    :hit :Jinnah_International_Airport .
+    :Jinnah_International_Airport rdf:type :Area , owl:NamedIndividual .
+    :2014_North_Rhine-Westphalia_storms rdf:type owl:NamedIndividual ;
+    :hit :North_Rhine-Westphalia ;
+    :hit :Düsseldorf ;
+    :hit :Cologne ;
+    :hit :Krefeld ;
+    :hit :Essen .
+    :North_Rhine-Westphalia rdf:type :Area , owl:NamedIndividual .
+    :Düsseldorf rdf:type :Area , owl:NamedIndividual .
+    :Cologne rdf:type :Area , owl:NamedIndividual .
+    :Krefeld rdf:type :Area , owl:NamedIndividual .
+    :Essen rdf:type :Area , owl:NamedIndividual .
+    :2014_Bhilai_Steel_Plant_explosion rdf:type owl:NamedIndividual ;
+    :hit :Bhilai .
+    :Bhilai rdf:type :Area , owl:NamedIndividual .
+    :2011 rdf:type owl:NamedIndividual ;
+    :hit :Nairobi ;
+    :hit :Machakos ;
+    :hit :Mombasa .
+    :Nairobi rdf:type :Area , owl:NamedIndividual .
+    :Machakos rdf:type :Area , owl:NamedIndividual .
+    :Mombasa rdf:type :Area , owl:NamedIndividual .
+    :2014_Mpeketoni_town_attack rdf:type owl:NamedIndividual ;
+    :hit :Mpeketoni .
+    :Mpeketoni rdf:type :Area , owl:NamedIndividual .
+    :2014_Pilger_tornado rdf:type owl:NamedIndividual ;
+    :hit :Pilger ;
+    :hit :Nebraska ;
+    :hit :Iowa .
+    :Pilger rdf:type :Area , owl:NamedIndividual .
+    :Nebraska rdf:type :Area , owl:NamedIndividual .
+    :Iowa rdf:type :Area , owl:NamedIndividual .
+    :2014_Wessington_Springs_tornado rdf:type owl:NamedIndividual ;
+    :hit :Wessington_Springs .
+    :Wessington_Springs rdf:type :Area , owl:NamedIndividual .
+    :2014_Glendale_Fire rdf:type owl:NamedIndividual ;
+    :hit :Glendale .
+    :Glendale rdf:type :Area , owl:NamedIndividual .
+    :2014_Bryant_Fire rdf:type owl:NamedIndividual ;
+    :hit :Klamath_County .
+    :Klamath_County rdf:type :Area , owl:NamedIndividual .
+    :2014_Aleutian_Islands_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Aleutian_Islands .
+    :Aleutian_Islands rdf:type :Area , owl:NamedIndividual .
+    :June_2014_Abuja_shopping_mall_bombing rdf:type owl:NamedIndividual ;
+    :hit :Wuse_District .
+    :Wuse_District rdf:type :Area , owl:NamedIndividual .
+    :June_2014_New_Tecumseth_Tornado rdf:type owl:NamedIndividual ;
+    :hit :New_Tecumseth .
+    :New_Tecumseth rdf:type :Area , owl:NamedIndividual .
+    :Butts_Canyon_Fire rdf:type owl:NamedIndividual ;
+    :hit :Napa_County .
+    :Napa_County rdf:type :Area , owl:NamedIndividual .
+    :July_2014_Grand_Rapids_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Grand_Rapids .
+    :Grand_Rapids rdf:type :Area , owl:NamedIndividual .
+    :2014_Southern_Mexico_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Guatemala ;
+    :hit :Mexico .
+    :Guatemala rdf:type :Area , owl:NamedIndividual .
+    :Mexico rdf:type :Area , owl:NamedIndividual .
+    :2014_Tapachula_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Chiapas ;
+    :hit :San_Marcos .
+    :Chiapas rdf:type :Area , owl:NamedIndividual .
+    :San_Marcos rdf:type :Area , owl:NamedIndividual .
+    :2014_Bulgarian_floods rdf:type owl:NamedIndividual ;
+    :hit :Varna_Province ;
+    :hit :Dobrich_Province ;
+    :hit :Veliko_Tarnovo_Province ;
+    :hit :Shumen_Province ;
+    :hit :Constanța_County .
+    :Varna_Province rdf:type :Area , owl:NamedIndividual .
+    :Dobrich_Province rdf:type :Area , owl:NamedIndividual .
+    :Veliko_Tarnovo_Province rdf:type :Area , owl:NamedIndividual .
+    :Shumen_Province rdf:type :Area , owl:NamedIndividual .
+    :Constanța_County rdf:type :Area , owl:NamedIndividual .
+    :2014_Puerto_Madero_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Puerto_Madero ;
+    :hit :Tapachula ;
+    :hit :Suchiate ;
+    :hit :Guatemala_City .
+    :Puerto_Madero rdf:type :Area , owl:NamedIndividual .
+    :Tapachula rdf:type :Area , owl:NamedIndividual .
+    :Suchiate rdf:type :Area , owl:NamedIndividual .
+    :Guatemala_City rdf:type :Area , owl:NamedIndividual .
+    :Paramakudi_riots rdf:type owl:NamedIndividual ;
+    :hit :Paramakudi .
+    :Paramakudi rdf:type :Area , owl:NamedIndividual .
+    :2014_Lowell_Apartment_fire rdf:type owl:NamedIndividual ;
+    :hit :Lowell .
+    :Lowell rdf:type :Area , owl:NamedIndividual .
+    :2014_Spring rdf:type owl:NamedIndividual ;
+    :hit :Spring .
+    :Spring rdf:type :Area , owl:NamedIndividual .
+    :2014_Meerut_riots rdf:type owl:NamedIndividual ;
+    :hit :Meerut .
+    :Meerut rdf:type :Area , owl:NamedIndividual .
+    :Malaysia_Airlines_Flight_17 rdf:type owl:NamedIndividual ;
+    :hit :Donetsk_Oblast .
+    :Donetsk_Oblast rdf:type :Area , owl:NamedIndividual .
+    :Smith_Creek_Fire rdf:type owl:NamedIndividual ;
+    :hit :Westside .
+    :Westside rdf:type :Area , owl:NamedIndividual .
+    :2014_Kafr_Zita_chemical_attack rdf:type owl:NamedIndividual ;
+    :hit :Kafr_Zita .
+    :Kafr_Zita rdf:type :Area , owl:NamedIndividual .
+    :2014_Washington_State_wildfire rdf:type owl:NamedIndividual ;
+    :hit :Washington .
+    :Washington rdf:type :Area , owl:NamedIndividual .
+    :TransAsia_Airways_Flight_GE222_crash_incident rdf:type owl:NamedIndividual ;
+    :hit :Penghu .
+    :Penghu rdf:type :Area , owl:NamedIndividual .
+    :2014_Kaduna_Bombings rdf:type owl:NamedIndividual ;
+    :hit :Kaduna .
+    :Kaduna rdf:type :Area , owl:NamedIndividual .
+    :2014_Kamloops_Flash_Flooding rdf:type owl:NamedIndividual ;
+    :hit :Kamloops .
+    :Kamloops rdf:type :Area , owl:NamedIndividual .
+    :2014_GAIL_pipeline_explosion rdf:type owl:NamedIndividual ;
+    :hit :Nagaram .
+    :Nagaram rdf:type :Area , owl:NamedIndividual .
+    :Air_Algérie_Flight_5017 rdf:type owl:NamedIndividual ;
+    :hit :Mali .
+    :Mali rdf:type :Area , owl:NamedIndividual .
+    :2014_Virginia_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Delmarva_Peninsula .
+    :Delmarva_Peninsula rdf:type :Area , owl:NamedIndividual .
+    :2014_Cherrystone_Campground_tornado rdf:type owl:NamedIndividual ;
+    :hit :Cape_Charles .
+    :Cape_Charles rdf:type :Area , owl:NamedIndividual .
+    :Reyhanlı_bombings rdf:type owl:NamedIndividual ;
+    :hit :Reyhanlı ;
+    :hit :Hatay_Province .
+    :Reyhanlı rdf:type :Area , owl:NamedIndividual .
+    :Hatay_Province rdf:type :Area , owl:NamedIndividual .
+    :2014_Boston_Tornado rdf:type owl:NamedIndividual ;
+    :hit :Revere .
+    :Revere rdf:type :Area , owl:NamedIndividual .
+    :2014_Eastbourne_Pier_fire rdf:type owl:NamedIndividual ;
+    :hit :Eastbourne_Pier .
+    :Eastbourne_Pier rdf:type :Area , owl:NamedIndividual .
+    :2014_Malin_landslide rdf:type owl:NamedIndividual ;
+    :hit :Ambegaon_taluka .
+    :Ambegaon_taluka rdf:type :Area , owl:NamedIndividual .
+    :2014_Ferrybridge_C_power_station_fire rdf:type owl:NamedIndividual ;
+    :hit :Ferrybridge_power_stations .
+    :Ferrybridge_power_stations rdf:type :Area , owl:NamedIndividual .
+    :2014_Kaohsiung_gas_explosions rdf:type owl:NamedIndividual ;
+    :hit :Kaohsiung .
+    :Kaohsiung rdf:type :Area , owl:NamedIndividual .
+    :2014_Ludian_earthquake rdf:type owl:NamedIndividual ;
+    :hit :Yunnan .
+    :Yunnan rdf:type :Area , owl:NamedIndividual .
+    :2014_Lahore_clash rdf:type owl:NamedIndividual ;
+    :hit :Model_Town .
+    :Model_Town rdf:type :Area , owl:NamedIndividual .
+    :TransAsia_Airways_Flight_222 rdf:type owl:NamedIndividual ;
+    :hit :Husi .
+    :Husi rdf:type :Area , owl:NamedIndividual .
+    :2014_South_Napa_earthquake rdf:type owl:NamedIndividual ;
+    :hit :California .
+    :California rdf:type :Area , owl:NamedIndividual .
+    :Persecution_of_Yazidis_by_ISIL rdf:type owl:NamedIndividual ;
+    :hit :Sinjar .
+    :Sinjar rdf:type :Area , owl:NamedIndividual .
+    :2014_Washington_state_wildfires rdf:type owl:NamedIndividual ;
+    :hit :Chelan_County ;
+    :hit :Okanogan_County ;
+    :hit :Ferry_County ;
+    :hit :Kittitas_County .
+    :Chelan_County rdf:type :Area , owl:NamedIndividual .
+    :Okanogan_County rdf:type :Area , owl:NamedIndividual .
+    :Ferry_County rdf:type :Area , owl:NamedIndividual .
+    :Kittitas_County rdf:type :Area , owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

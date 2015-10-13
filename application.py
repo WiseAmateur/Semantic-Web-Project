@@ -18,6 +18,37 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
+    
+@app.route("/json_convert")
+def json_convert():
+    return render_template("json_convert.html")
+
+@app.route("/json_test", methods=["GET"])
+def json_test():
+    data = []
+    
+#    with open('ontology/disasters.json') as f:
+#        for line in f:
+#            data.append(json.loads(line))
+
+    data = json.load(open('ontology/disasters.json'))
+            
+    return jsonify(data)
+
+# Freebase disaster query
+#
+#[{
+#  "type": "/event/disaster",
+#  "name": null,
+#  "type_of_disaster": [],
+#  "areas_affected": [],
+#  "fatalities": null,
+#  "injuries": null,
+#  "damage": null,
+#  "/time/event/start_date>=": "2000",
+#  "/time/event/start_date": null,
+#  "/time/event/end_date": null
+#}]
 
 
 if __name__ == "__main__":
