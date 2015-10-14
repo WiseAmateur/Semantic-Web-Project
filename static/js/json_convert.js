@@ -89,5 +89,5 @@ function convertSpecialCharsAreas(string)
 function convertSpecialCharsDisaster(string)
 {
     /* Replace spaces with '_', apostrophe/comma/brackets+content with nothing and remove slashes/– with everything after them */
-    return string.replace(/ /g, "_").replace(/[,\u0027]/g, '').replace(/\((.*)\)/g, '').replace(/[\/–](.*)/, '');
+    return string.replace(/ /g, "_").replace(/–/g, "-").replace(/[,\u0027]/g, '').replace(/\((.*)\)/g, '').replace(/\/(.*)/, '');
 }

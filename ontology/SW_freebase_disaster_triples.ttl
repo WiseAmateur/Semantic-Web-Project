@@ -1114,7 +1114,7 @@
     :Moore rdf:type :Area , owl:NamedIndividual .
     :Oklahoma_City rdf:type :Area , owl:NamedIndividual .
     :Edmond rdf:type :Area , owl:NamedIndividual .
-    :May_18 rdf:type owl:NamedIndividual ;
+    :May_18-21_2013_tornado_outbreak rdf:type owl:NamedIndividual ;
     :start_date "2013-05-18"^^xsd:string ;
     :end_date "2013-05-21"^^xsd:string ;
     :fatalities "26"^^xsd:integer ;
@@ -1308,7 +1308,7 @@
     :disaster_type "Winter storm"^^xsd:string ;
     :hit :Gulf_Coast_of_the_United_States .
     :Gulf_Coast_of_the_United_States rdf:type :Area , owl:NamedIndividual .
-    :February rdf:type owl:NamedIndividual ;
+    :February-March_2007_tornado_outbreak_sequence rdf:type owl:NamedIndividual ;
     :start_date "2007-02-28"^^xsd:string ;
     :end_date "2007-03-02"^^xsd:string ;
     :disaster_type "Tornado"^^xsd:string ;
@@ -1376,7 +1376,7 @@
     :disaster_type "Mudflow"^^xsd:string ;
     :hit :Oso .
     :Oso rdf:type :Area , owl:NamedIndividual .
-    :April_27 rdf:type owl:NamedIndividual ;
+    :April_27-30_2014_tornado_outbreak rdf:type owl:NamedIndividual ;
     :start_date "2014-04-27"^^xsd:string ;
     :end_date "2014-04-30"^^xsd:string ;
     :disaster_type "Tornado"^^xsd:string ;
@@ -1625,7 +1625,7 @@
     :disaster_type "Gas explosion"^^xsd:string ;
     :hit :Bhilai .
     :Bhilai rdf:type :Area , owl:NamedIndividual .
-    :2011 rdf:type owl:NamedIndividual ;
+    :2011-14_terrorist_attacks_in_Kenya rdf:type owl:NamedIndividual ;
     :start_date "2011-10-24"^^xsd:string ;
     :hit :Nairobi ;
     :hit :Machakos ;

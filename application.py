@@ -7,9 +7,7 @@
 
 from flask import Flask, render_template, url_for, request, jsonify
 from SPARQLWrapper import SPARQLWrapper, RDF, JSON
-import requests
-import os
-import json
+import requests, os, json, csv, re
 
 
 app = Flask(__name__)
@@ -34,6 +32,39 @@ def json_test():
     data = json.load(open('ontology/disasters.json'))
             
     return jsonify(data)
+
+@app.route("/csv_convert")
+def csv_convert():
+    return render_template("csv_convert.html")
+
+@app.route("/csv_test", methods=["GET"])
+def csv_test():
+    json_file = open('ontology/countries.json', 'w')
+
+    with open('ontology/worldbank_countries.csv') as csv_file:
+        pattern = re.compile(':(.*)')
+    
+        reader = csv.DictReader(csv_file, delimiter=',')
+        first = True;
+        for row in reader:
+            print row
+            if (first):
+                json_file.write("{\n\t\"result\": [\n\t\t{\n\t\t\t\"country\": \"" + 
+                row["ECONOMY"] + "\",\n\t\t\t\"income\": \"" + re.sub(pattern, "", row["INCOME GROUP"]) + "\"\n\t\t}")
+                first = False
+            else:
+                print row
+                json_file.write(",\n\t\t{\n\t\t\t\"country\": \"" + row["ECONOMY"] +
+                "\",\n\t\t\t\"income\": \"" + re.sub(pattern, "", row["INCOME GROUP"]) + "\"\n\t\t}")
+
+        json_file.write("\n\t]\n}")
+    
+    json_file.close()
+            
+    data = json.load(open('ontology/countries.json'))
+    
+    return jsonify(data)
+
 
 # Freebase disaster query
 #

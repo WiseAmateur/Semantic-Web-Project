@@ -1,0 +1,273 @@
+@prefix : <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/daan_julien/ontologies/worldbank_countries> .
+
+<http://www.semanticweb.org/daan_julien/ontologies/worldbank_countries> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+
+
+    :Afghanistan rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Albania rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Algeria rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :American_Samoa rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Andorra rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Angola rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Antigua_and_Barbuda rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Argentina rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Armenia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Aruba rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Australia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Austria rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Azerbaijan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Bahamas rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Bahrain rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Bangladesh rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Barbados rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Belarus rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Belgium rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Belize rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Benin rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Bermuda rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Bhutan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Bolivia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Bosnia_and_Herzegovina rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Botswana rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Brazil rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Brunei_Darussalam rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Bulgaria rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Burkina_Faso rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Burundi rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Cabo_Verde rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Cambodia rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Cameroon rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Canada rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Cayman_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Central_African_Republic rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Chad rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Channel_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Chile rdf:type :High_Income_Country , owl:NamedIndividual .
+    :China rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Colombia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Comoros rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Democratic_Republic_of_the_Congo rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Republic_of_the_Congo rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Costa_Rica rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Ivory_Coast rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Croatia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Cuba rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Curacao rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Cyprus rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Czech_Republic rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Denmark rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Djibouti rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Dominica rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Dominican_Republic rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Ecuador rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Egypt rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :El_Salvador rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Equatorial_Guinea rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Eritrea rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Estonia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Ethiopia rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Faeroe_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Fiji rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Finland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :France rdf:type :High_Income_Country , owl:NamedIndividual .
+    :French_Polynesia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Gabon rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Gambia rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Georgia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Germany rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Ghana rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Greece rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Greenland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Grenada rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Guam rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Guatemala rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Guinea rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Guinea-Bissau rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Guyana rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Haiti rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Honduras rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Hong_Kong rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Hungary rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Iceland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :India rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Indonesia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Iran rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Iraq rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Ireland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Isle_of_Man rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Israel rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Italy rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Jamaica rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Japan rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Jordan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Kazakhstan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Kenya rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Kiribati rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :North_Korea rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :South_Korea rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Kosovo rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Kuwait rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Kyrgyzstan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Laos rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Latvia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Lebanon rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Lesotho rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Liberia rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Libya rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Liechtenstein rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Lithuania rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Luxembourg rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Macao rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Republic_of_Macedonia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Madagascar rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Malawi rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Malaysia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Maldives rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Mali rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Malta rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Marshall_Islands rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Mauritania rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Mauritius rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Mexico rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Micronesia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Moldova rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Monaco rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Mongolia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Montenegro rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Morocco rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Mozambique rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Myanmar rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Namibia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Nepal rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Netherlands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :New_Caledonia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :New_Zealand rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Nicaragua rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Niger rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Nigeria rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Northern_Mariana_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Norway rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Oman rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Pakistan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Palau rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Panama rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Papua_New_Guinea rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Paraguay rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Peru rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Philippines rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Poland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Portugal rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Puerto_Rico rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Qatar rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Romania rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Russian_Federation rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Rwanda rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Samoa rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :San_Marino rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Sao_Tome_and_Principe rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Saudi_Arabia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Senegal rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Serbia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Seychelles rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Sierra_Leone rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Singapore rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Sint_Maarten rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Slovak_Republic rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Slovenia rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Solomon_Islands rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Somalia rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :South_Africa rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :South_Sudan rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Spain rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Sri_Lanka rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Saint_Kitts_and_Nevis rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Saint_Lucia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Saint_Martin rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Saint_Vincent_and_the_Grenadines rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Sudan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Suriname rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Swaziland rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Sweden rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Switzerland rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Syrian_Arab_Republic rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Taiwan rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Tajikistan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Tanzania rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Thailand rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Timor-Leste rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Togo rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Tonga rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Trinidad_and_Tobago rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Tunisia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Turkey rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Turkmenistan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Turks_and_Caicos_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Tuvalu rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Uganda rdf:type :Low_Income_Country , owl:NamedIndividual .
+    :Ukraine rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :United_Arab_Emirates rdf:type :High_Income_Country , owl:NamedIndividual .
+    :United_Kingdom rdf:type :High_Income_Country , owl:NamedIndividual .
+    :United_States rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Uruguay rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Uzbekistan rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Vanuatu rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Venezuela rdf:type :High_Income_Country , owl:NamedIndividual .
+    :Vietnam rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :United_States_Virgin_Islands rdf:type :High_Income_Country , owl:NamedIndividual .
+    :West_Bank rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Gaza_Strip rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Yemen rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Zambia rdf:type :Middle_Income_Country , owl:NamedIndividual .
+    :Zimbabwe rdf:type :Low_Income_Country , owl:NamedIndividual . 
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

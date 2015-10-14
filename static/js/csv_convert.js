@@ -27,13 +27,13 @@ function getCountries(data)
     for (var i = 0; i < result_l; i++)
     {
         if (result[i]["income"] == "Low income")
-            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :Low_Income_Country, owl:NamedIndividual .</li>");
+            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :Low_Income_Country , owl:NamedIndividual .</li>");
 
         if (result[i]["income"] == "Lower middle income" || result[i]["income"] == "Upper middle income")
-            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :Middle_Income_Country, owl:NamedIndividual .</li>");
+            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :Middle_Income_Country , owl:NamedIndividual .</li>");
 
         if (result[i]["income"] == "High income")
-            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :High_Income_Country, owl:NamedIndividual .</li>");
+            $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :High_Income_Country , owl:NamedIndividual .</li>");
     }
     //$("#result").append(count);
 }

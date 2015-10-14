@@ -154,6 +154,10 @@ dbo:Country rdf:type owl:Class .
        owl:equivalentClass [ rdf:type owl:Restriction ;
                              owl:onProperty :disaster_type ;
                              owl:hasValue "Flood"^^xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :disaster_type ;
+                             owl:hasValue "Tsunami"^^xsd:string
                            ] ;
        
        rdfs:subClassOf :Natural_Disaster .
@@ -183,11 +187,7 @@ dbo:Country rdf:type owl:Class .
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical Cyclone"^^xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tsunami"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
@@ -240,9 +240,9 @@ dbo:Country rdf:type owl:Class .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Rich_Country
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Income_Country
 
-:Rich_Country rdf:type owl:Class ;
+:High_Income_Country rdf:type owl:Class ;
               
               rdfs:subClassOf dbo:Country .
 
