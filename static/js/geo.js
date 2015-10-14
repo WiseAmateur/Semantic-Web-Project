@@ -46,15 +46,15 @@ function getGeoInfo(areas)
         for (var i = 0; i < result_l; i++)
         {
             $("#result ul").append("<li>" + result[i]["area"]["value"].replace("http://dbpedia.org/resource/",":") + 
-                                    " :lat \"" + result[i]["point"]["value"].split(" ")[0] + "\"^^xsd:integer ;</li>");
+                                    " :lat \"" + result[i]["point"]["value"].split(" ")[0] + "\"^^xsd:float ;</li>");
                                     
             if (result[i]["country"])
                 $("#result ul").append("<li>:long \"" + result[i]["point"]["value"].split(" ")[1] + 
-                                        "\"^^xsd:integer ;</li><li>dbo:country :" + 
+                                        "\"^^xsd:float ;</li><li>dbo:country :" + 
                                         result[i]["country"]["value"].split("/resource/")[1].replace("%7B%7B", "Philippines")
                                         + " .</li>");
             else
-                $("#result ul").append("<li>:long \"" + result[i]["point"]["value"].split(" ")[1] + "\"^^xsd:integer .</li>");
+                $("#result ul").append("<li>:long \"" + result[i]["point"]["value"].split(" ")[1] + "\"^^xsd:float .</li>");
         }
     });
 }

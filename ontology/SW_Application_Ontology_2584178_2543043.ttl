@@ -136,14 +136,6 @@ dbo:Country rdf:type owl:Class .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Blizzard
-
-:Blizzard rdf:type owl:Class ;
-          
-          rdfs:subClassOf :Natural_Disaster .
-
-
-
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Earthquake
 
 :Earthquake rdf:type owl:Class ;
@@ -174,6 +166,29 @@ dbo:Country rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Impact_Disaster
+
+:High_Impact_Disaster rdf:type owl:Class ;
+                      
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :fatalities ;
+                                            owl:someValuesFrom xsd:integer
+                                          ] .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Impact_Natural_Disaster
+
+:High_Impact_Natural_Disaster rdf:type owl:Class ;
+                              
+                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                    owl:intersectionOf ( :High_Impact_Disaster
+                                                                         :Natural_Disaster
+                                                                       )
+                                                  ] .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Income_Country
 
 :High_Income_Country rdf:type owl:Class ;
@@ -186,9 +201,27 @@ dbo:Country rdf:type owl:Class .
 
 :High_Risk_Area rdf:type owl:Class ;
                 
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hitBy ;
-                                      owl:someValuesFrom :Natural_Disaster
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dbo:country ;
+                                                             owl:someValuesFrom :Low_Income_Country
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hitBy ;
+                                                             owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                           ]
+                                                         )
+                                    ] ,
+                                    [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty dbo:country ;
+                                                             owl:someValuesFrom :Middle_Income_Country
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hitBy ;
+                                                             owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                           ]
+                                                         )
                                     ] ;
                 
                 rdfs:subClassOf :Area .
@@ -201,14 +234,28 @@ dbo:Country rdf:type owl:Class .
            
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical cyclone"^^xsd:string
+                                 owl:hasValue "Tornado"^^xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tornado"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Impact_Natural_Disaster
+
+:Low_Impact_Natural_Disaster rdf:type owl:Class ;
+                             
+                             owl:equivalentClass [ rdf:type owl:Class ;
+                                                   owl:intersectionOf ( :Natural_Disaster
+                                                                        [ rdf:type owl:Class ;
+                                                                          owl:complementOf :High_Impact_Natural_Disaster
+                                                                        ]
+                                                                      )
+                                                 ] .
 
 
 
@@ -224,6 +271,29 @@ dbo:Country rdf:type owl:Class .
 
 :Low_Risk_Area rdf:type owl:Class ;
                
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty dbo:country ;
+                                                            owl:someValuesFrom :Low_Income_Country
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hitBy ;
+                                                            owl:someValuesFrom :Low_Impact_Natural_Disaster
+                                                          ]
+                                                        )
+                                   ] ,
+                                   [ rdf:type owl:Class ;
+                                     owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty dbo:country ;
+                                                            owl:someValuesFrom :Middle_Income_Country
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hitBy ;
+                                                            owl:someValuesFrom :Low_Impact_Natural_Disaster
+                                                          ]
+                                                        )
+                                   ] ;
+               
                rdfs:subClassOf :Area .
 
 
@@ -231,6 +301,18 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medium_Risk_Area
 
 :Medium_Risk_Area rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                               owl:onProperty dbo:country ;
+                                                               owl:someValuesFrom :High_Income_Country
+                                                             ]
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hitBy ;
+                                                               owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                             ]
+                                                           )
+                                      ] ;
                   
                   rdfs:subClassOf :Area .
 
@@ -254,15 +336,19 @@ dbo:Country rdf:type owl:Class .
 
 :No_Risk_Area rdf:type owl:Class ;
               
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty dbo:country ;
+                                                           owl:someValuesFrom :High_Income_Country
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hitBy ;
+                                                           owl:someValuesFrom :Low_Impact_Natural_Disaster
+                                                         ]
+                                                       )
+                                  ] ;
+              
               rdfs:subClassOf :Area .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Volcanic_Eruption
-
-:Volcanic_Eruption rdf:type owl:Class ;
-                   
-                   rdfs:subClassOf :Natural_Disaster .
 
 
 
