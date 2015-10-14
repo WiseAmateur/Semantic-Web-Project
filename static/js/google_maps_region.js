@@ -7,34 +7,26 @@ $(document).ready(function()
         
         result = data.results.bindings;
         
-        var l = result.length;
-        
-        for (var i = 0; i < l; i++)
-        {
-            console.log(result[i]["lat"]);
-            console.log(result[i]["area"]);
-        }
+        initialize(result);
     });
-    
-    google.maps.event.addDomListener(window, 'onload', initialize());
 });
 
-function initialize() {
+function initialize(result) {
     var map;
     var centerPosition = new google.maps.LatLng(50.272213, -5.054973);
     var options = {
         'zoom': 12,
         'center': centerPosition,
-        'mapTypeId': google.maps.MapTypeId.ROADMAP,
-        'zIndex': 2
+        'mapTypeId': google.maps.MapTypeId.ROADMAP
     };
 
     map = new google.maps.Map(document.getElementById('map'), options);    
 
+    var l = result.length;
     
     for (var i = 0; i < l; i++)
     {
-        centerPosition = new google.maps.LatLng(result[i]["lat"], result[i]["long"]);
+        centerPosition = new google.maps.LatLng(result[i]["lat"]["value"], result[i]["long"]["value"]);
 
         var circle = new google.maps.Circle({
             center: centerPosition,
@@ -52,7 +44,7 @@ function initialize() {
 
         map.fitBounds(circle.getBounds());
 
-        var labelText = result[i]["area"];
+        var labelText = result[i]["area"]["value"].split("#")[1];
 
         var myOptions = {
             content: labelText,
