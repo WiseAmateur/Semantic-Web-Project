@@ -23,15 +23,7 @@ def json_convert():
 
 @app.route("/json_test", methods=["GET"])
 def json_test():
-    data = []
-    
-#    with open('ontology/disasters.json') as f:
-#        for line in f:
-#            data.append(json.loads(line))
-
-    data = json.load(open('ontology/disasters.json'))
-            
-    return jsonify(data)
+    return jsonify(json.load(open('ontology/disasters.json')))
 
 @app.route("/csv_convert")
 def csv_convert():
@@ -69,28 +61,23 @@ def csv_test():
 def geo():
     return render_template("geo.html")
     
-@app.route("/geo_test")
+@app.route("/geo_test", methods=["GET"])
 def geo_test():
     query = request.args.get("query", None)    
     endpoint = request.args.get("endpoint")
     
     if (query and endpoint):
+        return sendSparqlQuery(query, endpoint)
+    else :
+        return jsonify({"result": "Error"})
         
-        sparql = SPARQLWrapper(endpoint)
-        
-        sparql.setQuery(query)
-
-        sparql.setReturnFormat(JSON)
-        sparql.addParameter("Accept","application/sparql-results+json")
-
-        #sparql.addParameter("reasoning",True)
-        
-        try:
-            response = sparql.query().convert()
-
-            return jsonify(response)
-        except Exception as e:
-            return jsonify({"result": "Error"})
+@app.route("/sparql", methods=["GET"])
+def sparql():
+    query = request.args.get("query", None)
+    endpoint = "http://localhost:5820/naturalDisasterOntology/query"
+    
+    if (query):
+        return sendSparqlQuery(query, endpoint)
     else :
         return jsonify({"result": "Error"})
 
@@ -109,7 +96,23 @@ def geo_test():
 #  "/time/event/start_date": null,
 #  "/time/event/end_date": null
 #}]
+def sendSparqlQuery(query, endpoint):
+    sparql = SPARQLWrapper(endpoint)
+        
+    sparql.setQuery(query)
 
+    sparql.setReturnFormat(JSON)
+    sparql.addParameter("Accept","application/sparql-results+json")
+
+    #sparql.addParameter("reasoning",True)
+    
+    try:
+        response = sparql.query().convert()
+
+        return jsonify(response)
+    except Exception as e:
+        return jsonify({"result": "Error"})
+    
 
 if __name__ == "__main__":
     app.debug = True

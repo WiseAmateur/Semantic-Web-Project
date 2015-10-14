@@ -8,10 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> .
 
-<http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> rdf:type owl:Ontology ;
-                                                                          
-                                                                          owl:imports <http://www.semanticweb.org/daan_julien/ontologies/freebase_disaster> ,
-                                                                                      <http://www.semanticweb.org/daan_julien/ontologies/worldbank_countries> .
+<http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> rdf:type owl:Ontology .
 
 
 #################################################################
@@ -294,7 +291,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Aalborg
 
 :Aalborg rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat 57.05 ;
+         
+         :long 9.916666666666666 ;
+         
+         dbo:country :Denmark .
 
 
 
@@ -308,7 +311,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Abuja
 
 :Abuja rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 7.483333333333333 ;
+       
+       :lat 9.066666666666666 ;
+       
+       dbo:country :Nigeria .
 
 
 
@@ -337,7 +346,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Adisucipto_International_Airport
 
 :Adisucipto_International_Airport rdf:type :Area ,
-                                           owl:NamedIndividual .
+                                           owl:NamedIndividual ;
+                                  
+                                  :lat -7.788055555555555 ;
+                                  
+                                  :long 110.43166666666667 .
 
 
 
@@ -352,7 +365,11 @@ dbo:Country rdf:type owl:Class .
 
 :Afghanistan rdf:type :Area ,
                       :Low_Income_Country ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :lat 34.53333333333333 ;
+             
+             :long 69.13333333333334 .
 
 
 
@@ -494,7 +511,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Aktobe_Region
 
 :Aktobe_Region rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :lat 50.28333333333333 ;
+               
+               :long 57.166666666666664 ;
+               
+               dbo:country :Kazakhstan .
 
 
 
@@ -553,14 +576,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Alto_Hospicio
 
 :Alto_Hospicio rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :lat -20.25 ;
+               
+               :long -70.11666666666666 ;
+               
+               dbo:country :Chile .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Ambegaon_taluka
 
 :Ambegaon_taluka rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat 19.03472222222222 ;
+                 
+                 :long 73.83638888888889 ;
+                 
+                 dbo:country :India .
 
 
 
@@ -610,7 +645,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Amsterdam_Airport_Schiphol
 
 :Amsterdam_Airport_Schiphol rdf:type :Area ,
-                                     owl:NamedIndividual .
+                                     owl:NamedIndividual ;
+                            
+                            :long 4.764166666666666 ;
+                            
+                            :lat 52.308055555555555 .
 
 
 
@@ -816,7 +855,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Awaran
 
 :Awaran rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 26.27 ;
+        
+        :long 65.14 ;
+        
+        dbo:country :Pakistan .
 
 
 
@@ -875,7 +920,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Baotou
 
 :Baotou rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 109.83333333333333 ;
+        
+        :lat 40.65 ;
+        
+        dbo:country :China .
 
 
 
@@ -889,14 +940,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Barcelona
 
 :Barcelona rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long 2.183333333333333 ;
+           
+           :lat 41.38333333333333 ;
+           
+           dbo:country :Spain .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bashkortostan
 
 :Bashkortostan rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :lat 54.46666666666667 ;
+               
+               :long 56.266666666666666 ;
+               
+               dbo:country :Russia .
 
 
 
@@ -910,7 +973,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bassersdorf
 
 :Bassersdorf rdf:type :Area ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :lat 47.45 ;
+             
+             :long 8.633333333333333 ;
+             
+             dbo:country :Switzerland .
 
 
 
@@ -950,7 +1019,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Belgrade
 
 :Belgrade rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 20.466666666666665 ;
+          
+          :lat 44.81666666666667 ;
+          
+          dbo:country :Serbia .
 
 
 
@@ -983,14 +1058,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bendigo
 
 :Bendigo rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long 144.26666666666668 ;
+         
+         :lat 36.75 ;
+         
+         dbo:country :Australia .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Benghazi
 
 :Benghazi rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 20.066666666666666 ;
+          
+          :lat 32.11666666666667 ;
+          
+          dbo:country :Libya .
 
 
 
@@ -1011,7 +1098,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bhilai
 
 :Bhilai rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 21.21 ;
+        
+        :long 81.38 .
 
 
 
@@ -1025,7 +1116,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Blace
 
 :Blace rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 21.28595 ;
+       
+       :lat 43.29578333333333 ;
+       
+       dbo:country :Serbia .
 
 
 
@@ -1046,14 +1143,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bob_Hope_Airport
 
 :Bob_Hope_Airport rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :long -118.35861111111112 ;
+                  
+                  :lat 34.20055555555555 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bohol
 
 :Bohol rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 124.16666666666667 ;
+       
+       :lat 9.833333333333334 ;
+       
+       dbo:country :Philippines .
 
 
 
@@ -1069,7 +1176,11 @@ dbo:Country rdf:type owl:Class .
 
 :Bosnia_and_Herzegovina rdf:type :Area ,
                                  :Middle_Income_Country ,
-                                 owl:NamedIndividual .
+                                 owl:NamedIndividual ;
+                        
+                        :long 18.416666666666668 ;
+                        
+                        :lat 43.86666666666667 .
 
 
 
@@ -1118,7 +1229,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Brazzaville
 
 :Brazzaville rdf:type :Area ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :lat -4.267777777777778 ;
+             
+             :long 15.291944444444445 ;
+             
+             dbo:country :Republic_of_the_Congo .
 
 
 
@@ -1143,7 +1260,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Brindisi
 
 :Brindisi rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 17.933333333333334 ;
+          
+          :lat 40.63333333333333 ;
+          
+          dbo:country :Italy .
 
 
 
@@ -1170,7 +1293,11 @@ dbo:Country rdf:type owl:Class .
 
 :Bulgaria rdf:type :Area ,
                    :Middle_Income_Country ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 23.316666666666666 ;
+          
+          :lat 42.68333333333333 .
 
 
 
@@ -1198,7 +1325,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Bushehr_Province
 
 :Bushehr_Province rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :lat 28.9184 ;
+                  
+                  :long 50.8382 ;
+                  
+                  dbo:country :Iran .
 
 
 
@@ -1308,7 +1441,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Cebu
 
 :Cebu rdf:type :Area ,
-               owl:NamedIndividual .
+               owl:NamedIndividual ;
+      
+      :lat 10.316666666666666 ;
+      
+      :long 123.75 ;
+      
+      dbo:country :Philippines .
 
 
 
@@ -1402,14 +1541,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Chelyabinsk_Oblast
 
 :Chelyabinsk_Oblast rdf:type :Area ,
-                             owl:NamedIndividual .
+                             owl:NamedIndividual ;
+                    
+                    :lat 54.53333333333333 ;
+                    
+                    :long 60.333333333333336 ;
+                    
+                    dbo:country :Russia .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Chiapas
 
 :Chiapas rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long -92.41666666666667 ;
+         
+         :lat 16.416666666666668 ;
+         
+         dbo:country :Mexico .
 
 
 
@@ -1424,7 +1575,11 @@ dbo:Country rdf:type owl:Class .
 
 :Chile rdf:type :Area ,
                 :High_Income_Country ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat -33.43333333333333 ;
+       
+       :long -70.66666666666667 .
 
 
 
@@ -1482,14 +1637,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Chongqing
 
 :Chongqing rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long 106.56666666666666 ;
+           
+           :lat 29.558333333333334 ;
+           
+           dbo:country :China .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Christchurch
 
 :Christchurch rdf:type :Area ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :lat -43.53 ;
+              
+              :long 172.62027777777777 .
 
 
 
@@ -1520,7 +1685,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Cologne
 
 :Cologne rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat 50.93638888888889 ;
+         
+         :long 6.9527777777777775 ;
+         
+         dbo:country :Germany .
 
 
 
@@ -1574,7 +1745,14 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Constanța_County
 
 :Constanța_County rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :long 28.31 ;
+                  
+                  :lat 44.27 ;
+                  
+                  dbo:country :Kingdom_of_Romania ,
+                              :Romania .
 
 
 
@@ -1588,7 +1766,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Copenhagen_Airport
 
 :Copenhagen_Airport rdf:type :Area ,
-                             owl:NamedIndividual .
+                             owl:NamedIndividual ;
+                    
+                    :long 12.65611111111111 ;
+                    
+                    :lat 55.61805555555556 .
 
 
 
@@ -1626,7 +1808,11 @@ dbo:Country rdf:type owl:Class .
 
 :Costa_Rica rdf:type :Area ,
                      :Middle_Income_Country ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :long -84.08333333333333 ;
+            
+            :lat 9.933333333333334 .
 
 
 
@@ -1640,7 +1826,14 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Cromer
 
 :Cromer rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 1.302 ;
+        
+        :lat 52.931 ;
+        
+        dbo:country :Norfolk ,
+                    :United_Kingdom .
 
 
 
@@ -1670,7 +1863,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Cumbal_Volcano
 
 :Cumbal_Volcano rdf:type :Area ,
-                         owl:NamedIndividual .
+                         owl:NamedIndividual ;
+                
+                :long -77.888 ;
+                
+                :lat 0.949 .
 
 
 
@@ -1710,14 +1907,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Dalian
 
 :Dalian rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 121.63916666666667 ;
+        
+        :lat 38.920833333333334 ;
+        
+        dbo:country :China .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Dallas
 
 :Dallas rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -96.79666666666667 ;
+        
+        :lat 32.77583333333333 ;
+        
+        dbo:country :United_States .
 
 
 
@@ -1803,14 +2012,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Denver
 
 :Denver rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -104.881105 ;
+        
+        :lat 39.76185 ;
+        
+        dbo:country :United_States .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Dilsukhnagar
 
 :Dilsukhnagar rdf:type :Area ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :lat 17.368784 ;
+              
+              :long 78.524652 .
 
 
 
@@ -1839,7 +2058,11 @@ dbo:Country rdf:type owl:Class .
 
 :Dominican_Republic rdf:type :Area ,
                              :Middle_Income_Country ,
-                             owl:NamedIndividual .
+                             owl:NamedIndividual ;
+                    
+                    :long -70.66666666666667 ;
+                    
+                    :lat 19.0 .
 
 
 
@@ -1874,14 +2097,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Durban
 
 :Durban rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 29.883333333333333 ;
+        
+        :long 31.05 ;
+        
+        dbo:country :South_Africa .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Düsseldorf
 
 :Düsseldorf rdf:type :Area ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :lat 51.233333333333334 ;
+            
+            :long 6.783333333333333 ;
+            
+            dbo:country :Germany .
 
 
 
@@ -1898,7 +2133,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#East_Azerbaidjan
 
 :East_Azerbaidjan rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :lat 38.0766 ;
+                  
+                  :long 46.28 ;
+                  
+                  dbo:country :Iran .
 
 
 
@@ -2015,7 +2256,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Essen
 
 :Essen rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat 51.450833333333335 ;
+       
+       :long 7.013055555555556 ;
+       
+       dbo:country :Germany .
 
 
 
@@ -2115,7 +2362,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Ferrybridge_power_stations
 
 :Ferrybridge_power_stations rdf:type :Area ,
-                                     owl:NamedIndividual .
+                                     owl:NamedIndividual ;
+                            
+                            :long -1.28058 ;
+                            
+                            :lat 53.7174 .
 
 
 
@@ -2148,7 +2399,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Florence
 
 :Florence rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 11.25 ;
+          
+          :lat 43.78333333333333 ;
+          
+          dbo:country :Italy .
 
 
 
@@ -2276,14 +2533,25 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Gila_National_Forest
 
 :Gila_National_Forest rdf:type :Area ,
-                               owl:NamedIndividual .
+                               owl:NamedIndividual ;
+                      
+                      :long -108.53 ;
+                      
+                      :lat 33.47 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Glasgow
 
 :Glasgow rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long -4.259 ;
+         
+         :lat 55.858 ;
+         
+         dbo:country :Scotland ,
+                     :United_Kingdom .
 
 
 
@@ -2304,7 +2572,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Gonesse
 
 :Gonesse rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long 2.4494 ;
+         
+         :lat 48.9875 ;
+         
+         dbo:country :France .
 
 
 
@@ -2336,7 +2610,15 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Great_Plains
 
 :Great_Plains rdf:type :Area ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :long -97.0 ;
+              
+              :lat 37.0 ;
+              
+              dbo:country :Canada ,
+                          :Mexico ,
+                          :United_States .
 
 
 
@@ -2344,7 +2626,11 @@ dbo:Country rdf:type owl:Class .
 
 :Greece rdf:type :Area ,
                  :High_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 23.716666666666665 ;
+        
+        :lat 37.96666666666667 .
 
 
 
@@ -2394,21 +2680,37 @@ dbo:Country rdf:type owl:Class .
 
 :Guatemala rdf:type :Area ,
                     :Middle_Income_Country ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long -90.5 ;
+           
+           :lat 14.633333333333333 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Guatemala_City
 
 :Guatemala_City rdf:type :Area ,
-                         owl:NamedIndividual .
+                         owl:NamedIndividual ;
+                
+                :long -90.53527777777778 ;
+                
+                :lat 14.613333333333333 ;
+                
+                dbo:country :Guatemala .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Guerrero
 
 :Guerrero rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long -99.95 ;
+          
+          :lat 17.616666666666667 ;
+          
+          dbo:country :Mexico .
 
 
 
@@ -2416,7 +2718,11 @@ dbo:Country rdf:type owl:Class .
 
 :Guinea rdf:type :Area ,
                  :Low_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -13.7 ;
+        
+        :lat 9.516666666666667 .
 
 
 
@@ -2472,7 +2778,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Hanscom_Field
 
 :Hanscom_Field rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :long -71.28888888888889 ;
+               
+               :lat 42.47 .
 
 
 
@@ -2573,7 +2883,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Huehuetenango_Department
 
 :Huehuetenango_Department rdf:type :Area ,
-                                   owl:NamedIndividual .
+                                   owl:NamedIndividual ;
+                          
+                          :long -91.47583333333333 ;
+                          
+                          :lat 15.314166666666667 ;
+                          
+                          dbo:country :Guatemala .
 
 
 
@@ -2633,7 +2949,11 @@ dbo:Country rdf:type owl:Class .
 
 :India rdf:type :Area ,
                 :Middle_Income_Country ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat 28.613333333333333 ;
+       
+       :long 77.20833333333333 .
 
 
 
@@ -2648,7 +2968,11 @@ dbo:Country rdf:type owl:Class .
 
 :Indonesia rdf:type :Area ,
                     :Middle_Income_Country ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat -6.175 ;
+           
+           :long 106.82833333333333 .
 
 
 
@@ -2662,7 +2986,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Iquique_Province
 
 :Iquique_Province rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :lat -20.21388888888889 ;
+                  
+                  :long -70.1525 ;
+                  
+                  dbo:country :Chile .
 
 
 
@@ -2670,7 +3000,11 @@ dbo:Country rdf:type owl:Class .
 
 :Iran rdf:type :Area ,
                :Middle_Income_Country ,
-               owl:NamedIndividual .
+               owl:NamedIndividual ;
+      
+      :lat 35.68333333333333 ;
+      
+      :long 51.416666666666664 .
 
 
 
@@ -2698,7 +3032,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Irkutsk_Oblast
 
 :Irkutsk_Oblast rdf:type :Area ,
-                         owl:NamedIndividual .
+                         owl:NamedIndividual ;
+                
+                :long 106.0 ;
+                
+                :lat 57.36666666666667 ;
+                
+                dbo:country :Russia .
 
 
 
@@ -2762,7 +3102,11 @@ dbo:Country rdf:type owl:Class .
 
 :Japan rdf:type :Area ,
                 :High_Income_Country ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 139.76666666666668 ;
+       
+       :lat 35.68333333333333 .
 
 
 
@@ -2807,14 +3151,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Jos
 
 :Jos rdf:type :Area ,
-              owl:NamedIndividual .
+              owl:NamedIndividual ;
+     
+     :long 8.883333333333333 ;
+     
+     :lat 9.933333333333334 ;
+     
+     dbo:country :Nigeria .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Juanda_International_Airport
 
 :Juanda_International_Airport rdf:type :Area ,
-                                       owl:NamedIndividual .
+                                       owl:NamedIndividual ;
+                              
+                              :lat -7.379722222222222 ;
+                              
+                              :long 112.78694444444444 .
 
 
 
@@ -2899,14 +3253,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kaduna
 
 :Kaduna rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 10.523055555555555 ;
+        
+        :long 7.440277777777778 ;
+        
+        dbo:country :Nigeria .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kafr_Zita
 
 :Kafr_Zita rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat 35.37361111111111 ;
+           
+           :long 36.60166666666667 ;
+           
+           dbo:country :Syria .
 
 
 
@@ -2925,14 +3291,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kamloops
 
 :Kamloops rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long -120.34083333333334 ;
+          
+          :lat 50.67611111111111 ;
+          
+          dbo:country :Canada .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kampot_Province
 
 :Kampot_Province rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat 10.6 ;
+                 
+                 :long 104.16666666666667 ;
+                 
+                 dbo:country :Cambodia .
 
 
 
@@ -2946,14 +3324,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kaohsiung
 
 :Kaohsiung rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long 120.26666666666667 ;
+           
+           :lat 22.633333333333333 ;
+           
+           dbo:country :Taiwan .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Karachi
 
 :Karachi rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat 24.86 ;
+         
+         :long 67.01 ;
+         
+         dbo:country :Pakistan .
 
 
 
@@ -2977,7 +3367,11 @@ dbo:Country rdf:type owl:Class .
 
 :Kazakhstan rdf:type :Area ,
                      :Middle_Income_Country ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :lat 51.166666666666664 ;
+            
+            :long 71.41666666666667 .
 
 
 
@@ -3010,7 +3404,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Keçiborlu
 
 :Keçiborlu rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long 30.302222222222223 ;
+           
+           :lat 37.94305555555555 ;
+           
+           dbo:country :Turkey .
 
 
 
@@ -3024,14 +3424,30 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Khartoum
 
 :Khartoum rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat 15.633333333333333 ;
+          
+          :long 32.53333333333333 .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kingdom_of_Romania
+
+:Kingdom_of_Romania rdf:type owl:NamedIndividual .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kinshasa
 
 :Kinshasa rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat -4.325 ;
+          
+          :long 15.322222222222223 ;
+          
+          dbo:country :The_Democratic_Republic_Of_Congo .
 
 
 
@@ -3073,14 +3489,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Kostanay_Region
 
 :Kostanay_Region rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat 53.2 ;
+                 
+                 :long 63.63333333333333 ;
+                 
+                 dbo:country :Kazakhstan .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Krefeld
 
 :Krefeld rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat 51.333333333333336 ;
+         
+         :long 6.566666666666666 ;
+         
+         dbo:country :Germany .
 
 
 
@@ -3115,14 +3543,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Lagos
 
 :Lagos rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 3.3958333333333335 ;
+       
+       :lat 6.453055555555555 ;
+       
+       dbo:country :Nigeria .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Lahore
 
 :Lahore rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 31.549722222222222 ;
+        
+        :long 74.34361111111112 .
 
 
 
@@ -3136,7 +3574,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Las_Palmas
 
 :Las_Palmas rdf:type :Area ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :long -15.416666666666666 ;
+            
+            :lat 28.15 ;
+            
+            dbo:country :Spain .
 
 
 
@@ -3165,7 +3609,11 @@ dbo:Country rdf:type owl:Class .
 
 :Liberia rdf:type :Area ,
                   :Low_Income_Country ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long -10.8 ;
+         
+         :lat 6.316666666666666 .
 
 
 
@@ -3235,21 +3683,37 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#London
 
 :London rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -0.1275 ;
+        
+        :lat 51.507222222222225 ;
+        
+        dbo:country :United_Kingdom .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#London_Heathrow_Airport
 
 :London_Heathrow_Airport rdf:type :Area ,
-                                  owl:NamedIndividual .
+                                  owl:NamedIndividual ;
+                         
+                         :long -0.4613888888888889 ;
+                         
+                         :lat 51.4775 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Los_Angeles
 
 :Los_Angeles rdf:type :Area ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :long -118.25 ;
+             
+             :lat 34.05 ;
+             
+             dbo:country :United_States .
 
 
 
@@ -3298,14 +3762,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Machakos
 
 :Machakos rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat -1.5166666666666666 ;
+          
+          :long 37.266666666666666 ;
+          
+          dbo:country :Kenya .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Machiques
 
 :Machiques rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long -72.56666666666666 ;
+           
+           :lat 10.066666666666666 ;
+           
+           dbo:country :Venezuela .
 
 
 
@@ -3313,7 +3789,11 @@ dbo:Country rdf:type owl:Class .
 
 :Madagascar rdf:type :Area ,
                      :Low_Income_Country ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :lat -18.916666666666668 ;
+            
+            :long 47.516666666666666 .
 
 
 
@@ -3365,7 +3845,11 @@ dbo:Country rdf:type owl:Class .
 
 :Maldives rdf:type :Area ,
                    :Middle_Income_Country ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat 4.166666666666667 ;
+          
+          :long 73.5 .
 
 
 
@@ -3373,7 +3857,11 @@ dbo:Country rdf:type owl:Class .
 
 :Mali rdf:type :Area ,
                :Low_Income_Country ,
-               owl:NamedIndividual .
+               owl:NamedIndividual ;
+      
+      :long -8.0 ;
+      
+      :lat 12.65 .
 
 
 
@@ -3397,7 +3885,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Manaus
 
 :Manaus rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat -3.1 ;
+        
+        :long -60.016666666666666 ;
+        
+        dbo:country :Brazil .
 
 
 
@@ -3515,7 +4009,14 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Mariupol
 
 :Mariupol rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 37.54944444444445 ;
+          
+          :lat 47.09583333333333 ;
+          
+          dbo:country :Donetsk_Oblast ,
+                      :Ukraine .
 
 
 
@@ -3649,7 +4150,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medan
 
 :Medan rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat 3.5833333333333335 ;
+       
+       :long 98.66666666666667 ;
+       
+       dbo:country :Indonesia .
 
 
 
@@ -3663,14 +4170,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Medolla
 
 :Medolla rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long 11.066666666666666 ;
+         
+         :lat 44.85 ;
+         
+         dbo:country :Italy .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Meerut
 
 :Meerut rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 28.99 ;
+        
+        :long 77.7 ;
+        
+        dbo:country :India .
 
 
 
@@ -3684,7 +4203,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Memphis_International_Airport
 
 :Memphis_International_Airport rdf:type :Area ,
-                                        owl:NamedIndividual .
+                                        owl:NamedIndividual ;
+                               
+                               :long -89.97666666666667 ;
+                               
+                               :lat 35.0425 .
 
 
 
@@ -3740,7 +4263,11 @@ dbo:Country rdf:type owl:Class .
 
 :Mexico rdf:type :Area ,
                  :Middle_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -99.13333333333334 ;
+        
+        :lat 19.433333333333334 .
 
 
 
@@ -3768,14 +4295,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Milan
 
 :Milan rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat 45.46666666666667 ;
+       
+       :long 9.183333333333334 ;
+       
+       dbo:country :Italy .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Minneapolis
 
 :Minneapolis rdf:type :Area ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :long -93.26666666666667 ;
+             
+             :lat 44.983333333333334 ;
+             
+             dbo:country :United_States .
 
 
 
@@ -3803,21 +4342,37 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Modena
 
 :Modena rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 10.933333333333334 ;
+        
+        :lat 44.65 ;
+        
+        dbo:country :Italy .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Mogadishu
 
 :Mogadishu rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat 2.033333333333333 ;
+           
+           :long 45.35 ;
+           
+           dbo:country :Somalia .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Moises_R._Espinosa_Airport
 
 :Moises_R._Espinosa_Airport rdf:type :Area ,
-                                     owl:NamedIndividual .
+                                     owl:NamedIndividual ;
+                            
+                            :lat 12.369444444444444 ;
+                            
+                            :long 123.62916666666666 .
 
 
 
@@ -3831,7 +4386,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Mombasa
 
 :Mombasa rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat -4.05 ;
+         
+         :long 39.666666666666664 ;
+         
+         dbo:country :Kenya .
 
 
 
@@ -3959,14 +4520,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Naha_Airport
 
 :Naha_Airport rdf:type :Area ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :long 127.64583333333333 ;
+              
+              :lat 26.195833333333333 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Nairobi
 
 :Nairobi rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat -1.2833333333333332 ;
+         
+         :long 36.81666666666667 ;
+         
+         dbo:country :Kenya .
 
 
 
@@ -4001,7 +4572,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Negros_Oriental
 
 :Negros_Oriental rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :long 123.0 ;
+                 
+                 :lat 9.75 ;
+                 
+                 dbo:country :Philippines .
 
 
 
@@ -4059,7 +4636,11 @@ dbo:Country rdf:type owl:Class .
 
 :New_Zealand rdf:type :Area ,
                       :High_Income_Country ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :lat -41.28333333333333 ;
+             
+             :long 174.45 .
 
 
 
@@ -4088,7 +4669,17 @@ dbo:Country rdf:type owl:Class .
 
 :Nigeria rdf:type :Area ,
                   :Middle_Income_Country ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long 7.483333333333333 ;
+         
+         :lat 9.066666666666666 .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Norfolk
+
+:Norfolk rdf:type owl:NamedIndividual .
 
 
 
@@ -4109,7 +4700,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#North_Rhine-Westphalia
 
 :North_Rhine-Westphalia rdf:type :Area ,
-                                 owl:NamedIndividual .
+                                 owl:NamedIndividual ;
+                        
+                        :lat 51.46666666666667 ;
+                        
+                        :long 7.55 ;
+                        
+                        dbo:country :Germany .
 
 
 
@@ -4175,7 +4772,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Oklahoma_City
 
 :Oklahoma_City rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :long -97.535 ;
+               
+               :lat 35.48222222222222 ;
+               
+               dbo:country :United_States .
 
 
 
@@ -4201,7 +4804,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Orenburg_Oblast
 
 :Orenburg_Oblast rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat 52.13333333333333 ;
+                 
+                 :long 55.6 ;
+                 
+                 dbo:country :Russia .
 
 
 
@@ -4278,7 +4887,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Paramakudi
 
 :Paramakudi rdf:type :Area ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :long 78.591 ;
+            
+            :lat 9.544 ;
+            
+            dbo:country :India .
 
 
 
@@ -4299,7 +4914,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Paris
 
 :Paris rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 2.3508 ;
+       
+       :lat 48.8567 ;
+       
+       dbo:country :France .
 
 
 
@@ -4313,14 +4934,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Patna
 
 :Patna rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat 25.611 ;
+       
+       :long 85.144 ;
+       
+       dbo:country :India .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Penghu
 
 :Penghu rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 119.58333333333333 ;
+        
+        :lat 23.583333333333332 ;
+        
+        dbo:country :Taiwan .
 
 
 
@@ -4342,14 +4975,24 @@ dbo:Country rdf:type owl:Class .
 
 :Peru rdf:type :Area ,
                :Middle_Income_Country ,
-               owl:NamedIndividual .
+               owl:NamedIndividual ;
+      
+      :lat -12.043333333333333 ;
+      
+      :long -77.02833333333334 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Philadelphia
 
 :Philadelphia rdf:type :Area ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :long -75.16666666666667 ;
+              
+              :lat 39.95 ;
+              
+              dbo:country :United_States .
 
 
 
@@ -4367,14 +5010,22 @@ dbo:Country rdf:type owl:Class .
 
 :Philippines rdf:type :Area ,
                       :Middle_Income_Country ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :long 120.96666666666667 ;
+             
+             :lat 14.583333333333334 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Phuket_International_Airport
 
 :Phuket_International_Airport rdf:type :Area ,
-                                       owl:NamedIndividual .
+                                       owl:NamedIndividual ;
+                              
+                              :lat 8.113055555555556 ;
+                              
+                              :long 98.31666666666666 .
 
 
 
@@ -4400,7 +5051,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Pitești
 
 :Pitești rdf:type :Area ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long 24.86777777777778 ;
+         
+         :lat 44.86055555555556 ;
+         
+         dbo:country :Romania .
 
 
 
@@ -4522,21 +5179,39 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Queens
 
 :Queens rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long -73.86666666666666 ;
+        
+        :lat 40.75 ;
+        
+        dbo:country :United_States .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Quetzaltenango_Department
 
 :Quetzaltenango_Department rdf:type :Area ,
-                                    owl:NamedIndividual .
+                                    owl:NamedIndividual ;
+                           
+                           :long -91.5188888888889 ;
+                           
+                           :lat 14.845833333333333 ;
+                           
+                           dbo:country :Guatemala .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Quiché_Department
 
 :Quiché_Department rdf:type :Area ,
-                            owl:NamedIndividual .
+                            owl:NamedIndividual ;
+                   
+                   :long -91.15 ;
+                   
+                   :lat 15.03 ;
+                   
+                   dbo:country :Guatemala .
 
 
 
@@ -4564,7 +5239,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Reyhanlı
 
 :Reyhanlı rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat 36.26916666666666 ;
+          
+          :long 36.56722222222222 ;
+          
+          dbo:country :Turkey .
 
 
 
@@ -4637,7 +5318,19 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Rostov_Oblast
 
 :Rostov_Oblast rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :long 41.18333333333333 ;
+               
+               :lat 47.86666666666667 ;
+               
+               dbo:country :Russia .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Russia
+
+:Russia rdf:type owl:NamedIndividual .
 
 
 
@@ -4701,7 +5394,11 @@ dbo:Country rdf:type owl:Class .
 
 :Samoa rdf:type :Area ,
                 :Middle_Income_Country ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :lat -13.833333333333334 ;
+       
+       :long -171.75 .
 
 
 
@@ -4789,14 +5486,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Santiago
 
 :Santiago rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :lat -33.45 ;
+          
+          :long -70.66666666666667 ;
+          
+          dbo:country :Chile .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Santiago_de_Compostela
 
 :Santiago_de_Compostela rdf:type :Area ,
-                                 owl:NamedIndividual .
+                                 owl:NamedIndividual ;
+                        
+                        :long -8.544444444444444 ;
+                        
+                        :lat 42.87777777777778 ;
+                        
+                        dbo:country :Spain .
 
 
 
@@ -4821,7 +5530,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Santo_Domingo
 
 :Santo_Domingo rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :long -69.95 ;
+               
+               :lat 18.466666666666665 ;
+               
+               dbo:country :Dominican_Republic .
 
 
 
@@ -4839,6 +5554,12 @@ dbo:Country rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Scotland
+
+:Scotland rdf:type owl:NamedIndividual .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Seattle_Pacific_University
 
 :Seattle_Pacific_University rdf:type :Area ,
@@ -4850,7 +5571,11 @@ dbo:Country rdf:type owl:Class .
 
 :Senegal rdf:type :Area ,
                   :Middle_Income_Country ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :long -17.416666666666668 ;
+         
+         :lat 14.666666666666666 .
 
 
 
@@ -4889,7 +5614,11 @@ dbo:Country rdf:type owl:Class .
 
 :Serbia rdf:type :Area ,
                  :Middle_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 20.466666666666665 ;
+        
+        :lat 44.8 .
 
 
 
@@ -4910,7 +5639,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Sharm_el-Sheikh
 
 :Sharm_el-Sheikh rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat 27.912222222222223 ;
+                 
+                 :long 34.32972222222222 ;
+                 
+                 dbo:country :Egypt .
 
 
 
@@ -4958,7 +5693,11 @@ dbo:Country rdf:type owl:Class .
 
 :Sierra_Leone rdf:type :Area ,
                        :Low_Income_Country ,
-                       owl:NamedIndividual .
+                       owl:NamedIndividual ;
+              
+              :long -13.23445 ;
+              
+              :lat 8.48445 .
 
 
 
@@ -4993,7 +5732,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Sinjar
 
 :Sinjar rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 36.3225 ;
+        
+        :long 41.86416666666667 .
 
 
 
@@ -5021,7 +5764,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Skopje
 
 :Skopje rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 21.433333333333334 ;
+        
+        :lat 42.0 ;
+        
+        dbo:country :Republic_of_Macedonia .
 
 
 
@@ -5054,14 +5803,24 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Sochi_International_Airport
 
 :Sochi_International_Airport rdf:type :Area ,
-                                      owl:NamedIndividual .
+                                      owl:NamedIndividual ;
+                             
+                             :long 39.95666666666666 ;
+                             
+                             :lat 43.45 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Sololá_Department
 
 :Sololá_Department rdf:type :Area ,
-                            owl:NamedIndividual .
+                            owl:NamedIndividual ;
+                   
+                   :long -91.47583333333333 ;
+                   
+                   :lat 14.773888888888889 ;
+                   
+                   dbo:country :Guatemala .
 
 
 
@@ -5069,7 +5828,11 @@ dbo:Country rdf:type owl:Class .
 
 :Solomon_Islands rdf:type :Area ,
                           :Middle_Income_Country ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :lat -9.466666666666667 ;
+                 
+                 :long 159.81666666666666 .
 
 
 
@@ -5084,7 +5847,11 @@ dbo:Country rdf:type owl:Class .
 
 :Somalia rdf:type :Area ,
                   :Low_Income_Country ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat 2.033333333333333 ;
+         
+         :long 45.35 .
 
 
 
@@ -5126,7 +5893,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#South_Sumatra
 
 :South_Sumatra rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :lat -2.75 ;
+               
+               :long 103.83333333333333 ;
+               
+               dbo:country :Indonesia .
 
 
 
@@ -5191,14 +5964,24 @@ dbo:Country rdf:type owl:Class .
 
 :Sri_Lanka rdf:type :Area ,
                     :Middle_Income_Country ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat 6.933333333333334 ;
+           
+           :long 79.83333333333333 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Staten_Island
 
 :Staten_Island rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :long -74.14483888888888 ;
+               
+               :lat 40.576280555555556 ;
+               
+               dbo:country :United_States .
 
 
 
@@ -5239,7 +6022,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Suchiate
 
 :Suchiate rdf:type :Area ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long -92.14972222222222 ;
+          
+          :lat 14.679166666666667 ;
+          
+          dbo:country :Mexico .
 
 
 
@@ -5267,7 +6056,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Surakarta
 
 :Surakarta rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat -7.566666666666666 ;
+           
+           :long 110.81666666666666 ;
+           
+           dbo:country :Indonesia .
 
 
 
@@ -5306,6 +6101,12 @@ dbo:Country rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Syria
+
+:Syria rdf:type owl:NamedIndividual .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Syrian_Arab_Republic
 
 :Syrian_Arab_Republic rdf:type :Middle_Income_Country ,
@@ -5316,7 +6117,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#São_Paulo
 
 :São_Paulo rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :lat -23.55 ;
+           
+           :long -46.63333333333333 ;
+           
+           dbo:country :Brazil .
 
 
 
@@ -5360,7 +6167,11 @@ dbo:Country rdf:type owl:Class .
 
 :Taiwan rdf:type :Area ,
                  :High_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 121.63333333333334 ;
+        
+        :lat 25.033333333333335 .
 
 
 
@@ -5395,14 +6206,26 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tapachula
 
 :Tapachula rdf:type :Area ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long -92.26666666666667 ;
+           
+           :lat 14.9 ;
+           
+           dbo:country :Mexico .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tehran
 
 :Tehran rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 35.69611111111111 ;
+        
+        :long 51.42305555555556 ;
+        
+        dbo:country :Iran .
 
 
 
@@ -5417,7 +6240,17 @@ dbo:Country rdf:type owl:Class .
 
 :Thailand rdf:type :Area ,
                    :Middle_Income_Country ,
-                   owl:NamedIndividual .
+                   owl:NamedIndividual ;
+          
+          :long 100.48333333333333 ;
+          
+          :lat 13.75 .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#The_Democratic_Republic_Of_Congo
+
+:The_Democratic_Republic_Of_Congo rdf:type owl:NamedIndividual .
 
 
 
@@ -5431,7 +6264,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Thessaloniki_International_Airport
 
 :Thessaloniki_International_Airport rdf:type :Area ,
-                                             owl:NamedIndividual .
+                                             owl:NamedIndividual ;
+                                    
+                                    :long 22.970833333333335 ;
+                                    
+                                    :lat 40.51972222222222 .
 
 
 
@@ -5452,7 +6289,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tokyo
 
 :Tokyo rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 139.6917 ;
+       
+       :lat 35.689505555555556 ;
+       
+       dbo:country :Japan .
 
 
 
@@ -5460,21 +6303,35 @@ dbo:Country rdf:type owl:Class .
 
 :Tonga rdf:type :Area ,
                 :Middle_Income_Country ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long -175.2 ;
+       
+       :lat -21.133333333333333 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Toronto_Pearson_International_Airport
 
 :Toronto_Pearson_International_Airport rdf:type :Area ,
-                                                owl:NamedIndividual .
+                                                owl:NamedIndividual ;
+                                       
+                                       :long -79.63055555555556 ;
+                                       
+                                       :lat 43.67666666666667 .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Totonicapán_Department
 
 :Totonicapán_Department rdf:type :Area ,
-                                 owl:NamedIndividual .
+                                 owl:NamedIndividual ;
+                        
+                        :long -91.36 ;
+                        
+                        :lat 14.9125 ;
+                        
+                        dbo:country :Guatemala .
 
 
 
@@ -5520,7 +6377,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tula_Oblast
 
 :Tula_Oblast rdf:type :Area ,
-                      owl:NamedIndividual .
+                      owl:NamedIndividual ;
+             
+             :long 37.583333333333336 ;
+             
+             :lat 53.916666666666664 ;
+             
+             dbo:country :Russia .
 
 
 
@@ -5539,7 +6402,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tunis
 
 :Tunis rdf:type :Area ,
-                owl:NamedIndividual .
+                owl:NamedIndividual ;
+       
+       :long 10.183333333333334 ;
+       
+       :lat 36.8 ;
+       
+       dbo:country :Tunisia .
 
 
 
@@ -5561,7 +6430,11 @@ dbo:Country rdf:type owl:Class .
 
 :Turkey rdf:type :Area ,
                  :Middle_Income_Country ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :long 32.833333333333336 ;
+        
+        :lat 39.916666666666664 .
 
 
 
@@ -5626,7 +6499,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Tyumen_Oblast
 
 :Tyumen_Oblast rdf:type :Area ,
-                        owl:NamedIndividual .
+                        owl:NamedIndividual ;
+               
+               :lat 57.833333333333336 ;
+               
+               :long 69.0 ;
+               
+               dbo:country :Russia .
 
 
 
@@ -5765,7 +6644,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Valparaíso
 
 :Valparaíso rdf:type :Area ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :lat -33.05 ;
+            
+            :long -71.61666666666666 ;
+            
+            dbo:country :Chile .
 
 
 
@@ -5773,7 +6658,11 @@ dbo:Country rdf:type owl:Class .
 
 :Vanuatu rdf:type :Area ,
                   :Middle_Income_Country ,
-                  owl:NamedIndividual .
+                  owl:NamedIndividual ;
+         
+         :lat -17.75 ;
+         
+         :long 168.3 .
 
 
 
@@ -5795,7 +6684,11 @@ dbo:Country rdf:type owl:Class .
 
 :Venezuela rdf:type :Area ,
                     :High_Income_Country ,
-                    owl:NamedIndividual .
+                    owl:NamedIndividual ;
+           
+           :long -66.96666666666667 ;
+           
+           :lat 10.5 .
 
 
 
@@ -5809,7 +6702,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Vilnius_Airport
 
 :Vilnius_Airport rdf:type :Area ,
-                          owl:NamedIndividual .
+                          owl:NamedIndividual ;
+                 
+                 :long 25.287777777777777 ;
+                 
+                 :lat 54.636944444444445 .
 
 
 
@@ -5878,7 +6775,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Wellington
 
 :Wellington rdf:type :Area ,
-                     owl:NamedIndividual .
+                     owl:NamedIndividual ;
+            
+            :lat -41.28888888888889 ;
+            
+            :long 174.77722222222224 .
 
 
 
@@ -5945,7 +6846,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Whitewater_Baldy
 
 :Whitewater_Baldy rdf:type :Area ,
-                           owl:NamedIndividual .
+                           owl:NamedIndividual ;
+                  
+                  :long -108.6417248 ;
+                  
+                  :lat 33.323675 .
 
 
 
@@ -5959,7 +6864,11 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#World_Trade_Center
 
 :World_Trade_Center rdf:type :Area ,
-                             owl:NamedIndividual .
+                             owl:NamedIndividual ;
+                    
+                    :long -74.0125 ;
+                    
+                    :lat 40.711666666666666 .
 
 
 
@@ -6055,7 +6964,13 @@ dbo:Country rdf:type owl:Class .
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Ürümqi
 
 :Ürümqi rdf:type :Area ,
-                 owl:NamedIndividual .
+                 owl:NamedIndividual ;
+        
+        :lat 43.825 ;
+        
+        :long 87.6 ;
+        
+        dbo:country :China .
 
 
 

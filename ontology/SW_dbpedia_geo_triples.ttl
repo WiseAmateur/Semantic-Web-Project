@@ -1,0 +1,530 @@
+@prefix : <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/daan_julien/ontologies/dbpedia_geo> .
+
+<http://www.semanticweb.org/daan_julien/ontologies/dbpedia_geo> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://dbpedia.org/ontology/country
+
+dbo:country rdf:type owl:ObjectProperty ;
+            
+            rdfs:range dbo:Country .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#lat
+
+:lat rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#long
+
+:long rdf:type owl:DatatypeProperty .
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+    :Kostanay_Region :lat "53.2"^^xsd:integer ;
+    :long "63.63333333333333"^^xsd:integer ;
+    dbo:country :Kazakhstan .
+    :Belgrade :lat "44.81666666666667"^^xsd:integer ;
+    :long "20.466666666666665"^^xsd:integer ;
+    dbo:country :Serbia .
+    :Great_Plains :lat "37.0"^^xsd:integer ;
+    :long "-97.0"^^xsd:integer ;
+    dbo:country :Canada .
+    :Great_Plains :lat "37.0"^^xsd:integer ;
+    :long "-97.0"^^xsd:integer ;
+    dbo:country :Mexico .
+    :Great_Plains :lat "37.0"^^xsd:integer ;
+    :long "-97.0"^^xsd:integer ;
+    dbo:country :United_States .
+    :Irkutsk_Oblast :lat "57.36666666666667"^^xsd:integer ;
+    :long "106.0"^^xsd:integer ;
+    dbo:country :Russia .
+    :Oklahoma_City :lat "35.48222222222222"^^xsd:integer ;
+    :long "-97.535"^^xsd:integer ;
+    dbo:country :United_States .
+    :Santo_Domingo :lat "18.466666666666665"^^xsd:integer ;
+    :long "-69.95"^^xsd:integer ;
+    dbo:country :Dominican_Republic .
+    :London :lat "51.507222222222225"^^xsd:integer ;
+    :long "-0.1275"^^xsd:integer ;
+    dbo:country :United_Kingdom .
+    :Alto_Hospicio :lat "-20.25"^^xsd:integer ;
+    :long "-70.11666666666666"^^xsd:integer ;
+    dbo:country :Chile .
+    :Benghazi :lat "32.11666666666667"^^xsd:integer ;
+    :long "20.066666666666666"^^xsd:integer ;
+    dbo:country :Libya .
+    :Cromer :lat "52.931"^^xsd:integer ;
+    :long "1.302"^^xsd:integer ;
+    dbo:country :Norfolk .
+    :Cromer :lat "52.931"^^xsd:integer ;
+    :long "1.302"^^xsd:integer ;
+    dbo:country :United_Kingdom .
+    :Aalborg :lat "57.05"^^xsd:integer ;
+    :long "9.916666666666666"^^xsd:integer ;
+    dbo:country :Denmark .
+    :Abuja :lat "9.066666666666666"^^xsd:integer ;
+    :long "7.483333333333333"^^xsd:integer ;
+    dbo:country :Nigeria .
+    :Awaran :lat "26.27"^^xsd:integer ;
+    :long "65.14"^^xsd:integer ;
+    dbo:country :Pakistan .
+    :Baotou :lat "40.65"^^xsd:integer ;
+    :long "109.83333333333333"^^xsd:integer ;
+    dbo:country :China .
+    :Barcelona :lat "41.38333333333333"^^xsd:integer ;
+    :long "2.183333333333333"^^xsd:integer ;
+    dbo:country :Spain .
+    :Bashkortostan :lat "54.46666666666667"^^xsd:integer ;
+    :long "56.266666666666666"^^xsd:integer ;
+    dbo:country :Russia .
+    :Bendigo :lat "36.75"^^xsd:integer ;
+    :long "144.26666666666668"^^xsd:integer ;
+    dbo:country :Australia .
+    :Blace :lat "43.29578333333333"^^xsd:integer ;
+    :long "21.28595"^^xsd:integer ;
+    dbo:country :Serbia .
+    :Bohol :lat "9.833333333333334"^^xsd:integer ;
+    :long "124.16666666666667"^^xsd:integer ;
+    dbo:country :Philippines .
+    :Brazzaville :lat "-4.267777777777778"^^xsd:integer ;
+    :long "15.291944444444445"^^xsd:integer ;
+    dbo:country :Republic_of_the_Congo .
+    :Brindisi :lat "40.63333333333333"^^xsd:integer ;
+    :long "17.933333333333334"^^xsd:integer ;
+    dbo:country :Italy .
+    :Bushehr_Province :lat "28.9184"^^xsd:integer ;
+    :long "50.8382"^^xsd:integer ;
+    dbo:country :Iran .
+    :Cebu :lat "10.316666666666666"^^xsd:integer ;
+    :long "123.75"^^xsd:integer ;
+    dbo:country :Philippines .
+    :Chiapas :lat "16.416666666666668"^^xsd:integer ;
+    :long "-92.41666666666667"^^xsd:integer ;
+    dbo:country :Mexico .
+    :Chongqing :lat "29.558333333333334"^^xsd:integer ;
+    :long "106.56666666666666"^^xsd:integer ;
+    dbo:country :China .
+    :Cologne :lat "50.93638888888889"^^xsd:integer ;
+    :long "6.9527777777777775"^^xsd:integer ;
+    dbo:country :Germany .
+    :Dalian :lat "38.920833333333334"^^xsd:integer ;
+    :long "121.63916666666667"^^xsd:integer ;
+    dbo:country :China .
+    :Dallas :lat "32.77583333333333"^^xsd:integer ;
+    :long "-96.79666666666667"^^xsd:integer ;
+    dbo:country :United_States .
+    :Denver :lat "39.76185"^^xsd:integer ;
+    :long "-104.881105"^^xsd:integer ;
+    dbo:country :United_States .
+    :Düsseldorf :lat "51.233333333333334"^^xsd:integer ;
+    :long "6.783333333333333"^^xsd:integer ;
+    dbo:country :Germany .
+    :Essen :lat "51.450833333333335"^^xsd:integer ;
+    :long "7.013055555555556"^^xsd:integer ;
+    dbo:country :Germany .
+    :Florence :lat "43.78333333333333"^^xsd:integer ;
+    :long "11.25"^^xsd:integer ;
+    dbo:country :Italy .
+    :Glasgow :lat "55.858"^^xsd:integer ;
+    :long "-4.259"^^xsd:integer ;
+    dbo:country :Scotland .
+    :Glasgow :lat "55.858"^^xsd:integer ;
+    :long "-4.259"^^xsd:integer ;
+    dbo:country :United_Kingdom .
+    :Guerrero :lat "17.616666666666667"^^xsd:integer ;
+    :long "-99.95"^^xsd:integer ;
+    dbo:country :Mexico .
+    :Huehuetenango_Department :lat "15.314166666666667"^^xsd:integer ;
+    :long "-91.47583333333333"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Iquique_Province :lat "-20.21388888888889"^^xsd:integer ;
+    :long "-70.1525"^^xsd:integer ;
+    dbo:country :Chile .
+    :Jos :lat "9.933333333333334"^^xsd:integer ;
+    :long "8.883333333333333"^^xsd:integer ;
+    dbo:country :Nigeria .
+    :Kaduna :lat "10.523055555555555"^^xsd:integer ;
+    :long "7.440277777777778"^^xsd:integer ;
+    dbo:country :Nigeria .
+    :Kamloops :lat "50.67611111111111"^^xsd:integer ;
+    :long "-120.34083333333334"^^xsd:integer ;
+    dbo:country :Canada .
+    :Kampot_Province :lat "10.6"^^xsd:integer ;
+    :long "104.16666666666667"^^xsd:integer ;
+    dbo:country :Cambodia .
+    :Kaohsiung :lat "22.633333333333333"^^xsd:integer ;
+    :long "120.26666666666667"^^xsd:integer ;
+    dbo:country :Taiwan .
+    :Karachi :lat "24.86"^^xsd:integer ;
+    :long "67.01"^^xsd:integer ;
+    dbo:country :Pakistan .
+    :Kinshasa :lat "-4.325"^^xsd:integer ;
+    :long "15.322222222222223"^^xsd:integer ;
+    dbo:country :The_Democratic_Republic_Of_Congo .
+    :Krefeld :lat "51.333333333333336"^^xsd:integer ;
+    :long "6.566666666666666"^^xsd:integer ;
+    dbo:country :Germany .
+    :Lagos :lat "6.453055555555555"^^xsd:integer ;
+    :long "3.3958333333333335"^^xsd:integer ;
+    dbo:country :Nigeria .
+    :Las_Palmas :lat "28.15"^^xsd:integer ;
+    :long "-15.416666666666666"^^xsd:integer ;
+    dbo:country :Spain .
+    :Los_Angeles :lat "34.05"^^xsd:integer ;
+    :long "-118.25"^^xsd:integer ;
+    dbo:country :United_States .
+    :Machakos :lat "-1.5166666666666666"^^xsd:integer ;
+    :long "37.266666666666666"^^xsd:integer ;
+    dbo:country :Kenya .
+    :Machiques :lat "10.066666666666666"^^xsd:integer ;
+    :long "-72.56666666666666"^^xsd:integer ;
+    dbo:country :Venezuela .
+    :Mariupol :lat "47.09583333333333"^^xsd:integer ;
+    :long "37.54944444444445"^^xsd:integer ;
+    dbo:country :Ukraine .
+    :Mariupol :lat "47.09583333333333"^^xsd:integer ;
+    :long "37.54944444444445"^^xsd:integer ;
+    dbo:country :Donetsk_Oblast .
+    :Medan :lat "3.5833333333333335"^^xsd:integer ;
+    :long "98.66666666666667"^^xsd:integer ;
+    dbo:country :Indonesia .
+    :Medolla :lat "44.85"^^xsd:integer ;
+    :long "11.066666666666666"^^xsd:integer ;
+    dbo:country :Italy .
+    :Meerut :lat "28.99"^^xsd:integer ;
+    :long "77.7"^^xsd:integer ;
+    dbo:country :India .
+    :Milan :lat "45.46666666666667"^^xsd:integer ;
+    :long "9.183333333333334"^^xsd:integer ;
+    dbo:country :Italy .
+    :Modena :lat "44.65"^^xsd:integer ;
+    :long "10.933333333333334"^^xsd:integer ;
+    dbo:country :Italy .
+    :Mogadishu :lat "2.033333333333333"^^xsd:integer ;
+    :long "45.35"^^xsd:integer ;
+    dbo:country :Somalia .
+    :Mombasa :lat "-4.05"^^xsd:integer ;
+    :long "39.666666666666664"^^xsd:integer ;
+    dbo:country :Kenya .
+    :Nairobi :lat "-1.2833333333333332"^^xsd:integer ;
+    :long "36.81666666666667"^^xsd:integer ;
+    dbo:country :Kenya .
+    :Negros_Oriental :lat "9.75"^^xsd:integer ;
+    :long "123.0"^^xsd:integer ;
+    dbo:country :Philippines .
+    :North_Rhine-Westphalia :lat "51.46666666666667"^^xsd:integer ;
+    :long "7.55"^^xsd:integer ;
+    dbo:country :Germany .
+    :Paris :lat "48.8567"^^xsd:integer ;
+    :long "2.3508"^^xsd:integer ;
+    dbo:country :France .
+    :Patna :lat "25.611"^^xsd:integer ;
+    :long "85.144"^^xsd:integer ;
+    dbo:country :India .
+    :Penghu :lat "23.583333333333332"^^xsd:integer ;
+    :long "119.58333333333333"^^xsd:integer ;
+    dbo:country :Taiwan .
+    :Philadelphia :lat "39.95"^^xsd:integer ;
+    :long "-75.16666666666667"^^xsd:integer ;
+    dbo:country :United_States .
+    :Queens :lat "40.75"^^xsd:integer ;
+    :long "-73.86666666666666"^^xsd:integer ;
+    dbo:country :United_States .
+    :Quetzaltenango_Department :lat "14.845833333333333"^^xsd:integer ;
+    :long "-91.5188888888889"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Quiché_Department :lat "15.03"^^xsd:integer ;
+    :long "-91.15"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Santiago :lat "-33.45"^^xsd:integer ;
+    :long "-70.66666666666667"^^xsd:integer ;
+    dbo:country :Chile .
+    :Santiago_de_Compostela :lat "42.87777777777778"^^xsd:integer ;
+    :long "-8.544444444444444"^^xsd:integer ;
+    dbo:country :Spain .
+    :Skopje :lat "42.0"^^xsd:integer ;
+    :long "21.433333333333334"^^xsd:integer ;
+    dbo:country :Republic_of_Macedonia .
+    :Sololá_Department :lat "14.773888888888889"^^xsd:integer ;
+    :long "-91.47583333333333"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Suchiate :lat "14.679166666666667"^^xsd:integer ;
+    :long "-92.14972222222222"^^xsd:integer ;
+    dbo:country :Mexico .
+    :Surakarta :lat "-7.566666666666666"^^xsd:integer ;
+    :long "110.81666666666666"^^xsd:integer ;
+    dbo:country :Indonesia .
+    :São_Paulo :lat "-23.55"^^xsd:integer ;
+    :long "-46.63333333333333"^^xsd:integer ;
+    dbo:country :Brazil .
+    :Tapachula :lat "14.9"^^xsd:integer ;
+    :long "-92.26666666666667"^^xsd:integer ;
+    dbo:country :Mexico .
+    :Tehran :lat "35.69611111111111"^^xsd:integer ;
+    :long "51.42305555555556"^^xsd:integer ;
+    dbo:country :Iran .
+    :Tokyo :lat "35.689505555555556"^^xsd:integer ;
+    :long "139.6917"^^xsd:integer ;
+    dbo:country :Japan .
+    :Totonicapán_Department :lat "14.9125"^^xsd:integer ;
+    :long "-91.36"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Tunis :lat "36.8"^^xsd:integer ;
+    :long "10.183333333333334"^^xsd:integer ;
+    dbo:country :Tunisia .
+    :Valparaíso :lat "-33.05"^^xsd:integer ;
+    :long "-71.61666666666666"^^xsd:integer ;
+    dbo:country :Chile .
+    :Ürümqi :lat "43.825"^^xsd:integer ;
+    :long "87.6"^^xsd:integer ;
+    dbo:country :China .
+    :Paramakudi :lat "9.544"^^xsd:integer ;
+    :long "78.591"^^xsd:integer ;
+    dbo:country :India .
+    :Constanța_County :lat "44.27"^^xsd:integer ;
+    :long "28.31"^^xsd:integer ;
+    dbo:country :Romania .
+    :Constanța_County :lat "44.27"^^xsd:integer ;
+    :long "28.31"^^xsd:integer ;
+    dbo:country :Kingdom_of_Romania .
+    :Pitești :lat "44.86055555555556"^^xsd:integer ;
+    :long "24.86777777777778"^^xsd:integer ;
+    dbo:country :Romania .
+    :Minneapolis :lat "44.983333333333334"^^xsd:integer ;
+    :long "-93.26666666666667"^^xsd:integer ;
+    dbo:country :United_States .
+    :Bassersdorf :lat "47.45"^^xsd:integer ;
+    :long "8.633333333333333"^^xsd:integer ;
+    dbo:country :Switzerland .
+    :Guatemala_City :lat "14.613333333333333"^^xsd:integer ;
+    :long "-90.53527777777778"^^xsd:integer ;
+    dbo:country :Guatemala .
+    :Aktobe_Region :lat "50.28333333333333"^^xsd:integer ;
+    :long "57.166666666666664"^^xsd:integer ;
+    dbo:country :Kazakhstan .
+    :Chelyabinsk_Oblast :lat "54.53333333333333"^^xsd:integer ;
+    :long "60.333333333333336"^^xsd:integer ;
+    dbo:country :Russia .
+    :Durban :lat "29.883333333333333"^^xsd:integer ;
+    :long "31.05"^^xsd:integer ;
+    dbo:country :South_Africa .
+    :East_Azerbaidjan :lat "38.0766"^^xsd:integer ;
+    :long "46.28"^^xsd:integer ;
+    dbo:country :Iran .
+    :Gonesse :lat "48.9875"^^xsd:integer ;
+    :long "2.4494"^^xsd:integer ;
+    dbo:country :France .
+    :Manaus :lat "-3.1"^^xsd:integer ;
+    :long "-60.016666666666666"^^xsd:integer ;
+    dbo:country :Brazil .
+    :Orenburg_Oblast :lat "52.13333333333333"^^xsd:integer ;
+    :long "55.6"^^xsd:integer ;
+    dbo:country :Russia .
+    :Rostov_Oblast :lat "47.86666666666667"^^xsd:integer ;
+    :long "41.18333333333333"^^xsd:integer ;
+    dbo:country :Russia .
+    :South_Sumatra :lat "-2.75"^^xsd:integer ;
+    :long "103.83333333333333"^^xsd:integer ;
+    dbo:country :Indonesia .
+    :Staten_Island :lat "40.576280555555556"^^xsd:integer ;
+    :long "-74.14483888888888"^^xsd:integer ;
+    dbo:country :United_States .
+    :Tula_Oblast :lat "53.916666666666664"^^xsd:integer ;
+    :long "37.583333333333336"^^xsd:integer ;
+    dbo:country :Russia .
+    :Tyumen_Oblast :lat "57.833333333333336"^^xsd:integer ;
+    :long "69.0"^^xsd:integer ;
+    dbo:country :Russia .
+    :Kafr_Zita :lat "35.37361111111111"^^xsd:integer ;
+    :long "36.60166666666667"^^xsd:integer ;
+    dbo:country :Syria .
+    :Sharm_el-Sheikh :lat "27.912222222222223"^^xsd:integer ;
+    :long "34.32972222222222"^^xsd:integer ;
+    dbo:country :Egypt .
+    :Ambegaon_taluka :lat "19.03472222222222"^^xsd:integer ;
+    :long "73.83638888888889"^^xsd:integer ;
+    dbo:country :India .
+    :Keçiborlu :lat "37.94305555555555"^^xsd:integer ;
+    :long "30.302222222222223"^^xsd:integer ;
+    dbo:country :Turkey .
+    :Reyhanlı :lat "36.26916666666666"^^xsd:integer ;
+    :long "36.56722222222222"^^xsd:integer ;
+    dbo:country :Turkey .
+    :Amsterdam_Airport_Schiphol :lat "52.308055555555555"^^xsd:integer ;
+    :long "4.764166666666666"^^xsd:integer .
+    :Juanda_International_Airport :lat "-7.379722222222222"^^xsd:integer ;
+    :long "112.78694444444444"^^xsd:integer .
+    :London_Heathrow_Airport :lat "51.4775"^^xsd:integer ;
+    :long "-0.4613888888888889"^^xsd:integer .
+    :Bhilai :lat "21.21"^^xsd:integer ;
+    :long "81.38"^^xsd:integer .
+    :Costa_Rica :lat "9.933333333333334"^^xsd:integer ;
+    :long "-84.08333333333333"^^xsd:integer .
+    :Somalia :lat "2.033333333333333"^^xsd:integer ;
+    :long "45.35"^^xsd:integer .
+    :Christchurch :lat "-43.53"^^xsd:integer ;
+    :long "172.62027777777777"^^xsd:integer .
+    :Khartoum :lat "15.633333333333333"^^xsd:integer ;
+    :long "32.53333333333333"^^xsd:integer .
+    :Lahore :lat "31.549722222222222"^^xsd:integer ;
+    :long "74.34361111111112"^^xsd:integer .
+    :Sinjar :lat "36.3225"^^xsd:integer ;
+    :long "41.86416666666667"^^xsd:integer .
+    :Wellington :lat "-41.28888888888889"^^xsd:integer ;
+    :long "174.77722222222224"^^xsd:integer .
+    :Cumbal_Volcano :lat "0.949"^^xsd:integer ;
+    :long "-77.888"^^xsd:integer .
+    :Afghanistan :lat "34.53333333333333"^^xsd:integer ;
+    :long "69.13333333333334"^^xsd:integer .
+    :Bosnia_and_Herzegovina :lat "43.86666666666667"^^xsd:integer ;
+    :long "18.416666666666668"^^xsd:integer .
+    :Bulgaria :lat "42.68333333333333"^^xsd:integer ;
+    :long "23.316666666666666"^^xsd:integer .
+    :Chile :lat "-33.43333333333333"^^xsd:integer ;
+    :long "-70.66666666666667"^^xsd:integer .
+    :Dominican_Republic :lat "19.0"^^xsd:integer ;
+    :long "-70.66666666666667"^^xsd:integer .
+    :Greece :lat "37.96666666666667"^^xsd:integer ;
+    :long "23.716666666666665"^^xsd:integer .
+    :Guatemala :lat "14.633333333333333"^^xsd:integer ;
+    :long "-90.5"^^xsd:integer .
+    :Guinea :lat "9.516666666666667"^^xsd:integer ;
+    :long "-13.7"^^xsd:integer .
+    :India :lat "28.613333333333333"^^xsd:integer ;
+    :long "77.20833333333333"^^xsd:integer .
+    :Indonesia :lat "-6.175"^^xsd:integer ;
+    :long "106.82833333333333"^^xsd:integer .
+    :Iran :lat "35.68333333333333"^^xsd:integer ;
+    :long "51.416666666666664"^^xsd:integer .
+    :Japan :lat "35.68333333333333"^^xsd:integer ;
+    :long "139.76666666666668"^^xsd:integer .
+    :Kazakhstan :lat "51.166666666666664"^^xsd:integer ;
+    :long "71.41666666666667"^^xsd:integer .
+    :Liberia :lat "6.316666666666666"^^xsd:integer ;
+    :long "-10.8"^^xsd:integer .
+    :Madagascar :lat "-18.916666666666668"^^xsd:integer ;
+    :long "47.516666666666666"^^xsd:integer .
+    :Maldives :lat "4.166666666666667"^^xsd:integer ;
+    :long "73.5"^^xsd:integer .
+    :Mali :lat "12.65"^^xsd:integer ;
+    :long "-8.0"^^xsd:integer .
+    :Mexico :lat "19.433333333333334"^^xsd:integer ;
+    :long "-99.13333333333334"^^xsd:integer .
+    :New_Zealand :lat "-41.28333333333333"^^xsd:integer ;
+    :long "174.45"^^xsd:integer .
+    :Nigeria :lat "9.066666666666666"^^xsd:integer ;
+    :long "7.483333333333333"^^xsd:integer .
+    :Peru :lat "-12.043333333333333"^^xsd:integer ;
+    :long "-77.02833333333334"^^xsd:integer .
+    :Philippines :lat "14.583333333333334"^^xsd:integer ;
+    :long "120.96666666666667"^^xsd:integer .
+    :Samoa :lat "-13.833333333333334"^^xsd:integer ;
+    :long "-171.75"^^xsd:integer .
+    :Senegal :lat "14.666666666666666"^^xsd:integer ;
+    :long "-17.416666666666668"^^xsd:integer .
+    :Serbia :lat "44.8"^^xsd:integer ;
+    :long "20.466666666666665"^^xsd:integer .
+    :Sierra_Leone :lat "8.48445"^^xsd:integer ;
+    :long "-13.23445"^^xsd:integer .
+    :Solomon_Islands :lat "-9.466666666666667"^^xsd:integer ;
+    :long "159.81666666666666"^^xsd:integer .
+    :Sri_Lanka :lat "6.933333333333334"^^xsd:integer ;
+    :long "79.83333333333333"^^xsd:integer .
+    :Taiwan :lat "25.033333333333335"^^xsd:integer ;
+    :long "121.63333333333334"^^xsd:integer .
+    :Thailand :lat "13.75"^^xsd:integer ;
+    :long "100.48333333333333"^^xsd:integer .
+    :Tonga :lat "-21.133333333333333"^^xsd:integer ;
+    :long "-175.2"^^xsd:integer .
+    :Turkey :lat "39.916666666666664"^^xsd:integer ;
+    :long "32.833333333333336"^^xsd:integer .
+    :Vanuatu :lat "-17.75"^^xsd:integer ;
+    :long "168.3"^^xsd:integer .
+    :Venezuela :lat "10.5"^^xsd:integer ;
+    :long "-66.96666666666667"^^xsd:integer .
+    :World_Trade_Center :lat "40.711666666666666"^^xsd:integer ;
+    :long "-74.0125"^^xsd:integer .
+    :Naha_Airport :lat "26.195833333333333"^^xsd:integer ;
+    :long "127.64583333333333"^^xsd:integer .
+    :Whitewater_Baldy :lat "33.323675"^^xsd:integer ;
+    :long "-108.6417248"^^xsd:integer .
+    :Dilsukhnagar :lat "17.368784"^^xsd:integer ;
+    :long "78.524652"^^xsd:integer .
+    :Toronto_Pearson_International_Airport :lat "43.67666666666667"^^xsd:integer ;
+    :long "-79.63055555555556"^^xsd:integer .
+    :Moises_R._Espinosa_Airport :lat "12.369444444444444"^^xsd:integer ;
+    :long "123.62916666666666"^^xsd:integer .
+    :Hanscom_Field :lat "42.47"^^xsd:integer ;
+    :long "-71.28888888888889"^^xsd:integer .
+    :Adisucipto_International_Airport :lat "-7.788055555555555"^^xsd:integer ;
+    :long "110.43166666666667"^^xsd:integer .
+    :Sochi_International_Airport :lat "43.45"^^xsd:integer ;
+    :long "39.95666666666666"^^xsd:integer .
+    :Ferrybridge_power_stations :lat "53.7174"^^xsd:integer ;
+    :long "-1.28058"^^xsd:integer .
+    :Gila_National_Forest :lat "33.47"^^xsd:integer ;
+    :long "-108.53"^^xsd:integer .
+    :Bob_Hope_Airport :lat "34.20055555555555"^^xsd:integer ;
+    :long "-118.35861111111112"^^xsd:integer .
+    :Copenhagen_Airport :lat "55.61805555555556"^^xsd:integer ;
+    :long "12.65611111111111"^^xsd:integer .
+    :Memphis_International_Airport :lat "35.0425"^^xsd:integer ;
+    :long "-89.97666666666667"^^xsd:integer .
+    :Phuket_International_Airport :lat "8.113055555555556"^^xsd:integer ;
+    :long "98.31666666666666"^^xsd:integer .
+    :Thessaloniki_International_Airport :lat "40.51972222222222"^^xsd:integer ;
+    :long "22.970833333333335"^^xsd:integer .
+    :Vilnius_Airport :lat "54.636944444444445"^^xsd:integer ;
+    :long "25.287777777777777"^^xsd:integer .
+
+ 
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

@@ -1,10 +1,31 @@
+$(document).ready(function()
+{
+    //var query = "SELECT DISTINCT ?area ?lat ?long WHERE { ?area rdf:type :Area ; :lat ?lat ; :long ?long . }";
+    var query = "SELECT DISTINCT ?area ?lat ?long WHERE { ?area rdf:type :Area ; :lat ?lat ; :long ?long . }";
+    $.get( "/sparql", data={'query': query}, function( data ) {
+        console.log(data);
+        
+        result = data.results.bindings;
+        
+        var l = result.length;
+        
+        for (var i = 0; i < l; i++)
+        {
+            console.log(result[i]["lat"]);
+        }
+    });
+    
+    //initialize();
+});
+
 function initialize() {
     var map;
     var centerPosition = new google.maps.LatLng(50.272213, -5.054973);
     var options = {
         'zoom': 12,
         'center': centerPosition,
-        'mapTypeId': google.maps.MapTypeId.ROADMAP
+        'mapTypeId': google.maps.MapTypeId.ROADMAP,
+        'zIndex': 2
     };
 
     map = new google.maps.Map(document.getElementById('map'), options);
@@ -55,4 +76,4 @@ function initialize() {
 
 }
 
-google.maps.event.addDomListener(window, 'onload', initialize());
+//google.maps.event.addDomListener(window, 'onload', initialize());
