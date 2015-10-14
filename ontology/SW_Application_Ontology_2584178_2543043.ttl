@@ -10,7 +10,8 @@
 
 <http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk> rdf:type owl:Ontology ;
                                                                           
-                                                                          owl:imports <http://www.semanticweb.org/daan_julien/ontologies/freebase_disaster> .
+                                                                          owl:imports <http://www.semanticweb.org/daan_julien/ontologies/freebase_disaster> ,
+                                                                                      <http://www.semanticweb.org/daan_julien/ontologies/worldbank_countries> .
 
 
 #################################################################
@@ -164,6 +165,14 @@ dbo:Country rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Income_Country
+
+:High_Income_Country rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf dbo:Country .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Risk_Area
 
 :High_Risk_Area rdf:type owl:Class ;
@@ -183,11 +192,11 @@ dbo:Country rdf:type owl:Class .
            
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tornado"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical cyclone"^^xsd:string
+                                 owl:hasValue "Tornado"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
@@ -237,14 +246,6 @@ dbo:Country rdf:type owl:Class .
 :No_Risk_Area rdf:type owl:Class ;
               
               rdfs:subClassOf :Area .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#High_Income_Country
-
-:High_Income_Country rdf:type owl:Class ;
-              
-              rdfs:subClassOf dbo:Country .
 
 
 
