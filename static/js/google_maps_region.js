@@ -12,10 +12,11 @@ $(document).ready(function()
         for (var i = 0; i < l; i++)
         {
             console.log(result[i]["lat"]);
+            console.log(result[i]["area"]);
         }
     });
     
-    //initialize();
+    google.maps.event.addDomListener(window, 'onload', initialize());
 });
 
 function initialize() {
@@ -28,52 +29,57 @@ function initialize() {
         'zIndex': 2
     };
 
-    map = new google.maps.Map(document.getElementById('map'), options);
+    map = new google.maps.Map(document.getElementById('map'), options);    
 
-    var circle = new google.maps.Circle({
-        center: centerPosition,
-        map: map,
-        fillColor: '#0000FF',
-        fillOpacity: 0.5,
-        strokeColor: '#0000FF',
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-        draggable: false,
-        zIndex: 30
-    });
+    
+    for (var i = 0; i < l; i++)
+    {
+        centerPosition = new google.maps.LatLng(result[i]["lat"], result[i]["long"]);
 
-    circle.setRadius(18362.55489862987);
+        var circle = new google.maps.Circle({
+            center: centerPosition,
+            map: map,
+            fillColor: '#0000FF',
+            fillOpacity: 0.5,
+            strokeColor: '#0000FF',
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+            draggable: false,
+            zIndex: 30
+        });
 
-    map.fitBounds(circle.getBounds());
+        circle.setRadius(18362.55489862987);
 
-    var labelText = "Text goes here";
+        map.fitBounds(circle.getBounds());
 
-    var myOptions = {
-        content: labelText,
-        boxStyle: {
-            background: '#FFFFFF',
-            border: "1px solid black",
-            textAlign: "center",
-            fontSize: "8pt",
-            width: "90px",
-            zIndex: 60
-        },
-        disableAutoPan: true,
-        pixelOffset: new google.maps.Size(-45, 0),
-        position: centerPosition,
-        closeBoxURL: "",
-        isHidden: false,
-        pane: "mapPane",
-        enableEventPropagation: true
-    };
+        var labelText = result[i]["area"];
 
-    var label = new InfoBox(myOptions);
-    label.open(map);
+        var myOptions = {
+            content: labelText,
+            boxStyle: {
+                background: '#FFFFFF',
+                border: "1px solid black",
+                textAlign: "center",
+                fontSize: "8pt",
+                width: "90px",
+                zIndex: 60
+            },
+            disableAutoPan: true,
+            pixelOffset: new google.maps.Size(-45, 0),
+            position: centerPosition,
+            closeBoxURL: "",
+            isHidden: false,
+            pane: "mapPane",
+            enableEventPropagation: true
+        };
 
-    google.maps.event.addListener(circle, 'center_changed', function () {
-        label.setPosition(circle.getCenter());
-    });
+        var label = new InfoBox(myOptions);
+        label.open(map);
 
+        google.maps.event.addListener(circle, 'center_changed', function () {
+            label.setPosition(circle.getCenter());
+        });
+    }
 }
 
-//google.maps.event.addDomListener(window, 'onload', initialize());
+
