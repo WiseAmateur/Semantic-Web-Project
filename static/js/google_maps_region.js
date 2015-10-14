@@ -28,17 +28,27 @@ function initialize(result) {
     {
         centerPosition = new google.maps.LatLng(result[i]["lat"]["value"], result[i]["long"]["value"]);
 
+        if (result[i]["type"]["value"] == "No_Risk_Area")
+            var circleColor = '#0000FF';                        // blue
+        if (result[i]["type"]["value"] == "Low_Risk_Area")
+            var circleColor = '#FFA500';                        // yellow
+        if (result[i]["type"]["value"] == "Medium_Risk_Area")
+            var circleColor = '#FFA500';                        // orange
+        if (result[i]["type"]["value"] == "High_Risk_Area")
+            var circleColor = '#FF0000';                        // red
+
         var circle = new google.maps.Circle({
             center: centerPosition,
             map: map,
-            fillColor: '#0000FF',
+            fillColor: circleColor,
             fillOpacity: 0.5,
-            strokeColor: '#0000FF',
+            strokeColor: circleColor,
             strokeOpacity: 1.0,
             strokeWeight: 2,
             draggable: false,
             zIndex: 30
         });
+
 
         circle.setRadius(18362.55489862987);
 
