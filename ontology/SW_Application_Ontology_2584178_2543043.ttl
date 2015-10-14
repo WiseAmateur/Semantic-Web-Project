@@ -100,6 +100,18 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#lat
+
+:lat rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#long
+
+:long rdf:type owl:DatatypeProperty .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#start_date
 
 :start_date rdf:type owl:DatatypeProperty .
@@ -154,11 +166,11 @@ dbo:Country rdf:type owl:Class .
        
        owl:equivalentClass [ rdf:type owl:Restriction ;
                              owl:onProperty :disaster_type ;
-                             owl:hasValue "Flood"^^xsd:string
+                             owl:hasValue "Tsunami"^^xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :disaster_type ;
-                             owl:hasValue "Tsunami"^^xsd:string
+                             owl:hasValue "Flood"^^xsd:string
                            ] ;
        
        rdfs:subClassOf :Natural_Disaster .

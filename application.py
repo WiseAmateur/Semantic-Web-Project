@@ -64,6 +64,35 @@ def csv_test():
     data = json.load(open('ontology/countries.json'))
     
     return jsonify(data)
+    
+@app.route("/geo")
+def geo():
+    return render_template("geo.html")
+    
+@app.route("/geo_test")
+def geo_test():
+    query = request.args.get("query", None)    
+    endpoint = request.args.get("endpoint")
+    
+    if (query and endpoint):
+        
+        sparql = SPARQLWrapper(endpoint)
+        
+        sparql.setQuery(query)
+
+        sparql.setReturnFormat(JSON)
+        sparql.addParameter("Accept","application/sparql-results+json")
+
+        #sparql.addParameter("reasoning",True)
+        
+        try:
+            response = sparql.query().convert()
+
+            return jsonify(response)
+        except Exception as e:
+            return jsonify({"result": "Error"})
+    else :
+        return jsonify({"result": "Error"})
 
 
 # Freebase disaster query

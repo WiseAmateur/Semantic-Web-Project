@@ -35,7 +35,6 @@ function getCountries(data)
         if (result[i]["income"] == "High income")
             $("#result ul").append("<li>:" + convertSpecialChars(result[i]["country"]) + " rdf:type :High_Income_Country , owl:NamedIndividual .</li>");
     }
-    //$("#result").append(count);
 }
 
 /* Removing the characters from the imported country data, while ensuring it remains dbpedia compatible */
