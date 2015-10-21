@@ -117,7 +117,7 @@ def sparql(query=False):
 #  "/time/event/start_date": null,
 #  "/time/event/end_date": null
 #}]
-def sendSparqlQuery(query, endpoint, response=False):
+def sendSparqlQuery(query, endpoint, json=False):
     sparql = SPARQLWrapper(endpoint)
         
     sparql.setQuery(query)
@@ -130,7 +130,7 @@ def sendSparqlQuery(query, endpoint, response=False):
     try:
         response = sparql.query().convert()
 
-        if (response):
+        if (json):
             return response
         else:
             return jsonify(response)

@@ -59,6 +59,10 @@ html, body {
   font-family: Roboto;
 }
 
+.none {
+    display: none;
+}
+
 .ontology{
 	width: 45%;
 	padding: 1px;
