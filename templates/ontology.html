@@ -16,13 +16,13 @@
     <h1><p>Subject of interest: {{thing}}</p></h1>
     <table>
         <tr>
-            <th class="ontology">Predicaat</th>
-            <th class="ontology">Object</th>
+            <th>Predicaat</th>
+            <th>Object</th>
         </tr>
     {% for res in result.results.bindings %}
         <tr>
-            <td class="ontology">{{res.pred.value}}</td>
-            <td class="ontology">{{res.obj.value}}</td>
+            <td>{{res.pred.value}}</td>
+            <td>{{res.obj.value}}</td>
         </tr>
     {% endfor %}
     </table>

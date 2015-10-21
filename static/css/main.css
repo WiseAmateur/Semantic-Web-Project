@@ -59,11 +59,17 @@ html, body {
   font-family: Roboto;
 }
 
-.ontology{
+th,
+td{
 	width: 49%;
 	height: 100%;
-	padding: 1px;
 	border: 1px solid black;
+	padding: 3.9px;
 	display: inline-block;
 	word-wrap: break-word;
 }
+
+tr:nth-child(even)		{ background-color:#eee; }
+tr:nth-child(odd)		{ background-color:#fff; }
+
+tr{ width: 60%; }
