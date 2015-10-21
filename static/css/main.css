@@ -60,8 +60,10 @@ html, body {
 }
 
 .ontology{
-	width: 45%;
+	width: 49%;
+	height: 100%;
 	padding: 1px;
 	border: 1px solid black;
 	display: inline-block;
+	word-wrap: break-word;
 }
