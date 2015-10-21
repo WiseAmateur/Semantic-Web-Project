@@ -68,15 +68,15 @@ html, body {
 /* Instance table */
 
 th, td {
-	width: 49%;
+    box-sizing: border-box;
+	width: 50%;
 	height: 100%;
 	border: 1px solid black;
 	padding: 3.9px;
-	display: inline-block;
 	word-wrap: break-word;
 }
 
-tr{ width: 60%; }
+tr{ width: 100%; }
 
 tr:nth-child(even)		{ background-color:#eee; }
 tr:nth-child(odd)		{ background-color:#fff; }
