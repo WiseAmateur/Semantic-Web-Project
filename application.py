@@ -17,6 +17,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
     
+@app.route("/ontology/<thing>")
+def ontology(thing):
+    return render_template('ontology.html', thing=thing)
+    
 @app.route("/json_convert")
 def json_convert():
     return render_template("json_convert.html")
