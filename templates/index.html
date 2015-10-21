@@ -19,11 +19,13 @@
 		
     </head>
     <body>
-        Work still in progress...<br /><br />
+        Enjoy the long loading time...<br /><br />
 
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 		<div id="map"></div>
 
 
-		<script src='{{ url_for("static", filename="js/google_maps_region.js") }}' type='text/javascript'></script>
+		<script src='{{ url_for("static", filename="js/google_maps_region2.js") }}' type='text/javascript'></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Ztoe2tqPAYIem7iITlvPrDmYNpAljcY&libraries=places&callback=initAutocomplete" async defer></script>
     </body>
 </html>
