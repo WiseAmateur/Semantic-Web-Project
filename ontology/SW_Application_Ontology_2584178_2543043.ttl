@@ -20,9 +20,7 @@
 
 ###  http://dbpedia.org/ontology/country
 
-dbo:country rdf:type owl:ObjectProperty ;
-            
-            rdfs:range dbo:Country .
+dbo:country rdf:type owl:ObjectProperty .
 
 
 
@@ -32,17 +30,37 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 
 
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#directlyHitBy
+
+:directlyHitBy rdf:type owl:ObjectProperty ;
+               
+               rdfs:subPropertyOf :hitBy .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hit
 
 :hit rdf:type owl:ObjectProperty ;
      
-     owl:inverseOf :hitBy .
+     owl:inverseOf :directlyHitBy .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hitBy
 
 :hitBy rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#indirectlyHitBy
+
+:indirectlyHitBy rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:subPropertyOf :hitBy ;
+                 
+                 owl:propertyChainAxiom ( dbo:country
+                                          :directlyHitBy
+                                        ) .
 
 
 
@@ -87,7 +105,15 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#fatalities
 
-:fatalities rdf:type owl:DatatypeProperty .
+:fatalities rdf:type owl:DatatypeProperty ;
+            
+            rdfs:range xsd:integer ,
+                       [ rdf:type rdfs:Datatype ;
+                         owl:onDatatype xsd:integer ;
+                         owl:withRestrictions ( [ xsd:minInclusive 0
+                                                ]
+                                              )
+                       ] .
 
 
 
@@ -172,7 +198,12 @@ dbo:Country rdf:type owl:Class .
                       
                       owl:equivalentClass [ rdf:type owl:Restriction ;
                                             owl:onProperty :fatalities ;
-                                            owl:someValuesFrom xsd:integer
+                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                 owl:onDatatype xsd:integer ;
+                                                                 owl:withRestrictions ( [ xsd:minInclusive 5
+                                                                                        ]
+                                                                                      )
+                                                               ]
                                           ] .
 
 
@@ -204,18 +235,7 @@ dbo:Country rdf:type owl:Class .
                 owl:equivalentClass [ rdf:type owl:Class ;
                                       owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                              owl:onProperty dbo:country ;
-                                                             owl:someValuesFrom :Low_Income_Country
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :hitBy ;
-                                                             owl:someValuesFrom :High_Impact_Natural_Disaster
-                                                           ]
-                                                         )
-                                    ] ,
-                                    [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                             owl:onProperty dbo:country ;
-                                                             owl:someValuesFrom :Middle_Income_Country
+                                                             owl:someValuesFrom :High_Income_Country
                                                            ]
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hitBy ;
@@ -234,14 +254,30 @@ dbo:Country rdf:type owl:Class .
            
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tornado"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical cyclone"^^xsd:string
+                                 owl:hasValue "Tornado"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Low_Impact_Disaster
+
+:Low_Impact_Disaster rdf:type owl:Class ;
+                     
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :fatalities ;
+                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                owl:onDatatype xsd:integer ;
+                                                                owl:withRestrictions ( [ xsd:maxExclusive 5
+                                                                                       ]
+                                                                                     )
+                                                              ]
+                                         ] .
 
 
 
@@ -250,10 +286,8 @@ dbo:Country rdf:type owl:Class .
 :Low_Impact_Natural_Disaster rdf:type owl:Class ;
                              
                              owl:equivalentClass [ rdf:type owl:Class ;
-                                                   owl:intersectionOf ( :Natural_Disaster
-                                                                        [ rdf:type owl:Class ;
-                                                                          owl:complementOf :High_Impact_Natural_Disaster
-                                                                        ]
+                                                   owl:intersectionOf ( :Low_Impact_Disaster
+                                                                        :Natural_Disaster
                                                                       )
                                                  ] .
 
@@ -274,18 +308,7 @@ dbo:Country rdf:type owl:Class .
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                             owl:onProperty dbo:country ;
-                                                            owl:someValuesFrom :Low_Income_Country
-                                                          ]
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :hitBy ;
-                                                            owl:someValuesFrom :Low_Impact_Natural_Disaster
-                                                          ]
-                                                        )
-                                   ] ,
-                                   [ rdf:type owl:Class ;
-                                     owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                            owl:onProperty dbo:country ;
-                                                            owl:someValuesFrom :Middle_Income_Country
+                                                            owl:someValuesFrom :High_Income_Country
                                                           ]
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hitBy ;
@@ -305,11 +328,22 @@ dbo:Country rdf:type owl:Class .
                   owl:equivalentClass [ rdf:type owl:Class ;
                                         owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                owl:onProperty dbo:country ;
-                                                               owl:someValuesFrom :High_Income_Country
+                                                               owl:someValuesFrom :Low_Income_Country
                                                              ]
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hitBy ;
-                                                               owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                               owl:someValuesFrom :Low_Impact_Natural_Disaster
+                                                             ]
+                                                           )
+                                      ] ,
+                                      [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                               owl:onProperty dbo:country ;
+                                                               owl:someValuesFrom :Middle_Income_Country
+                                                             ]
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hitBy ;
+                                                               owl:someValuesFrom :Low_Impact_Natural_Disaster
                                                              ]
                                                            )
                                       ] ;
@@ -332,23 +366,34 @@ dbo:Country rdf:type owl:Class .
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#No_Risk_Area
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Very_High_Risk_Area
 
-:No_Risk_Area rdf:type owl:Class ;
-              
-              owl:equivalentClass [ rdf:type owl:Class ;
-                                    owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                           owl:onProperty dbo:country ;
-                                                           owl:someValuesFrom :High_Income_Country
-                                                         ]
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hitBy ;
-                                                           owl:someValuesFrom :Low_Impact_Natural_Disaster
-                                                         ]
-                                                       )
-                                  ] ;
-              
-              rdfs:subClassOf :Area .
+:Very_High_Risk_Area rdf:type owl:Class ;
+                     
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty dbo:country ;
+                                                                  owl:someValuesFrom :Low_Income_Country
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hitBy ;
+                                                                  owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                                ]
+                                                              )
+                                         ] ,
+                                         [ rdf:type owl:Class ;
+                                           owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty dbo:country ;
+                                                                  owl:someValuesFrom :Middle_Income_Country
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hitBy ;
+                                                                  owl:someValuesFrom :High_Impact_Natural_Disaster
+                                                                ]
+                                                              )
+                                         ] ;
+                     
+                     rdfs:subClassOf :Area .
 
 
 
@@ -2170,13 +2215,6 @@ dbo:Country rdf:type owl:Class .
 
 :Douglas_County rdf:type :Area ,
                          owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#Downtown
-
-:Downtown rdf:type :Area ,
-                   owl:NamedIndividual .
 
 
 
@@ -7057,6 +7095,15 @@ dbo:Country rdf:type owl:Class .
         :long 87.6 ;
         
         dbo:country :China .
+
+
+
+###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#2000_TEST
+
+<http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#2000_TEST> rdf:type owl:NamedIndividual ;
+                                                                                    
+                                                                                    :fatalities 2 ,
+                                                                                                6 .
 
 
 
