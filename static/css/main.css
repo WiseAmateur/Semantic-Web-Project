@@ -1,3 +1,29 @@
+/* Semantic Web Final Project
+ * Name: Daan Siepelinga & Julien Benistant
+ * Student id: 2584178 & 2543043
+ * Date: TODO date
+ *
+ * Here the css that styles the html of the web application is defined 
+ */
+
+/* General container divs */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    min-width: 360px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: "DejaVu Serif", "Arial";
+}
+
+/* Map */
+
 #map{
 	width: 100%;
     height: 500px;

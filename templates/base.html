@@ -1,0 +1,27 @@
+<!--
+ Semantic Web Project
+ Name: Daan Siepelinga & Julien Benistant
+ Student id: 2584178 & 2543043
+ Date: TODO add date at end of project
+ 
+ This file contains the html structure of the application.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>Natural Disaster Risk Viewer</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/main.css") }}' />
+
+        {% block includes %}{% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

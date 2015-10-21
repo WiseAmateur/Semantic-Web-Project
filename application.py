@@ -32,7 +32,7 @@ def ontology(thing):
     if (len(result['results']['bindings']) == 0):
         return render_template('404.html')
     else:
-        return render_template('ontology.html', thing=thing, result=result)
+        return render_template('ontology.html', thing=thing, result=result, title=thing)
     
 @app.route("/json_convert")
 def json_convert():
