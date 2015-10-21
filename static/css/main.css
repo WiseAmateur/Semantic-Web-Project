@@ -59,13 +59,24 @@ html, body {
   font-family: Roboto;
 }
 
+/* Invisible links */
+
 .none {
     display: none;
 }
 
-.ontology{
-	width: 45%;
-	padding: 1px;
+/* Instance table */
+
+th, td {
+	width: 49%;
+	height: 100%;
 	border: 1px solid black;
+	padding: 3.9px;
 	display: inline-block;
+	word-wrap: break-word;
 }
+
+tr{ width: 60%; }
+
+tr:nth-child(even)		{ background-color:#eee; }
+tr:nth-child(odd)		{ background-color:#fff; }
