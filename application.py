@@ -7,7 +7,7 @@
 
 from flask import Flask, render_template, url_for, request, jsonify
 from SPARQLWrapper import SPARQLWrapper, RDF, JSON
-import requests, os, json, csv, re
+import requests, os, json, csv, re, ast
 
 
 app = Flask(__name__)
@@ -19,7 +19,20 @@ def index():
     
 @app.route("/ontology/<thing>")
 def ontology(thing):
-    return render_template('ontology.html', thing=thing)
+    query = "SELECT DISTINCT ?pred ?obj WHERE { :" + thing + " ?pred ?obj . }"
+    result = sparql(query)
+    
+    # result is string
+    result = json.dumps(result)
+    
+    # convert to python dictionary
+    result = ast.literal_eval(result)
+
+    # check if the thing exists in the application's ontology, if not show the 404 page
+    if (len(result['results']['bindings']) == 0):
+        return render_template('404.html')
+    else:
+        return render_template('ontology.html', thing=thing, result=result)
     
 @app.route("/json_convert")
 def json_convert():
@@ -76,12 +89,16 @@ def geo_test():
         return jsonify({"result": "Error"})
         
 @app.route("/sparql", methods=["GET"])
-def sparql():
-    query = request.args.get("query", None)
+def sparql(query=False):
+    if (query == False):
+        query = request.args.get("query", None)
+        response = False
+    else:
+        response = True
     endpoint = "http://localhost:5820/naturalDisasterOntology/query"
     
     if (query):
-        return sendSparqlQuery(query, endpoint)
+        return sendSparqlQuery(query, endpoint, response)
     else :
         return jsonify({"result": "Error"})
 
@@ -100,7 +117,7 @@ def sparql():
 #  "/time/event/start_date": null,
 #  "/time/event/end_date": null
 #}]
-def sendSparqlQuery(query, endpoint):
+def sendSparqlQuery(query, endpoint, response=False):
     sparql = SPARQLWrapper(endpoint)
         
     sparql.setQuery(query)
@@ -113,7 +130,10 @@ def sendSparqlQuery(query, endpoint):
     try:
         response = sparql.query().convert()
 
-        return jsonify(response)
+        if (response):
+            return response
+        else:
+            return jsonify(response)
     except Exception as e:
         return jsonify({"result": "Error"})
     
