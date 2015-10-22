@@ -109,12 +109,14 @@ function initMapCircles(result) {
         
         /* Determine the circle radius with a lower boundary by looking at the area total of the risk area */
         if (typeof(result[i]["areaTotal"]) !== 'undefined')
-            circle_radius = result[i]["areaTotal"]["value"] / 100000.0;
+            circle_radius = Math.sqrt(result[i]["areaTotal"]["value"]);
             //console.log(circle_radius); 
             //if (circle_radius < 2000.0)
             //    circle_radius = 2000.0;
         else
             circle_radius = 18362.55489862987;
+
+        console.log(circle_radius);
         
         /* Create the circle with its position, radius and color, and set the z index
          * so that circles with a smaller radius are in front of circles with a bigger radius */

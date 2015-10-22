@@ -189,11 +189,11 @@ dbo:Country rdf:type owl:Class .
        
        owl:equivalentClass [ rdf:type owl:Restriction ;
                              owl:onProperty :disaster_type ;
-                             owl:hasValue "Flood"^^xsd:string
+                             owl:hasValue "Tsunami"^^xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :disaster_type ;
-                             owl:hasValue "Tsunami"^^xsd:string
+                             owl:hasValue "Flood"^^xsd:string
                            ] ;
        
        rdfs:subClassOf :Natural_Disaster .
@@ -241,9 +241,13 @@ dbo:Country rdf:type owl:Class .
 :High_Risk_Area rdf:type owl:Class ;
                 
                 owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                             owl:onProperty dbo:country ;
-                                                             owl:someValuesFrom :High_Income_Country
+                                      owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                             owl:unionOf ( :High_Income_Country
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty dbo:country ;
+                                                                             owl:someValuesFrom :High_Income_Country
+                                                                           ]
+                                                                         )
                                                            ]
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hitBy ;
@@ -262,11 +266,11 @@ dbo:Country rdf:type owl:Class .
            
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tornado"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical cyclone"^^xsd:string
+                                 owl:hasValue "Tornado"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
@@ -314,9 +318,13 @@ dbo:Country rdf:type owl:Class .
 :Low_Risk_Area rdf:type owl:Class ;
                
                owl:equivalentClass [ rdf:type owl:Class ;
-                                     owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                            owl:onProperty dbo:country ;
-                                                            owl:someValuesFrom :High_Income_Country
+                                     owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                            owl:unionOf ( :High_Income_Country
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty dbo:country ;
+                                                                            owl:someValuesFrom :High_Income_Country
+                                                                          ]
+                                                                        )
                                                           ]
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hitBy ;
@@ -334,9 +342,13 @@ dbo:Country rdf:type owl:Class .
 :Medium_Risk_Area rdf:type owl:Class ;
                   
                   owl:equivalentClass [ rdf:type owl:Class ;
-                                        owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                               owl:onProperty dbo:country ;
-                                                               owl:someValuesFrom :Low_Income_Country
+                                        owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Middle_Income_Country
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty dbo:country ;
+                                                                               owl:someValuesFrom :Middle_Income_Country
+                                                                             ]
+                                                                           )
                                                              ]
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hitBy ;
@@ -345,9 +357,13 @@ dbo:Country rdf:type owl:Class .
                                                            )
                                       ] ,
                                       [ rdf:type owl:Class ;
-                                        owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                               owl:onProperty dbo:country ;
-                                                               owl:someValuesFrom :Middle_Income_Country
+                                        owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Low_Income_Country
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty dbo:country ;
+                                                                               owl:someValuesFrom :Low_Income_Country
+                                                                             ]
+                                                                           )
                                                              ]
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty :hitBy ;
@@ -379,9 +395,13 @@ dbo:Country rdf:type owl:Class .
 :Very_High_Risk_Area rdf:type owl:Class ;
                      
                      owl:equivalentClass [ rdf:type owl:Class ;
-                                           owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty dbo:country ;
-                                                                  owl:someValuesFrom :Middle_Income_Country
+                                           owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :Low_Income_Country
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty dbo:country ;
+                                                                                  owl:someValuesFrom :Low_Income_Country
+                                                                                ]
+                                                                              )
                                                                 ]
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hitBy ;
@@ -390,9 +410,13 @@ dbo:Country rdf:type owl:Class .
                                                               )
                                          ] ,
                                          [ rdf:type owl:Class ;
-                                           owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty dbo:country ;
-                                                                  owl:someValuesFrom :Low_Income_Country
+                                           owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :Middle_Income_Country
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty dbo:country ;
+                                                                                  owl:someValuesFrom :Middle_Income_Country
+                                                                                ]
+                                                                              )
                                                                 ]
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hitBy ;
@@ -432,11 +456,9 @@ dbo:Country rdf:type owl:Class .
 :Aalborg rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :lat 57.05 ,
-              "57.05"^^xsd:float ;
+         :lat 57.05 ;
          
-         :long 9.916666666666666 ,
-               "9.916667"^^xsd:float ;
+         :long 9.916666666666666 ;
          
          dbo:country :Denmark .
 
@@ -456,11 +478,9 @@ dbo:Country rdf:type owl:Class .
        
        dbo:areaTotal "7.13E8"^^xsd:double ;
        
-       :long "7.483333"^^xsd:float ,
-             7.483333333333333 ;
+       :long 7.483333333333333 ;
        
-       :lat 9.066666666666666 ,
-            "9.066667"^^xsd:float ;
+       :lat 9.066666666666666 ;
        
        dbo:country :Nigeria .
 
@@ -493,11 +513,9 @@ dbo:Country rdf:type owl:Class .
 :Adisucipto_International_Airport rdf:type :Area ,
                                            owl:NamedIndividual ;
                                   
-                                  :lat "-7.7880554"^^xsd:float ,
-                                       -7.788055555555555 ;
+                                  :lat -7.788055555555555 ;
                                   
-                                  :long "110.43166"^^xsd:float ,
-                                        110.43166666666667 .
+                                  :long 110.43166666666667 .
 
 
 
@@ -514,14 +532,11 @@ dbo:Country rdf:type owl:Class .
                       :Low_Income_Country ,
                       owl:NamedIndividual ;
              
-             :lat "34.533333"^^xsd:float ,
-                  34.53333333333333 ;
+             :lat 34.53333333333333 ;
              
-             dbo:areaTotal "6.52229E11"^^xsd:double ,
-                           "6.52864E11"^^xsd:double ;
+             dbo:areaTotal "6.52864E11"^^xsd:double ;
              
-             :long "69.13333"^^xsd:float ,
-                   69.13333333333334 .
+             :long 69.13333333333334 .
 
 
 
@@ -667,11 +682,9 @@ dbo:Country rdf:type owl:Class .
                
                dbo:areaTotal "3.00629E11"^^xsd:double ;
                
-               :lat "50.283333"^^xsd:float ,
-                    50.28333333333333 ;
+               :lat 50.28333333333333 ;
                
-               :long 57.166666666666664 ,
-                     "57.166668"^^xsd:float ;
+               :long 57.166666666666664 ;
                
                dbo:country :Kazakhstan .
 
@@ -734,11 +747,9 @@ dbo:Country rdf:type owl:Class .
 :Alto_Hospicio rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :lat -20.25 ,
-                    "-20.25"^^xsd:float ;
+               :lat -20.25 ;
                
-               :long -70.11666666666666 ,
-                     "-70.11667"^^xsd:float ;
+               :long -70.11666666666666 ;
                
                dbo:areaTotal "5.932E8"^^xsd:double ;
                
@@ -751,11 +762,9 @@ dbo:Country rdf:type owl:Class .
 :Ambegaon_taluka rdf:type :Area ,
                           owl:NamedIndividual ;
                  
-                 :lat "19.034721"^^xsd:float ,
-                      19.03472222222222 ;
+                 :lat 19.03472222222222 ;
                  
-                 :long 73.83638888888889 ,
-                       "73.83639"^^xsd:float ;
+                 :long 73.83638888888889 ;
                  
                  dbo:country :India .
 
@@ -809,11 +818,9 @@ dbo:Country rdf:type owl:Class .
 :Amsterdam_Airport_Schiphol rdf:type :Area ,
                                      owl:NamedIndividual ;
                             
-                            :long 4.764166666666666 ,
-                                  "4.764167"^^xsd:float ;
+                            :long 4.764166666666666 ;
                             
-                            :lat 52.308055555555555 ,
-                                 "52.308056"^^xsd:float .
+                            :lat 52.308055555555555 .
 
 
 
@@ -1021,11 +1028,9 @@ dbo:Country rdf:type owl:Class .
 :Awaran rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat 26.27 ,
-             "26.27"^^xsd:float ;
+        :lat 26.27 ;
         
-        :long 65.14 ,
-              "65.14"^^xsd:float ;
+        :long 65.14 ;
         
         dbo:country :Pakistan .
 
@@ -1088,13 +1093,11 @@ dbo:Country rdf:type owl:Class .
 :Baotou rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long 109.83333333333333 ,
-              "109.833336"^^xsd:float ;
+        :long 109.83333333333333 ;
         
         dbo:areaTotal "2.7768E10"^^xsd:double ;
         
-        :lat 40.65 ,
-             "40.65"^^xsd:float ;
+        :lat 40.65 ;
         
         dbo:country :China .
 
@@ -1114,11 +1117,9 @@ dbo:Country rdf:type owl:Class .
            
            dbo:areaTotal "1.019E8"^^xsd:double ;
            
-           :long 2.183333333333333 ,
-                 "2.1833334"^^xsd:float ;
+           :long 2.183333333333333 ;
            
-           :lat 41.38333333333333 ,
-                "41.383335"^^xsd:float ;
+           :lat 41.38333333333333 ;
            
            dbo:country :Spain .
 
@@ -1131,11 +1132,9 @@ dbo:Country rdf:type owl:Class .
                
                dbo:areaTotal "1.436E11"^^xsd:double ;
                
-               :lat 54.46666666666667 ,
-                    "54.466667"^^xsd:float ;
+               :lat 54.46666666666667 ;
                
-               :long "56.266666"^^xsd:float ,
-                     56.266666666666666 ;
+               :long 56.266666666666666 ;
                
                dbo:country :Russia .
 
@@ -1153,11 +1152,9 @@ dbo:Country rdf:type owl:Class .
 :Bassersdorf rdf:type :Area ,
                       owl:NamedIndividual ;
              
-             :lat 47.45 ,
-                  "47.45"^^xsd:float ;
+             :lat 47.45 ;
              
-             :long "8.633333"^^xsd:float ,
-                   8.633333333333333 ;
+             :long 8.633333333333333 ;
              
              dbo:areaTotal "9020000.0"^^xsd:double ;
              
@@ -1203,13 +1200,11 @@ dbo:Country rdf:type owl:Class .
 :Belgrade rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long 20.466666666666665 ,
-                "20.466667"^^xsd:float ;
+          :long 20.466666666666665 ;
           
           dbo:areaTotal "3.5996E8"^^xsd:double ;
           
-          :lat "44.816666"^^xsd:float ,
-               44.81666666666667 ;
+          :lat 44.81666666666667 ;
           
           dbo:country :Serbia .
 
@@ -1246,11 +1241,9 @@ dbo:Country rdf:type owl:Class .
 :Bendigo rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long "144.26666"^^xsd:float ,
-               144.26666666666668 ;
+         :long 144.26666666666668 ;
          
-         :lat 36.75 ,
-              "36.75"^^xsd:float ;
+         :lat 36.75 ;
          
          dbo:country :Australia .
 
@@ -1261,13 +1254,11 @@ dbo:Country rdf:type owl:Class .
 :Benghazi rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long 20.066666666666666 ,
-                "20.066668"^^xsd:float ;
+          :long 20.066666666666666 ;
           
           dbo:areaTotal "3.14E8"^^xsd:double ;
           
-          :lat "32.116665"^^xsd:float ,
-               32.11666666666667 ;
+          :lat 32.11666666666667 ;
           
           dbo:country :Libya .
 
@@ -1292,11 +1283,9 @@ dbo:Country rdf:type owl:Class .
 :Bhilai rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat 21.21 ,
-             "21.21"^^xsd:float ;
+        :lat 21.21 ;
         
-        :long 81.38 ,
-              "81.38"^^xsd:float .
+        :long 81.38 .
 
 
 
@@ -1312,11 +1301,9 @@ dbo:Country rdf:type owl:Class .
 :Blace rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long 21.28595 ,
-             "21.28595"^^xsd:float ;
+       :long 21.28595 ;
        
-       :lat 43.29578333333333 ,
-            "43.295784"^^xsd:float ;
+       :lat 43.29578333333333 ;
        
        dbo:country :Serbia .
 
@@ -1341,11 +1328,9 @@ dbo:Country rdf:type owl:Class .
 :Bob_Hope_Airport rdf:type :Area ,
                            owl:NamedIndividual ;
                   
-                  :long "-118.35861"^^xsd:float ,
-                        -118.35861111111112 ;
+                  :long -118.35861111111112 ;
                   
-                  :lat "34.200554"^^xsd:float ,
-                       34.20055555555555 .
+                  :lat 34.20055555555555 .
 
 
 
@@ -1354,13 +1339,11 @@ dbo:Country rdf:type owl:Class .
 :Bohol rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long "124.166664"^^xsd:float ,
-             124.16666666666667 ;
+       :long 124.16666666666667 ;
        
        dbo:areaTotal "4.82095E9"^^xsd:double ;
        
-       :lat "9.833333"^^xsd:float ,
-            9.833333333333334 ;
+       :lat 9.833333333333334 ;
        
        dbo:country :Philippines .
 
@@ -1380,14 +1363,11 @@ dbo:Country rdf:type owl:Class .
                                  :Middle_Income_Country ,
                                  owl:NamedIndividual ;
                         
-                        :long "18.416666"^^xsd:float ,
-                              18.416666666666668 ;
+                        :long 18.416666666666668 ;
                         
-                        :lat "43.866665"^^xsd:float ,
-                             43.86666666666667 ;
+                        :lat 43.86666666666667 ;
                         
-                        dbo:areaTotal "5.1129E10"^^xsd:double ,
-                                      "5.1197E10"^^xsd:double .
+                        dbo:areaTotal "5.1129E10"^^xsd:double .
 
 
 
@@ -1438,11 +1418,9 @@ dbo:Country rdf:type owl:Class .
 :Brazzaville rdf:type :Area ,
                       owl:NamedIndividual ;
              
-             :lat -4.267777777777778 ,
-                  "-4.267778"^^xsd:float ;
+             :lat -4.267777777777778 ;
              
-             :long 15.291944444444445 ,
-                   "15.2919445"^^xsd:float ;
+             :long 15.291944444444445 ;
              
              dbo:areaTotal "2.639E8"^^xsd:double ;
              
@@ -1473,13 +1451,11 @@ dbo:Country rdf:type owl:Class .
 :Brindisi rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long "17.933332"^^xsd:float ,
-                17.933333333333334 ;
+          :long 17.933333333333334 ;
           
           dbo:areaTotal "3.28E8"^^xsd:double ;
           
-          :lat 40.63333333333333 ,
-               "40.633335"^^xsd:float ;
+          :lat 40.63333333333333 ;
           
           dbo:country :Italy .
 
@@ -1510,14 +1486,11 @@ dbo:Country rdf:type owl:Class .
                    :Middle_Income_Country ,
                    owl:NamedIndividual ;
           
-          dbo:areaTotal "1.10911E11"^^xsd:double ,
-                        "1.10994E11"^^xsd:double ;
+          dbo:areaTotal "1.10994E11"^^xsd:double ;
           
-          :long 23.316666666666666 ,
-                "23.316668"^^xsd:float ;
+          :long 23.316666666666666 ;
           
-          :lat 42.68333333333333 ,
-               "42.683334"^^xsd:float .
+          :lat 42.68333333333333 .
 
 
 
@@ -1549,11 +1522,9 @@ dbo:Country rdf:type owl:Class .
                   
                   dbo:areaTotal "2.2743E10"^^xsd:double ;
                   
-                  :lat 28.9184 ,
-                       "28.9184"^^xsd:float ;
+                  :lat 28.9184 ;
                   
-                  :long 50.8382 ,
-                        "50.8382"^^xsd:float ;
+                  :long 50.8382 ;
                   
                   dbo:country :Iran .
 
@@ -1667,11 +1638,9 @@ dbo:Country rdf:type owl:Class .
 :Cebu rdf:type :Area ,
                owl:NamedIndividual ;
       
-      :lat 10.316666666666666 ,
-           "10.316667"^^xsd:float ;
+      :lat 10.316666666666666 ;
       
-      :long 123.75 ,
-            "123.75"^^xsd:float ;
+      :long 123.75 ;
       
       dbo:areaTotal "4.94372E9"^^xsd:double ;
       
@@ -1771,11 +1740,9 @@ dbo:Country rdf:type owl:Class .
 :Chelyabinsk_Oblast rdf:type :Area ,
                              owl:NamedIndividual ;
                     
-                    :lat "54.533333"^^xsd:float ,
-                         54.53333333333333 ;
+                    :lat 54.53333333333333 ;
                     
-                    :long "60.333332"^^xsd:float ,
-                          60.333333333333336 ;
+                    :long 60.333333333333336 ;
                     
                     dbo:areaTotal "8.79E10"^^xsd:double ;
                     
@@ -1788,11 +1755,9 @@ dbo:Country rdf:type owl:Class .
 :Chiapas rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long "-92.416664"^^xsd:float ,
-               -92.41666666666667 ;
+         :long -92.41666666666667 ;
          
-         :lat "16.416666"^^xsd:float ,
-              16.416666666666668 ;
+         :lat 16.416666666666668 ;
          
          dbo:areaTotal "7.3311E10"^^xsd:double ;
          
@@ -1813,11 +1778,9 @@ dbo:Country rdf:type owl:Class .
                 :High_Income_Country ,
                 owl:NamedIndividual ;
        
-       :lat -33.43333333333333 ,
-            "-33.433334"^^xsd:float ;
+       :lat -33.43333333333333 ;
        
-       :long "-70.666664"^^xsd:float ,
-             -70.66666666666667 ;
+       :long -70.66666666666667 ;
        
        dbo:areaTotal "7.56096E11"^^xsd:double .
 
@@ -1879,11 +1842,9 @@ dbo:Country rdf:type owl:Class .
 :Chongqing rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :long "106.566666"^^xsd:float ,
-                 106.56666666666666 ;
+           :long 106.56666666666666 ;
            
-           :lat "29.558332"^^xsd:float ,
-                29.558333333333334 ;
+           :lat 29.558333333333334 ;
            
            dbo:areaTotal "8.2403E10"^^xsd:double ;
            
@@ -1896,13 +1857,11 @@ dbo:Country rdf:type owl:Class .
 :Christchurch rdf:type :Area ,
                        owl:NamedIndividual ;
               
-              :lat -43.53 ,
-                   "-43.53"^^xsd:float ;
+              :lat -43.53 ;
               
               dbo:areaTotal "1.426E9"^^xsd:double ;
               
-              :long 172.62027777777777 ,
-                    "172.62029"^^xsd:float .
+              :long 172.62027777777777 .
 
 
 
@@ -1937,11 +1896,9 @@ dbo:Country rdf:type owl:Class .
          
          dbo:areaTotal "4.0515E8"^^xsd:double ;
          
-         :lat 50.93638888888889 ,
-              "50.93639"^^xsd:float ;
+         :lat 50.93638888888889 ;
          
-         :long 6.9527777777777775 ,
-               "6.952778"^^xsd:float ;
+         :long 6.9527777777777775 ;
          
          dbo:country :Germany .
 
@@ -1999,14 +1956,11 @@ dbo:Country rdf:type owl:Class .
 :Constanța_County rdf:type :Area ,
                            owl:NamedIndividual ;
                   
-                  :long 28.31 ,
-                        "28.31"^^xsd:float ;
+                  :long 28.31 ;
                   
-                  :lat 44.27 ,
-                       "44.27"^^xsd:float ;
+                  :lat 44.27 ;
                   
-                  dbo:areaTotal "6.916E9"^^xsd:double ,
-                                "7.071E9"^^xsd:double ;
+                  dbo:areaTotal "7.071E9"^^xsd:double ;
                   
                   dbo:country :Kingdom_of_Romania ,
                               :Romania .
@@ -2025,11 +1979,9 @@ dbo:Country rdf:type owl:Class .
 :Copenhagen_Airport rdf:type :Area ,
                              owl:NamedIndividual ;
                     
-                    :long "12.656111"^^xsd:float ,
-                          12.65611111111111 ;
+                    :long 12.65611111111111 ;
                     
-                    :lat 55.61805555555556 ,
-                         "55.618057"^^xsd:float .
+                    :lat 55.61805555555556 .
 
 
 
@@ -2069,14 +2021,11 @@ dbo:Country rdf:type owl:Class .
                      :Middle_Income_Country ,
                      owl:NamedIndividual ;
             
-            :long -84.08333333333333 ,
-                  "-84.083336"^^xsd:float ;
+            :long -84.08333333333333 ;
             
-            dbo:areaTotal "5.0901E10"^^xsd:double ,
-                          "5.11E10"^^xsd:double ;
+            dbo:areaTotal "5.11E10"^^xsd:double ;
             
-            :lat "9.933333"^^xsd:float ,
-                 9.933333333333334 .
+            :lat 9.933333333333334 .
 
 
 
@@ -2092,13 +2041,11 @@ dbo:Country rdf:type owl:Class .
 :Cromer rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long 1.302 ,
-              "1.302"^^xsd:float ;
+        :long 1.302 ;
         
         dbo:areaTotal "4660000.0"^^xsd:double ;
         
-        :lat 52.931 ,
-             "52.931"^^xsd:float ;
+        :lat 52.931 ;
         
         dbo:country :Norfolk ,
                     :United_Kingdom .
@@ -2133,11 +2080,9 @@ dbo:Country rdf:type owl:Class .
 :Cumbal_Volcano rdf:type :Area ,
                          owl:NamedIndividual ;
                 
-                :long -77.888 ,
-                      "-77.888"^^xsd:float ;
+                :long -77.888 ;
                 
-                :lat 0.949 ,
-                     "0.949"^^xsd:float .
+                :lat 0.949 .
 
 
 
@@ -2181,11 +2126,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.3237E10"^^xsd:double ;
         
-        :long 121.63916666666667 ,
-              "121.63917"^^xsd:float ;
+        :long 121.63916666666667 ;
         
-        :lat 38.920833333333334 ,
-             "38.920834"^^xsd:float ;
+        :lat 38.920833333333334 ;
         
         dbo:country :China .
 
@@ -2196,11 +2139,9 @@ dbo:Country rdf:type owl:Class .
 :Dallas rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long -96.79666666666667 ,
-              "-96.79667"^^xsd:float ;
+        :long -96.79666666666667 ;
         
-        :lat "32.775833"^^xsd:float ,
-             32.77583333333333 ;
+        :lat 32.77583333333333 ;
         
         dbo:areaTotal "9.993E8"^^xsd:double ;
         
@@ -2292,11 +2233,9 @@ dbo:Country rdf:type owl:Class .
 :Denver rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long "-104.8811"^^xsd:float ,
-              -104.881105 ;
+        :long -104.881105 ;
         
-        :lat 39.76185 ,
-             "39.76185"^^xsd:float ;
+        :lat 39.76185 ;
         
         dbo:areaTotal "4.01448E8"^^xsd:double ;
         
@@ -2309,11 +2248,9 @@ dbo:Country rdf:type owl:Class .
 :Dilsukhnagar rdf:type :Area ,
                        owl:NamedIndividual ;
               
-              :lat 17.368784 ,
-                   "17.368784"^^xsd:float ;
+              :lat 17.368784 ;
               
-              :long "78.52465"^^xsd:float ,
-                    78.524652 .
+              :long 78.524652 .
 
 
 
@@ -2344,11 +2281,9 @@ dbo:Country rdf:type owl:Class .
                              :Middle_Income_Country ,
                              owl:NamedIndividual ;
                     
-                    :long "-70.666664"^^xsd:float ,
-                          -70.66666666666667 ;
+                    :long -70.66666666666667 ;
                     
-                    :lat 19.0 ,
-                         "19.0"^^xsd:float ;
+                    :lat 19.0 ;
                     
                     dbo:areaTotal "4.8442E10"^^xsd:double .
 
@@ -2380,11 +2315,9 @@ dbo:Country rdf:type owl:Class .
 :Durban rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat "29.883333"^^xsd:float ,
-             29.883333333333333 ;
+        :lat 29.883333333333333 ;
         
-        :long 31.05 ,
-              "31.05"^^xsd:float ;
+        :long 31.05 ;
         
         dbo:country :South_Africa .
 
@@ -2397,11 +2330,9 @@ dbo:Country rdf:type owl:Class .
             
             dbo:areaTotal "2.17E8"^^xsd:double ;
             
-            :lat 51.233333333333334 ,
-                 "51.233334"^^xsd:float ;
+            :lat 51.233333333333334 ;
             
-            :long "6.7833333"^^xsd:float ,
-                  6.783333333333333 ;
+            :long 6.783333333333333 ;
             
             dbo:country :Germany .
 
@@ -2422,13 +2353,11 @@ dbo:Country rdf:type owl:Class .
 :East_Azerbaidjan rdf:type :Area ,
                            owl:NamedIndividual ;
                   
-                  :lat 38.0766 ,
-                       "38.0766"^^xsd:float ;
+                  :lat 38.0766 ;
                   
                   dbo:areaTotal "4.565E10"^^xsd:double ;
                   
-                  :long 46.28 ,
-                        "46.28"^^xsd:float ;
+                  :long 46.28 ;
                   
                   dbo:country :Iran .
 
@@ -2551,11 +2480,9 @@ dbo:Country rdf:type owl:Class .
        
        dbo:areaTotal "2.1032E8"^^xsd:double ;
        
-       :lat "51.450832"^^xsd:float ,
-            51.450833333333335 ;
+       :lat 51.450833333333335 ;
        
-       :long "7.0130553"^^xsd:float ,
-             7.013055555555556 ;
+       :long 7.013055555555556 ;
        
        dbo:country :Germany .
 
@@ -2659,11 +2586,9 @@ dbo:Country rdf:type owl:Class .
 :Ferrybridge_power_stations rdf:type :Area ,
                                      owl:NamedIndividual ;
                             
-                            :long -1.28058 ,
-                                  "-1.28058"^^xsd:float ;
+                            :long -1.28058 ;
                             
-                            :lat 53.7174 ,
-                                 "53.7174"^^xsd:float .
+                            :lat 53.7174 .
 
 
 
@@ -2700,11 +2625,9 @@ dbo:Country rdf:type owl:Class .
           
           dbo:areaTotal "1.0241E8"^^xsd:double ;
           
-          :long 11.25 ,
-                "11.25"^^xsd:float ;
+          :long 11.25 ;
           
-          :lat "43.783333"^^xsd:float ,
-               43.78333333333333 ;
+          :lat 43.78333333333333 ;
           
           dbo:country :Italy .
 
@@ -2836,11 +2759,9 @@ dbo:Country rdf:type owl:Class .
 :Gila_National_Forest rdf:type :Area ,
                                owl:NamedIndividual ;
                       
-                      :long -108.53 ,
-                            "-108.53"^^xsd:float ;
+                      :long -108.53 ;
                       
-                      :lat 33.47 ,
-                           "33.47"^^xsd:float .
+                      :lat 33.47 .
 
 
 
@@ -2849,13 +2770,11 @@ dbo:Country rdf:type owl:Class .
 :Glasgow rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long -4.259 ,
-               "-4.259"^^xsd:float ;
+         :long -4.259 ;
          
          dbo:areaTotal "1.755E8"^^xsd:double ;
          
-         :lat 55.858 ,
-              "55.858"^^xsd:float ;
+         :lat 55.858 ;
          
          dbo:country :Scotland ,
                      :United_Kingdom .
@@ -2881,11 +2800,9 @@ dbo:Country rdf:type owl:Class .
 :Gonesse rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long 2.4494 ,
-               "2.4494"^^xsd:float ;
+         :long 2.4494 ;
          
-         :lat 48.9875 ,
-              "48.9875"^^xsd:float ;
+         :lat 48.9875 ;
          
          dbo:country :France .
 
@@ -2921,15 +2838,11 @@ dbo:Country rdf:type owl:Class .
 :Great_Plains rdf:type :Area ,
                        owl:NamedIndividual ;
               
-              :long -97.0 ,
-                    "-97.0"^^xsd:float ;
+              :long -97.0 ;
               
-              :lat 37.0 ,
-                   "37.0"^^xsd:float ;
+              :lat 37.0 ;
               
-              dbo:country :Canada ,
-                          :Mexico ,
-                          :United_States .
+              dbo:country :United_States .
 
 
 
@@ -2941,11 +2854,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.31957E11"^^xsd:double ;
         
-        :long 23.716666666666665 ,
-              "23.716667"^^xsd:float ;
+        :long 23.716666666666665 ;
         
-        :lat 37.96666666666667 ,
-             "37.966667"^^xsd:float .
+        :lat 37.96666666666667 .
 
 
 
@@ -2997,14 +2908,11 @@ dbo:Country rdf:type owl:Class .
                     :Middle_Income_Country ,
                     owl:NamedIndividual ;
            
-           :long -90.5 ,
-                 "-90.5"^^xsd:float ;
+           :long -90.5 ;
            
-           dbo:areaTotal "1.08888E11"^^xsd:double ,
-                         "1.08889E11"^^xsd:double ;
+           dbo:areaTotal "1.08889E11"^^xsd:double ;
            
-           :lat "14.633333"^^xsd:float ,
-                14.633333333333333 .
+           :lat 14.633333333333333 .
 
 
 
@@ -3013,11 +2921,9 @@ dbo:Country rdf:type owl:Class .
 :Guatemala_City rdf:type :Area ,
                          owl:NamedIndividual ;
                 
-                :long -90.53527777777778 ,
-                      "-90.53528"^^xsd:float ;
+                :long -90.53527777777778 ;
                 
-                :lat 14.613333333333333 ,
-                     "14.613334"^^xsd:float ;
+                :lat 14.613333333333333 ;
                 
                 dbo:areaTotal "6.92E8"^^xsd:double ;
                 
@@ -3030,11 +2936,9 @@ dbo:Country rdf:type owl:Class .
 :Guerrero rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long -99.95 ,
-                "-99.95"^^xsd:float ;
+          :long -99.95 ;
           
-          :lat 17.616666666666667 ,
-               "17.616667"^^xsd:float ;
+          :lat 17.616666666666667 ;
           
           dbo:areaTotal "6.3596E10"^^xsd:double ;
           
@@ -3048,14 +2952,11 @@ dbo:Country rdf:type owl:Class .
                  :Low_Income_Country ,
                  owl:NamedIndividual ;
         
-        :long -13.7 ,
-              "-13.7"^^xsd:float ;
+        :long -13.7 ;
         
-        dbo:areaTotal "2.45836E11"^^xsd:double ,
-                      "2.45857E11"^^xsd:double ;
+        dbo:areaTotal "2.45857E11"^^xsd:double ;
         
-        :lat "9.516666"^^xsd:float ,
-             9.516666666666667 .
+        :lat 9.516666666666667 .
 
 
 
@@ -3113,11 +3014,9 @@ dbo:Country rdf:type owl:Class .
 :Hanscom_Field rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :long -71.28888888888889 ,
-                     "-71.28889"^^xsd:float ;
+               :long -71.28888888888889 ;
                
-               :lat 42.47 ,
-                    "42.47"^^xsd:float .
+               :lat 42.47 .
 
 
 
@@ -3220,11 +3119,9 @@ dbo:Country rdf:type owl:Class .
 :Huehuetenango_Department rdf:type :Area ,
                                    owl:NamedIndividual ;
                           
-                          :long "-91.47583"^^xsd:float ,
-                                -91.47583333333333 ;
+                          :long -91.47583333333333 ;
                           
-                          :lat 15.314166666666667 ,
-                               "15.314167"^^xsd:float ;
+                          :lat 15.314166666666667 ;
                           
                           dbo:areaTotal "7.403E9"^^xsd:double ;
                           
@@ -3290,13 +3187,11 @@ dbo:Country rdf:type owl:Class .
                 :Middle_Income_Country ,
                 owl:NamedIndividual ;
        
-       :lat "28.613333"^^xsd:float ,
-            28.613333333333333 ;
+       :lat 28.613333333333333 ;
        
        dbo:areaTotal "3.28759E12"^^xsd:double ;
        
-       :long 77.20833333333333 ,
-             "77.208336"^^xsd:float .
+       :long 77.20833333333333 .
 
 
 
@@ -3313,13 +3208,11 @@ dbo:Country rdf:type owl:Class .
                     :Middle_Income_Country ,
                     owl:NamedIndividual ;
            
-           :lat -6.175 ,
-                "-6.175"^^xsd:float ;
+           :lat -6.175 ;
            
            dbo:areaTotal "1.90457E12"^^xsd:double ;
            
-           :long "106.82833"^^xsd:float ,
-                 106.82833333333333 .
+           :long 106.82833333333333 .
 
 
 
@@ -3335,11 +3228,9 @@ dbo:Country rdf:type owl:Class .
 :Iquique_Province rdf:type :Area ,
                            owl:NamedIndividual ;
                   
-                  :lat "-20.213888"^^xsd:float ,
-                       -20.21388888888889 ;
+                  :lat -20.21388888888889 ;
                   
-                  :long -70.1525 ,
-                        "-70.1525"^^xsd:float ;
+                  :long -70.1525 ;
                   
                   dbo:areaTotal "2.8353E9"^^xsd:double ;
                   
@@ -3355,11 +3246,9 @@ dbo:Country rdf:type owl:Class .
       
       dbo:areaTotal "1.6482E12"^^xsd:double ;
       
-      :lat 35.68333333333333 ,
-           "35.683334"^^xsd:float ;
+      :lat 35.68333333333333 ;
       
-      :long 51.416666666666664 ,
-            "51.416668"^^xsd:float .
+      :long 51.416666666666664 .
 
 
 
@@ -3389,11 +3278,9 @@ dbo:Country rdf:type owl:Class .
 :Irkutsk_Oblast rdf:type :Area ,
                          owl:NamedIndividual ;
                 
-                :long 106.0 ,
-                      "106.0"^^xsd:float ;
+                :long 106.0 ;
                 
-                :lat "57.366665"^^xsd:float ,
-                     57.36666666666667 ;
+                :lat 57.36666666666667 ;
                 
                 dbo:areaTotal "7.679E11"^^xsd:double ;
                 
@@ -3463,13 +3350,11 @@ dbo:Country rdf:type owl:Class .
                 :High_Income_Country ,
                 owl:NamedIndividual ;
        
-       :long "139.76666"^^xsd:float ,
-             139.76666666666668 ;
+       :long 139.76666666666668 ;
        
        dbo:areaTotal "3.77944E11"^^xsd:double ;
        
-       :lat 35.68333333333333 ,
-            "35.683334"^^xsd:float .
+       :lat 35.68333333333333 .
 
 
 
@@ -3516,11 +3401,9 @@ dbo:Country rdf:type owl:Class .
 :Jos rdf:type :Area ,
               owl:NamedIndividual ;
      
-     :long "8.883333"^^xsd:float ,
-           8.883333333333333 ;
+     :long 8.883333333333333 ;
      
-     :lat "9.933333"^^xsd:float ,
-          9.933333333333334 ;
+     :lat 9.933333333333334 ;
      
      dbo:country :Nigeria .
 
@@ -3531,11 +3414,9 @@ dbo:Country rdf:type owl:Class .
 :Juanda_International_Airport rdf:type :Area ,
                                        owl:NamedIndividual ;
                               
-                              :lat "-7.379722"^^xsd:float ,
-                                   -7.379722222222222 ;
+                              :lat -7.379722222222222 ;
                               
-                              :long "112.78694"^^xsd:float ,
-                                    112.78694444444444 .
+                              :long 112.78694444444444 .
 
 
 
@@ -3622,13 +3503,11 @@ dbo:Country rdf:type owl:Class .
 :Kaduna rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat 10.523055555555555 ,
-             "10.523056"^^xsd:float ;
+        :lat 10.523055555555555 ;
         
         dbo:areaTotal "3.08E9"^^xsd:double ;
         
-        :long "7.4402776"^^xsd:float ,
-              7.440277777777778 ;
+        :long 7.440277777777778 ;
         
         dbo:country :Nigeria .
 
@@ -3639,11 +3518,9 @@ dbo:Country rdf:type owl:Class .
 :Kafr_Zita rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :lat "35.37361"^^xsd:float ,
-                35.37361111111111 ;
+           :lat 35.37361111111111 ;
            
-           :long "36.601665"^^xsd:float ,
-                 36.60166666666667 ;
+           :long 36.60166666666667 ;
            
            dbo:country :Syria .
 
@@ -3666,11 +3543,9 @@ dbo:Country rdf:type owl:Class .
 :Kamloops rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long -120.34083333333334 ,
-                "-120.340836"^^xsd:float ;
+          :long -120.34083333333334 ;
           
-          :lat "50.67611"^^xsd:float ,
-               50.67611111111111 ;
+          :lat 50.67611111111111 ;
           
           dbo:country :Canada .
 
@@ -3681,11 +3556,9 @@ dbo:Country rdf:type owl:Class .
 :Kampot_Province rdf:type :Area ,
                           owl:NamedIndividual ;
                  
-                 :lat 10.6 ,
-                      "10.6"^^xsd:float ;
+                 :lat 10.6 ;
                  
-                 :long "104.166664"^^xsd:float ,
-                       104.16666666666667 ;
+                 :long 104.16666666666667 ;
                  
                  dbo:areaTotal "4.873E9"^^xsd:double ;
                  
@@ -3705,13 +3578,11 @@ dbo:Country rdf:type owl:Class .
 :Kaohsiung rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :long 120.26666666666667 ,
-                 "120.26667"^^xsd:float ;
+           :long 120.26666666666667 ;
            
            dbo:areaTotal "2.94625E9"^^xsd:double ;
            
-           :lat "22.633333"^^xsd:float ,
-                22.633333333333333 ;
+           :lat 22.633333333333333 ;
            
            dbo:country :Taiwan .
 
@@ -3722,13 +3593,11 @@ dbo:Country rdf:type owl:Class .
 :Karachi rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :lat 24.86 ,
-              "24.86"^^xsd:float ;
+         :lat 24.86 ;
          
          dbo:areaTotal "3.527E9"^^xsd:double ;
          
-         :long 67.01 ,
-               "67.01"^^xsd:float ;
+         :long 67.01 ;
          
          dbo:country :Pakistan .
 
@@ -3756,14 +3625,11 @@ dbo:Country rdf:type owl:Class .
                      :Middle_Income_Country ,
                      owl:NamedIndividual ;
             
-            dbo:areaTotal "2.72489E12"^^xsd:double ,
-                          "2.7249E12"^^xsd:double ;
+            dbo:areaTotal "2.72489E12"^^xsd:double ;
             
-            :lat 51.166666666666664 ,
-                 "51.166668"^^xsd:float ;
+            :lat 51.166666666666664 ;
             
-            :long "71.416664"^^xsd:float ,
-                  71.41666666666667 .
+            :long 71.41666666666667 .
 
 
 
@@ -3798,11 +3664,9 @@ dbo:Country rdf:type owl:Class .
 :Keçiborlu rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :long "30.302221"^^xsd:float ,
-                 30.302222222222223 ;
+           :long 30.302222222222223 ;
            
-           :lat "37.943054"^^xsd:float ,
-                37.94305555555555 ;
+           :lat 37.94305555555555 ;
            
            dbo:country :Turkey .
 
@@ -3820,11 +3684,9 @@ dbo:Country rdf:type owl:Class .
 :Khartoum rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :lat "15.633333"^^xsd:float ,
-               15.633333333333333 ;
+          :lat 15.633333333333333 ;
           
-          :long "32.533333"^^xsd:float ,
-                32.53333333333333 .
+          :long 32.53333333333333 .
 
 
 
@@ -3839,11 +3701,9 @@ dbo:Country rdf:type owl:Class .
 :Kinshasa rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :lat -4.325 ,
-               "-4.325"^^xsd:float ;
+          :lat -4.325 ;
           
-          :long "15.322222"^^xsd:float ,
-                15.322222222222223 ;
+          :long 15.322222222222223 ;
           
           dbo:areaTotal "9.965E9"^^xsd:double ;
           
@@ -3893,11 +3753,9 @@ dbo:Country rdf:type owl:Class .
                  
                  dbo:areaTotal "1.96001E11"^^xsd:double ;
                  
-                 :lat 53.2 ,
-                      "53.2"^^xsd:float ;
+                 :lat 53.2 ;
                  
-                 :long 63.63333333333333 ,
-                       "63.633335"^^xsd:float ;
+                 :long 63.63333333333333 ;
                  
                  dbo:country :Kazakhstan .
 
@@ -3910,11 +3768,9 @@ dbo:Country rdf:type owl:Class .
          
          dbo:areaTotal "1.3768E8"^^xsd:double ;
          
-         :lat "51.333332"^^xsd:float ,
-              51.333333333333336 ;
+         :lat 51.333333333333336 ;
          
-         :long "6.5666666"^^xsd:float ,
-               6.566666666666666 ;
+         :long 6.566666666666666 ;
          
          dbo:country :Germany .
 
@@ -3953,11 +3809,9 @@ dbo:Country rdf:type owl:Class .
 :Lagos rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long "3.3958333"^^xsd:float ,
-             3.3958333333333335 ;
+       :long 3.3958333333333335 ;
        
-       :lat "6.4530554"^^xsd:float ,
-            6.453055555555555 ;
+       :lat 6.453055555555555 ;
        
        dbo:country :Nigeria .
 
@@ -3968,14 +3822,11 @@ dbo:Country rdf:type owl:Class .
 :Lahore rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        dbo:areaTotal "1.77155E9"^^xsd:double ,
-                      "1.772E9"^^xsd:double ;
+        dbo:areaTotal "1.77155E9"^^xsd:double ;
         
-        :lat 31.549722222222222 ,
-             "31.549723"^^xsd:float ;
+        :lat 31.549722222222222 ;
         
-        :long "74.34361"^^xsd:float ,
-              74.34361111111112 .
+        :long 74.34361111111112 .
 
 
 
@@ -3991,13 +3842,11 @@ dbo:Country rdf:type owl:Class .
 :Las_Palmas rdf:type :Area ,
                      owl:NamedIndividual ;
             
-            :long -15.416666666666666 ,
-                  "-15.416667"^^xsd:float ;
+            :long -15.416666666666666 ;
             
             dbo:areaTotal "1.0055E8"^^xsd:double ;
             
-            :lat 28.15 ,
-                 "28.15"^^xsd:float ;
+            :lat 28.15 ;
             
             dbo:country :Spain .
 
@@ -4030,13 +3879,11 @@ dbo:Country rdf:type owl:Class .
                   :Low_Income_Country ,
                   owl:NamedIndividual ;
          
-         :long -10.8 ,
-               "-10.8"^^xsd:float ;
+         :long -10.8 ;
          
          dbo:areaTotal "1.11369E11"^^xsd:double ;
          
-         :lat "6.3166666"^^xsd:float ,
-              6.316666666666666 .
+         :lat 6.316666666666666 .
 
 
 
@@ -4108,11 +3955,9 @@ dbo:Country rdf:type owl:Class .
 :London rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long -0.1275 ,
-              "-0.1275"^^xsd:float ;
+        :long -0.1275 ;
         
-        :lat "51.50722"^^xsd:float ,
-             51.507222222222225 ;
+        :lat 51.507222222222225 ;
         
         dbo:country :United_Kingdom .
 
@@ -4123,11 +3968,9 @@ dbo:Country rdf:type owl:Class .
 :London_Heathrow_Airport rdf:type :Area ,
                                   owl:NamedIndividual ;
                          
-                         :long -0.4613888888888889 ,
-                               "-0.4613889"^^xsd:float ;
+                         :long -0.4613888888888889 ;
                          
-                         :lat 51.4775 ,
-                              "51.4775"^^xsd:float .
+                         :lat 51.4775 .
 
 
 
@@ -4136,14 +3979,11 @@ dbo:Country rdf:type owl:Class .
 :Los_Angeles rdf:type :Area ,
                       owl:NamedIndividual ;
              
-             :long -118.25 ,
-                   "-118.25"^^xsd:float ;
+             :long -118.25 ;
              
-             dbo:areaTotal "1.30276E9"^^xsd:double ,
-                           "1.302E9"^^xsd:double ;
+             dbo:areaTotal "1.30276E9"^^xsd:double ;
              
-             :lat 34.05 ,
-                  "34.05"^^xsd:float ;
+             :lat 34.05 ;
              
              dbo:country :United_States .
 
@@ -4196,11 +4036,9 @@ dbo:Country rdf:type owl:Class .
 :Machakos rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :lat -1.5166666666666666 ,
-               "-1.5166667"^^xsd:float ;
+          :lat -1.5166666666666666 ;
           
-          :long "37.266666"^^xsd:float ,
-                37.266666666666666 ;
+          :long 37.266666666666666 ;
           
           dbo:country :Kenya .
 
@@ -4211,11 +4049,9 @@ dbo:Country rdf:type owl:Class .
 :Machiques rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :long "-72.566666"^^xsd:float ,
-                 -72.56666666666666 ;
+           :long -72.56666666666666 ;
            
-           :lat 10.066666666666666 ,
-                "10.066667"^^xsd:float ;
+           :lat 10.066666666666666 ;
            
            dbo:country :Venezuela .
 
@@ -4227,14 +4063,11 @@ dbo:Country rdf:type owl:Class .
                      :Low_Income_Country ,
                      owl:NamedIndividual ;
             
-            :lat "-18.916666"^^xsd:float ,
-                 -18.916666666666668 ;
+            :lat -18.916666666666668 ;
             
-            :long "47.516666"^^xsd:float ,
-                  47.516666666666666 ;
+            :long 47.516666666666666 ;
             
-            dbo:areaTotal "5.86884E11"^^xsd:double ,
-                          "5.87041E11"^^xsd:double .
+            dbo:areaTotal "5.86884E11"^^xsd:double .
 
 
 
@@ -4288,14 +4121,11 @@ dbo:Country rdf:type owl:Class .
                    :Middle_Income_Country ,
                    owl:NamedIndividual ;
           
-          dbo:areaTotal "2.97849E8"^^xsd:double ,
-                        "2.98E8"^^xsd:double ;
+          dbo:areaTotal "2.97849E8"^^xsd:double ;
           
-          :lat "4.1666665"^^xsd:float ,
-               4.166666666666667 ;
+          :lat 4.166666666666667 ;
           
-          :long 73.5 ,
-                "73.5"^^xsd:float .
+          :long 73.5 .
 
 
 
@@ -4305,13 +4135,11 @@ dbo:Country rdf:type owl:Class .
                :Low_Income_Country ,
                owl:NamedIndividual ;
       
-      :long -8.0 ,
-            "-8.0"^^xsd:float ;
+      :long -8.0 ;
       
       dbo:areaTotal "1.24019E12"^^xsd:double ;
       
-      :lat 12.65 ,
-           "12.65"^^xsd:float .
+      :lat 12.65 .
 
 
 
@@ -4337,14 +4165,11 @@ dbo:Country rdf:type owl:Class .
 :Manaus rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat -3.1 ,
-             "-3.1"^^xsd:float ;
+        :lat -3.1 ;
         
-        :long "-60.016666"^^xsd:float ,
-              -60.016666666666666 ;
+        :long -60.016666666666666 ;
         
-        dbo:areaTotal "1.14011E10"^^xsd:double ,
-                      "1.1401E10"^^xsd:double ;
+        dbo:areaTotal "1.14011E10"^^xsd:double ;
         
         dbo:country :Brazil .
 
@@ -4468,14 +4293,11 @@ dbo:Country rdf:type owl:Class .
           
           dbo:areaTotal "2.44E8"^^xsd:double ;
           
-          :long 37.54944444444445 ,
-                "37.549446"^^xsd:float ;
+          :long 37.54944444444445 ;
           
-          :lat "47.095833"^^xsd:float ,
-               47.09583333333333 ;
+          :lat 47.09583333333333 ;
           
-          dbo:country :Donetsk_Oblast ,
-                      :Ukraine .
+          dbo:country :Ukraine .
 
 
 
@@ -4613,11 +4435,9 @@ dbo:Country rdf:type owl:Class .
        
        dbo:areaTotal "2.651E8"^^xsd:double ;
        
-       :lat "3.5833333"^^xsd:float ,
-            3.5833333333333335 ;
+       :lat 3.5833333333333335 ;
        
-       :long "98.666664"^^xsd:float ,
-             98.66666666666667 ;
+       :long 98.66666666666667 ;
        
        dbo:country :Indonesia .
 
@@ -4635,13 +4455,11 @@ dbo:Country rdf:type owl:Class .
 :Medolla rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long 11.066666666666666 ,
-               "11.066667"^^xsd:float ;
+         :long 11.066666666666666 ;
          
          dbo:areaTotal "2.68E7"^^xsd:double ;
          
-         :lat 44.85 ,
-              "44.85"^^xsd:float ;
+         :lat 44.85 ;
          
          dbo:country :Italy .
 
@@ -4654,11 +4472,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.4189E8"^^xsd:double ;
         
-        :lat 28.99 ,
-             "28.99"^^xsd:float ;
+        :lat 28.99 ;
         
-        :long 77.7 ,
-              "77.7"^^xsd:float ;
+        :long 77.7 ;
         
         dbo:country :India .
 
@@ -4676,11 +4492,9 @@ dbo:Country rdf:type owl:Class .
 :Memphis_International_Airport rdf:type :Area ,
                                         owl:NamedIndividual ;
                                
-                               :long -89.97666666666667 ,
-                                     "-89.97667"^^xsd:float ;
+                               :long -89.97666666666667 ;
                                
-                               :lat 35.0425 ,
-                                    "35.0425"^^xsd:float .
+                               :lat 35.0425 .
 
 
 
@@ -4738,13 +4552,11 @@ dbo:Country rdf:type owl:Class .
                  :Middle_Income_Country ,
                  owl:NamedIndividual ;
         
-        :long "-99.13333"^^xsd:float ,
-              -99.13333333333334 ;
+        :long -99.13333333333334 ;
         
         dbo:areaTotal "1.97255E12"^^xsd:double ;
         
-        :lat "19.433332"^^xsd:float ,
-             19.433333333333334 .
+        :lat 19.433333333333334 .
 
 
 
@@ -4776,11 +4588,9 @@ dbo:Country rdf:type owl:Class .
        
        dbo:areaTotal "1.8167E8"^^xsd:double ;
        
-       :lat 45.46666666666667 ,
-            "45.466667"^^xsd:float ;
+       :lat 45.46666666666667 ;
        
-       :long "9.183333"^^xsd:float ,
-             9.183333333333334 ;
+       :long 9.183333333333334 ;
        
        dbo:country :Italy .
 
@@ -4791,14 +4601,11 @@ dbo:Country rdf:type owl:Class .
 :Minneapolis rdf:type :Area ,
                       owl:NamedIndividual ;
              
-             :long -93.26666666666667 ,
-                   "-93.26667"^^xsd:float ;
+             :long -93.26666666666667 ;
              
-             dbo:areaTotal "1.51255E8"^^xsd:double ,
-                           "1.513E8"^^xsd:double ;
+             dbo:areaTotal "1.51255E8"^^xsd:double ;
              
-             :lat 44.983333333333334 ,
-                  "44.983334"^^xsd:float ;
+             :lat 44.983333333333334 ;
              
              dbo:country :United_States .
 
@@ -4832,11 +4639,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.8323E8"^^xsd:double ;
         
-        :long "10.933333"^^xsd:float ,
-              10.933333333333334 ;
+        :long 10.933333333333334 ;
         
-        :lat 44.65 ,
-             "44.65"^^xsd:float ;
+        :lat 44.65 ;
         
         dbo:country :Italy .
 
@@ -4849,11 +4654,9 @@ dbo:Country rdf:type owl:Class .
            
            dbo:areaTotal "1.657E9"^^xsd:double ;
            
-           :lat "2.0333333"^^xsd:float ,
-                2.033333333333333 ;
+           :lat 2.033333333333333 ;
            
-           :long 45.35 ,
-                 "45.35"^^xsd:float ;
+           :long 45.35 ;
            
            dbo:country :Somalia .
 
@@ -4864,11 +4667,9 @@ dbo:Country rdf:type owl:Class .
 :Moises_R._Espinosa_Airport rdf:type :Area ,
                                      owl:NamedIndividual ;
                             
-                            :lat 12.369444444444444 ,
-                                 "12.369445"^^xsd:float ;
+                            :lat 12.369444444444444 ;
                             
-                            :long "123.629166"^^xsd:float ,
-                                  123.62916666666666 .
+                            :long 123.62916666666666 .
 
 
 
@@ -4884,13 +4685,11 @@ dbo:Country rdf:type owl:Class .
 :Mombasa rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :lat -4.05 ,
-              "-4.05"^^xsd:float ;
+         :lat -4.05 ;
          
          dbo:areaTotal "2.947E8"^^xsd:double ;
          
-         :long 39.666666666666664 ,
-               "39.666668"^^xsd:float ;
+         :long 39.666666666666664 ;
          
          dbo:country :Kenya .
 
@@ -5022,11 +4821,9 @@ dbo:Country rdf:type owl:Class .
 :Naha_Airport rdf:type :Area ,
                        owl:NamedIndividual ;
               
-              :long 127.64583333333333 ,
-                    "127.645836"^^xsd:float ;
+              :long 127.64583333333333 ;
               
-              :lat "26.195833"^^xsd:float ,
-                   26.195833333333333 .
+              :lat 26.195833333333333 .
 
 
 
@@ -5035,11 +4832,9 @@ dbo:Country rdf:type owl:Class .
 :Nairobi rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :lat "-1.2833333"^^xsd:float ,
-              -1.2833333333333332 ;
+         :lat -1.2833333333333332 ;
          
-         :long "36.816666"^^xsd:float ,
-               36.81666666666667 ;
+         :long 36.81666666666667 ;
          
          dbo:areaTotal "6.96E8"^^xsd:double ;
          
@@ -5080,13 +4875,11 @@ dbo:Country rdf:type owl:Class .
 :Negros_Oriental rdf:type :Area ,
                           owl:NamedIndividual ;
                  
-                 :long 123.0 ,
-                       "123.0"^^xsd:float ;
+                 :long 123.0 ;
                  
                  dbo:areaTotal "5.38553E9"^^xsd:double ;
                  
-                 :lat 9.75 ,
-                      "9.75"^^xsd:float ;
+                 :lat 9.75 ;
                  
                  dbo:country :Philippines .
 
@@ -5148,14 +4941,11 @@ dbo:Country rdf:type owl:Class .
                       :High_Income_Country ,
                       owl:NamedIndividual ;
              
-             :lat "-41.283333"^^xsd:float ,
-                  -41.28333333333333 ;
+             :lat -41.28333333333333 ;
              
-             :long 174.45 ,
-                   "174.45"^^xsd:float ;
+             :long 174.45 ;
              
-             dbo:areaTotal "2.68021E11"^^xsd:double ,
-                           "2.6802E11"^^xsd:double .
+             dbo:areaTotal "2.68021E11"^^xsd:double .
 
 
 
@@ -5186,14 +4976,11 @@ dbo:Country rdf:type owl:Class .
                   :Middle_Income_Country ,
                   owl:NamedIndividual ;
          
-         :long "7.483333"^^xsd:float ,
-               7.483333333333333 ;
+         :long 7.483333333333333 ;
          
-         :lat 9.066666666666666 ,
-              "9.066667"^^xsd:float ;
+         :lat 9.066666666666666 ;
          
-         dbo:areaTotal "9.23763E11"^^xsd:double ,
-                       "9.23768E11"^^xsd:double .
+         dbo:areaTotal "9.23768E11"^^xsd:double .
 
 
 
@@ -5224,11 +5011,9 @@ dbo:Country rdf:type owl:Class .
                         
                         dbo:areaTotal "3.40841E10"^^xsd:double ;
                         
-                        :lat 51.46666666666667 ,
-                             "51.466667"^^xsd:float ;
+                        :lat 51.46666666666667 ;
                         
-                        :long 7.55 ,
-                              "7.55"^^xsd:float ;
+                        :long 7.55 ;
                         
                         dbo:country :Germany .
 
@@ -5298,14 +5083,11 @@ dbo:Country rdf:type owl:Class .
 :Oklahoma_City rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :long -97.535 ,
-                     "-97.535"^^xsd:float ;
+               :long -97.535 ;
                
-               dbo:areaTotal "1.6088E9"^^xsd:double ,
-                             "1.6089E9"^^xsd:double ;
+               dbo:areaTotal "1.6089E9"^^xsd:double ;
                
-               :lat 35.48222222222222 ,
-                    "35.482224"^^xsd:float ;
+               :lat 35.48222222222222 ;
                
                dbo:country :United_States .
 
@@ -5337,11 +5119,9 @@ dbo:Country rdf:type owl:Class .
                  
                  dbo:areaTotal "1.24E11"^^xsd:double ;
                  
-                 :lat 52.13333333333333 ,
-                      "52.133335"^^xsd:float ;
+                 :lat 52.13333333333333 ;
                  
-                 :long 55.6 ,
-                       "55.6"^^xsd:float ;
+                 :long 55.6 ;
                  
                  dbo:country :Russia .
 
@@ -5424,11 +5204,9 @@ dbo:Country rdf:type owl:Class .
             
             dbo:areaTotal "1.6E7"^^xsd:double ;
             
-            :long 78.591 ,
-                  "78.591"^^xsd:float ;
+            :long 78.591 ;
             
-            :lat 9.544 ,
-                 "9.544"^^xsd:float ;
+            :lat 9.544 ;
             
             dbo:country :India .
 
@@ -5453,11 +5231,9 @@ dbo:Country rdf:type owl:Class .
 :Paris rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long 2.3508 ,
-             "2.3508"^^xsd:float ;
+       :long 2.3508 ;
        
-       :lat 48.8567 ,
-            "48.8567"^^xsd:float ;
+       :lat 48.8567 ;
        
        dbo:country :France .
 
@@ -5475,11 +5251,9 @@ dbo:Country rdf:type owl:Class .
 :Patna rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :lat 25.611 ,
-            "25.611"^^xsd:float ;
+       :lat 25.611 ;
        
-       :long 85.144 ,
-             "85.144"^^xsd:float ;
+       :long 85.144 ;
        
        dbo:country :India .
 
@@ -5492,11 +5266,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.41052E8"^^xsd:double ;
         
-        :long 119.58333333333333 ,
-              "119.583336"^^xsd:float ;
+        :long 119.58333333333333 ;
         
-        :lat 23.583333333333332 ,
-             "23.583334"^^xsd:float ;
+        :lat 23.583333333333332 ;
         
         dbo:country :Taiwan .
 
@@ -5522,11 +5294,9 @@ dbo:Country rdf:type owl:Class .
                :Middle_Income_Country ,
                owl:NamedIndividual ;
       
-      :lat "-12.043333"^^xsd:float ,
-           -12.043333333333333 ;
+      :lat -12.043333333333333 ;
       
-      :long -77.02833333333334 ,
-            "-77.028336"^^xsd:float ;
+      :long -77.02833333333334 ;
       
       dbo:areaTotal "1.28522E12"^^xsd:double .
 
@@ -5537,13 +5307,11 @@ dbo:Country rdf:type owl:Class .
 :Philadelphia rdf:type :Area ,
                        owl:NamedIndividual ;
               
-              :long "-75.166664"^^xsd:float ,
-                    -75.16666666666667 ;
+              :long -75.16666666666667 ;
               
               dbo:areaTotal "3.66742E8"^^xsd:double ;
               
-              :lat 39.95 ,
-                   "39.95"^^xsd:float ;
+              :lat 39.95 ;
               
               dbo:country :United_States .
 
@@ -5565,11 +5333,9 @@ dbo:Country rdf:type owl:Class .
                       :Middle_Income_Country ,
                       owl:NamedIndividual ;
              
-             :long 120.96666666666667 ,
-                   "120.96667"^^xsd:float ;
+             :long 120.96666666666667 ;
              
-             :lat "14.583333"^^xsd:float ,
-                  14.583333333333334 .
+             :lat 14.583333333333334 .
 
 
 
@@ -5578,11 +5344,9 @@ dbo:Country rdf:type owl:Class .
 :Phuket_International_Airport rdf:type :Area ,
                                        owl:NamedIndividual ;
                               
-                              :lat "8.113055"^^xsd:float ,
-                                   8.113055555555556 ;
+                              :lat 8.113055555555556 ;
                               
-                              :long "98.316666"^^xsd:float ,
-                                    98.31666666666666 .
+                              :long 98.31666666666666 .
 
 
 
@@ -5610,13 +5374,11 @@ dbo:Country rdf:type owl:Class .
 :Pitești rdf:type :Area ,
                   owl:NamedIndividual ;
          
-         :long "24.867777"^^xsd:float ,
-               24.86777777777778 ;
+         :long 24.86777777777778 ;
          
          dbo:areaTotal "4.07E7"^^xsd:double ;
          
-         :lat "44.860554"^^xsd:float ,
-              44.86055555555556 ;
+         :lat 44.86055555555556 ;
          
          dbo:country :Romania .
 
@@ -5742,13 +5504,11 @@ dbo:Country rdf:type owl:Class .
 :Queens rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long -73.86666666666666 ,
-              "-73.86667"^^xsd:float ;
+        :long -73.86666666666666 ;
         
         dbo:areaTotal "4.61018E8"^^xsd:double ;
         
-        :lat 40.75 ,
-             "40.75"^^xsd:float ;
+        :lat 40.75 ;
         
         dbo:country :United_States .
 
@@ -5759,11 +5519,9 @@ dbo:Country rdf:type owl:Class .
 :Quetzaltenango_Department rdf:type :Area ,
                                     owl:NamedIndividual ;
                            
-                           :long -91.5188888888889 ,
-                                 "-91.51889"^^xsd:float ;
+                           :long -91.5188888888889 ;
                            
-                           :lat 14.845833333333333 ,
-                                "14.845834"^^xsd:float ;
+                           :lat 14.845833333333333 ;
                            
                            dbo:country :Guatemala .
 
@@ -5774,11 +5532,9 @@ dbo:Country rdf:type owl:Class .
 :Quiché_Department rdf:type :Area ,
                             owl:NamedIndividual ;
                    
-                   :long -91.15 ,
-                         "-91.15"^^xsd:float ;
+                   :long -91.15 ;
                    
-                   :lat 15.03 ,
-                        "15.03"^^xsd:float ;
+                   :lat 15.03 ;
                    
                    dbo:areaTotal "8.378E9"^^xsd:double ;
                    
@@ -5812,11 +5568,9 @@ dbo:Country rdf:type owl:Class .
 :Reyhanlı rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :lat "36.269165"^^xsd:float ,
-               36.26916666666666 ;
+          :lat 36.26916666666666 ;
           
-          :long 36.56722222222222 ,
-                "36.567223"^^xsd:float ;
+          :long 36.56722222222222 ;
           
           dbo:country :Turkey .
 
@@ -5895,11 +5649,9 @@ dbo:Country rdf:type owl:Class .
                
                dbo:areaTotal "1.008E11"^^xsd:double ;
                
-               :long 41.18333333333333 ,
-                     "41.183334"^^xsd:float ;
+               :long 41.18333333333333 ;
                
-               :lat "47.866665"^^xsd:float ,
-                    47.86666666666667 ;
+               :lat 47.86666666666667 ;
                
                dbo:country :Russia .
 
@@ -5973,14 +5725,11 @@ dbo:Country rdf:type owl:Class .
                 :Middle_Income_Country ,
                 owl:NamedIndividual ;
        
-       :lat "-13.833333"^^xsd:float ,
-            -13.833333333333334 ;
+       :lat -13.833333333333334 ;
        
-       :long -171.75 ,
-             "-171.75"^^xsd:float ;
+       :long -171.75 ;
        
-       dbo:areaTotal "2.84122E9"^^xsd:double ,
-                     "2.842E9"^^xsd:double .
+       dbo:areaTotal "2.84122E9"^^xsd:double .
 
 
 
@@ -6070,11 +5819,9 @@ dbo:Country rdf:type owl:Class .
 :Santiago rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :lat -33.45 ,
-               "-33.45"^^xsd:float ;
+          :lat -33.45 ;
           
-          :long "-70.666664"^^xsd:float ,
-                -70.66666666666667 ;
+          :long -70.66666666666667 ;
           
           dbo:areaTotal "6.41281E8"^^xsd:double ;
           
@@ -6087,13 +5834,11 @@ dbo:Country rdf:type owl:Class .
 :Santiago_de_Compostela rdf:type :Area ,
                                  owl:NamedIndividual ;
                         
-                        :long "-8.544444"^^xsd:float ,
-                              -8.544444444444444 ;
+                        :long -8.544444444444444 ;
                         
                         dbo:areaTotal "2.2E8"^^xsd:double ;
                         
-                        :lat "42.877777"^^xsd:float ,
-                             42.87777777777778 ;
+                        :lat 42.87777777777778 ;
                         
                         dbo:country :Spain .
 
@@ -6122,13 +5867,11 @@ dbo:Country rdf:type owl:Class .
 :Santo_Domingo rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :long -69.95 ,
-                     "-69.95"^^xsd:float ;
+               :long -69.95 ;
                
                dbo:areaTotal "1.0444E8"^^xsd:double ;
                
-               :lat 18.466666666666665 ,
-                    "18.466667"^^xsd:float ;
+               :lat 18.466666666666665 ;
                
                dbo:country :Dominican_Republic .
 
@@ -6167,14 +5910,11 @@ dbo:Country rdf:type owl:Class .
                   :Middle_Income_Country ,
                   owl:NamedIndividual ;
          
-         :long "-17.416666"^^xsd:float ,
-               -17.416666666666668 ;
+         :long -17.416666666666668 ;
          
-         dbo:areaTotal "1.96712E11"^^xsd:double ,
-                       "1.96839E11"^^xsd:double ;
+         dbo:areaTotal "1.96839E11"^^xsd:double ;
          
-         :lat 14.666666666666666 ,
-              "14.666667"^^xsd:float .
+         :lat 14.666666666666666 .
 
 
 
@@ -6215,11 +5955,9 @@ dbo:Country rdf:type owl:Class .
                  :Middle_Income_Country ,
                  owl:NamedIndividual ;
         
-        :long 20.466666666666665 ,
-              "20.466667"^^xsd:float ;
+        :long 20.466666666666665 ;
         
-        :lat 44.8 ,
-             "44.8"^^xsd:float ;
+        :lat 44.8 ;
         
         dbo:areaTotal "8.8361E10"^^xsd:double .
 
@@ -6244,11 +5982,9 @@ dbo:Country rdf:type owl:Class .
 :Sharm_el-Sheikh rdf:type :Area ,
                           owl:NamedIndividual ;
                  
-                 :lat "27.912222"^^xsd:float ,
-                      27.912222222222223 ;
+                 :lat 27.912222222222223 ;
                  
-                 :long 34.32972222222222 ,
-                       "34.329723"^^xsd:float ;
+                 :long 34.32972222222222 ;
                  
                  dbo:country :Egypt .
 
@@ -6300,14 +6036,11 @@ dbo:Country rdf:type owl:Class .
                        :Low_Income_Country ,
                        owl:NamedIndividual ;
               
-              :long -13.23445 ,
-                    "-13.23445"^^xsd:float ;
+              :long -13.23445 ;
               
-              dbo:areaTotal "7.17401E10"^^xsd:double ,
-                            "7.174E10"^^xsd:double ;
+              dbo:areaTotal "7.17401E10"^^xsd:double ;
               
-              :lat 8.48445 ,
-                   "8.48445"^^xsd:float .
+              :lat 8.48445 .
 
 
 
@@ -6344,11 +6077,9 @@ dbo:Country rdf:type owl:Class .
 :Sinjar rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat 36.3225 ,
-             "36.3225"^^xsd:float ;
+        :lat 36.3225 ;
         
-        :long "41.864166"^^xsd:float ,
-              41.86416666666667 .
+        :long 41.86416666666667 .
 
 
 
@@ -6378,11 +6109,9 @@ dbo:Country rdf:type owl:Class .
 :Skopje rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :long "21.433332"^^xsd:float ,
-              21.433333333333334 ;
+        :long 21.433333333333334 ;
         
-        :lat 42.0 ,
-             "42.0"^^xsd:float ;
+        :lat 42.0 ;
         
         dbo:areaTotal "5.7146E8"^^xsd:double ;
         
@@ -6421,11 +6150,9 @@ dbo:Country rdf:type owl:Class .
 :Sochi_International_Airport rdf:type :Area ,
                                       owl:NamedIndividual ;
                              
-                             :long "39.956665"^^xsd:float ,
-                                   39.95666666666666 ;
+                             :long 39.95666666666666 ;
                              
-                             :lat 43.45 ,
-                                  "43.45"^^xsd:float .
+                             :lat 43.45 .
 
 
 
@@ -6434,13 +6161,11 @@ dbo:Country rdf:type owl:Class .
 :Sololá_Department rdf:type :Area ,
                             owl:NamedIndividual ;
                    
-                   :long "-91.47583"^^xsd:float ,
-                         -91.47583333333333 ;
+                   :long -91.47583333333333 ;
                    
                    dbo:areaTotal "1.061E9"^^xsd:double ;
                    
-                   :lat 14.773888888888889 ,
-                        "14.773889"^^xsd:float ;
+                   :lat 14.773888888888889 ;
                    
                    dbo:country :Guatemala .
 
@@ -6452,14 +6177,11 @@ dbo:Country rdf:type owl:Class .
                           :Middle_Income_Country ,
                           owl:NamedIndividual ;
                  
-                 :lat "-9.466666"^^xsd:float ,
-                      -9.466666666666667 ;
+                 :lat -9.466666666666667 ;
                  
-                 :long 159.81666666666666 ,
-                       "159.81667"^^xsd:float ;
+                 :long 159.81666666666666 ;
                  
-                 dbo:areaTotal "2.83992E10"^^xsd:double ,
-                               "2.84E10"^^xsd:double .
+                 dbo:areaTotal "2.83992E10"^^xsd:double .
 
 
 
@@ -6476,14 +6198,11 @@ dbo:Country rdf:type owl:Class .
                   :Low_Income_Country ,
                   owl:NamedIndividual ;
          
-         :lat "2.0333333"^^xsd:float ,
-              2.033333333333333 ;
+         :lat 2.033333333333333 ;
          
-         :long 45.35 ,
-               "45.35"^^xsd:float ;
+         :long 45.35 ;
          
-         dbo:areaTotal "6.37655E11"^^xsd:double ,
-                       "6.37657E11"^^xsd:double .
+         dbo:areaTotal "6.37657E11"^^xsd:double .
 
 
 
@@ -6527,11 +6246,9 @@ dbo:Country rdf:type owl:Class .
 :South_Sumatra rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :lat -2.75 ,
-                    "-2.75"^^xsd:float ;
+               :lat -2.75 ;
                
-               :long 103.83333333333333 ,
-                     "103.833336"^^xsd:float ;
+               :long 103.83333333333333 ;
                
                dbo:areaTotal "9.15924E10"^^xsd:double ;
                
@@ -6602,14 +6319,11 @@ dbo:Country rdf:type owl:Class .
                     :Middle_Income_Country ,
                     owl:NamedIndividual ;
            
-           dbo:areaTotal "6.56096E10"^^xsd:double ,
-                         "6.561E10"^^xsd:double ;
+           dbo:areaTotal "6.56096E10"^^xsd:double ;
            
-           :lat 6.933333333333334 ,
-                "6.9333334"^^xsd:float ;
+           :lat 6.933333333333334 ;
            
-           :long 79.83333333333333 ,
-                 "79.833336"^^xsd:float .
+           :long 79.83333333333333 .
 
 
 
@@ -6618,13 +6332,11 @@ dbo:Country rdf:type owl:Class .
 :Staten_Island rdf:type :Area ,
                         owl:NamedIndividual ;
                
-               :long -74.14483888888888 ,
-                     "-74.14484"^^xsd:float ;
+               :long -74.14483888888888 ;
                
                dbo:areaTotal "2.64179E8"^^xsd:double ;
                
-               :lat "40.57628"^^xsd:float ,
-                    40.576280555555556 ;
+               :lat 40.576280555555556 ;
                
                dbo:country :United_States .
 
@@ -6669,11 +6381,9 @@ dbo:Country rdf:type owl:Class .
 :Suchiate rdf:type :Area ,
                    owl:NamedIndividual ;
           
-          :long "-92.14972"^^xsd:float ,
-                -92.14972222222222 ;
+          :long -92.14972222222222 ;
           
-          :lat 14.679166666666667 ,
-               "14.679167"^^xsd:float ;
+          :lat 14.679166666666667 ;
           
           dbo:areaTotal "6.061E8"^^xsd:double ;
           
@@ -6707,11 +6417,9 @@ dbo:Country rdf:type owl:Class .
 :Surakarta rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :lat "-7.5666666"^^xsd:float ,
-                -7.566666666666666 ;
+           :lat -7.566666666666666 ;
            
-           :long "110.816666"^^xsd:float ,
-                 110.81666666666666 ;
+           :long 110.81666666666666 ;
            
            dbo:areaTotal "4.403E7"^^xsd:double ;
            
@@ -6772,11 +6480,9 @@ dbo:Country rdf:type owl:Class .
 :São_Paulo rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :lat -23.55 ,
-                "-23.55"^^xsd:float ;
+           :lat -23.55 ;
            
-           :long -46.63333333333333 ,
-                 "-46.633335"^^xsd:float ;
+           :long -46.63333333333333 ;
            
            dbo:country :Brazil .
 
@@ -6824,14 +6530,11 @@ dbo:Country rdf:type owl:Class .
                  :High_Income_Country ,
                  owl:NamedIndividual ;
         
-        :long "121.63333"^^xsd:float ,
-              121.63333333333334 ;
+        :long 121.63333333333334 ;
         
-        :lat "25.033333"^^xsd:float ,
-             25.033333333333335 ;
+        :lat 25.033333333333335 ;
         
-        dbo:areaTotal "3.61925E10"^^xsd:double ,
-                      "3.6193E10"^^xsd:double .
+        dbo:areaTotal "3.61925E10"^^xsd:double .
 
 
 
@@ -6868,11 +6571,9 @@ dbo:Country rdf:type owl:Class .
 :Tapachula rdf:type :Area ,
                     owl:NamedIndividual ;
            
-           :long -92.26666666666667 ,
-                 "-92.26667"^^xsd:float ;
+           :long -92.26666666666667 ;
            
-           :lat 14.9 ,
-                "14.9"^^xsd:float ;
+           :lat 14.9 ;
            
            dbo:areaTotal "3.03E8"^^xsd:double ;
            
@@ -6885,11 +6586,9 @@ dbo:Country rdf:type owl:Class .
 :Tehran rdf:type :Area ,
                  owl:NamedIndividual ;
         
-        :lat "35.69611"^^xsd:float ,
-             35.69611111111111 ;
+        :lat 35.69611111111111 ;
         
-        :long "51.423054"^^xsd:float ,
-              51.42305555555556 ;
+        :long 51.42305555555556 ;
         
         dbo:country :Iran .
 
@@ -6908,14 +6607,11 @@ dbo:Country rdf:type owl:Class .
                    :Middle_Income_Country ,
                    owl:NamedIndividual ;
           
-          :long "100.48333"^^xsd:float ,
-                100.48333333333333 ;
+          :long 100.48333333333333 ;
           
-          :lat 13.75 ,
-               "13.75"^^xsd:float ;
+          :lat 13.75 ;
           
-          dbo:areaTotal "5.13115E11"^^xsd:double ,
-                        "5.1312E11"^^xsd:double .
+          dbo:areaTotal "5.13115E11"^^xsd:double .
 
 
 
@@ -6937,11 +6633,9 @@ dbo:Country rdf:type owl:Class .
 :Thessaloniki_International_Airport rdf:type :Area ,
                                              owl:NamedIndividual ;
                                     
-                                    :long "22.970833"^^xsd:float ,
-                                          22.970833333333335 ;
+                                    :long 22.970833333333335 ;
                                     
-                                    :lat "40.519722"^^xsd:float ,
-                                         40.51972222222222 .
+                                    :lat 40.51972222222222 .
 
 
 
@@ -6964,13 +6658,11 @@ dbo:Country rdf:type owl:Class .
 :Tokyo rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long 139.6917 ,
-             "139.6917"^^xsd:float ;
+       :long 139.6917 ;
        
        dbo:areaTotal "2.18766E9"^^xsd:double ;
        
-       :lat 35.689505555555556 ,
-            "35.689507"^^xsd:float ;
+       :lat 35.689505555555556 ;
        
        dbo:country :Japan .
 
@@ -6982,14 +6674,11 @@ dbo:Country rdf:type owl:Class .
                 :Middle_Income_Country ,
                 owl:NamedIndividual ;
        
-       :long -175.2 ,
-             "-175.2"^^xsd:float ;
+       :long -175.2 ;
        
-       :lat "-21.133333"^^xsd:float ,
-            -21.133333333333333 ;
+       :lat -21.133333333333333 ;
        
-       dbo:areaTotal "7.48507E8"^^xsd:double ,
-                     "7.48E8"^^xsd:double .
+       dbo:areaTotal "7.48507E8"^^xsd:double .
 
 
 
@@ -6998,11 +6687,9 @@ dbo:Country rdf:type owl:Class .
 :Toronto_Pearson_International_Airport rdf:type :Area ,
                                                 owl:NamedIndividual ;
                                        
-                                       :long "-79.630554"^^xsd:float ,
-                                             -79.63055555555556 ;
+                                       :long -79.63055555555556 ;
                                        
-                                       :lat "43.676666"^^xsd:float ,
-                                            43.67666666666667 .
+                                       :lat 43.67666666666667 .
 
 
 
@@ -7011,13 +6698,11 @@ dbo:Country rdf:type owl:Class .
 :Totonicapán_Department rdf:type :Area ,
                                  owl:NamedIndividual ;
                         
-                        :long -91.36 ,
-                              "-91.36"^^xsd:float ;
+                        :long -91.36 ;
                         
                         dbo:areaTotal "1.061E9"^^xsd:double ;
                         
-                        :lat 14.9125 ,
-                             "14.9125"^^xsd:float ;
+                        :lat 14.9125 ;
                         
                         dbo:country :Guatemala .
 
@@ -7069,11 +6754,9 @@ dbo:Country rdf:type owl:Class .
              
              dbo:areaTotal "2.57E10"^^xsd:double ;
              
-             :long "37.583332"^^xsd:float ,
-                   37.583333333333336 ;
+             :long 37.583333333333336 ;
              
-             :lat 53.916666666666664 ,
-                  "53.916668"^^xsd:float ;
+             :lat 53.916666666666664 ;
              
              dbo:country :Russia .
 
@@ -7096,13 +6779,11 @@ dbo:Country rdf:type owl:Class .
 :Tunis rdf:type :Area ,
                 owl:NamedIndividual ;
        
-       :long "10.183333"^^xsd:float ,
-             10.183333333333334 ;
+       :long 10.183333333333334 ;
        
        dbo:areaTotal "2.1263E8"^^xsd:double ;
        
-       :lat 36.8 ,
-            "36.8"^^xsd:float ;
+       :lat 36.8 ;
        
        dbo:country :Tunisia .
 
@@ -7128,11 +6809,9 @@ dbo:Country rdf:type owl:Class .
                  :Middle_Income_Country ,
                  owl:NamedIndividual ;
         
-        :long "32.833332"^^xsd:float ,
-              32.833333333333336 ;
+        :long 32.833333333333336 ;
         
-        :lat 39.916666666666664 ,
-             "39.916668"^^xsd:float ;
+        :lat 39.916666666666664 ;
         
         dbo:areaTotal "7.83562E11"^^xsd:double .
 
@@ -7203,11 +6882,9 @@ dbo:Country rdf:type owl:Class .
                
                dbo:areaTotal "1.4352E12"^^xsd:double ;
                
-               :lat "57.833332"^^xsd:float ,
-                    57.833333333333336 ;
+               :lat 57.833333333333336 ;
                
-               :long 69.0 ,
-                     "69.0"^^xsd:float ;
+               :long 69.0 ;
                
                dbo:country :Russia .
 
@@ -7350,11 +7027,9 @@ dbo:Country rdf:type owl:Class .
 :Valparaíso rdf:type :Area ,
                      owl:NamedIndividual ;
             
-            :lat -33.05 ,
-                 "-33.05"^^xsd:float ;
+            :lat -33.05 ;
             
-            :long -71.61666666666666 ,
-                  "-71.61667"^^xsd:float ;
+            :long -71.61666666666666 ;
             
             dbo:areaTotal "4.016E8"^^xsd:double ;
             
@@ -7368,13 +7043,11 @@ dbo:Country rdf:type owl:Class .
                   :Middle_Income_Country ,
                   owl:NamedIndividual ;
          
-         :lat -17.75 ,
-              "-17.75"^^xsd:float ;
+         :lat -17.75 ;
          
          dbo:areaTotal "1.219E10"^^xsd:double ;
          
-         :long 168.3 ,
-               "168.3"^^xsd:float .
+         :long 168.3 .
 
 
 
@@ -7398,14 +7071,11 @@ dbo:Country rdf:type owl:Class .
                     :High_Income_Country ,
                     owl:NamedIndividual ;
            
-           :long -66.96666666666667 ,
-                 "-66.96667"^^xsd:float ;
+           :long -66.96666666666667 ;
            
-           :lat 10.5 ,
-                "10.5"^^xsd:float ;
+           :lat 10.5 ;
            
-           dbo:areaTotal "9.16444E11"^^xsd:double ,
-                         "9.16445E11"^^xsd:double .
+           dbo:areaTotal "9.16445E11"^^xsd:double .
 
 
 
@@ -7421,11 +7091,9 @@ dbo:Country rdf:type owl:Class .
 :Vilnius_Airport rdf:type :Area ,
                           owl:NamedIndividual ;
                  
-                 :long "25.287777"^^xsd:float ,
-                       25.287777777777777 ;
+                 :long 25.287777777777777 ;
                  
-                 :lat "54.636944"^^xsd:float ,
-                      54.636944444444445 .
+                 :lat 54.636944444444445 .
 
 
 
@@ -7496,11 +7164,9 @@ dbo:Country rdf:type owl:Class .
 :Wellington rdf:type :Area ,
                      owl:NamedIndividual ;
             
-            :lat "-41.288887"^^xsd:float ,
-                 -41.28888888888889 ;
+            :lat -41.28888888888889 ;
             
-            :long "174.77722"^^xsd:float ,
-                  174.77722222222224 .
+            :long 174.77722222222224 .
 
 
 
@@ -7569,11 +7235,9 @@ dbo:Country rdf:type owl:Class .
 :Whitewater_Baldy rdf:type :Area ,
                            owl:NamedIndividual ;
                   
-                  :long "-108.64172"^^xsd:float ,
-                        -108.6417248 ;
+                  :long -108.6417248 ;
                   
-                  :lat "33.323673"^^xsd:float ,
-                       33.323675 .
+                  :lat 33.323675 .
 
 
 
@@ -7589,11 +7253,9 @@ dbo:Country rdf:type owl:Class .
 :World_Trade_Center rdf:type :Area ,
                              owl:NamedIndividual ;
                     
-                    :long -74.0125 ,
-                          "-74.0125"^^xsd:float ;
+                    :long -74.0125 ;
                     
-                    :lat "40.711666"^^xsd:float ,
-                         40.711666666666666 .
+                    :lat 40.711666666666666 .
 
 
 
@@ -7693,11 +7355,9 @@ dbo:Country rdf:type owl:Class .
         
         dbo:areaTotal "1.4577E10"^^xsd:double ;
         
-        :lat 43.825 ,
-             "43.825"^^xsd:float ;
+        :lat 43.825 ;
         
-        :long 87.6 ,
-              "87.6"^^xsd:float ;
+        :long 87.6 ;
         
         dbo:country :China .
 
