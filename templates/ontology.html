@@ -12,18 +12,18 @@
     <script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>		
 {% endblock %}
     
-{% block content %}   
+{% block content %}
     <h1><p>Subject of interest: {{thing}}</p></h1>
     <table>
         <tr>
             <th>Predicaat</th>
             <th>Object</th>
         </tr>
-    {% for res in result.results.bindings %}
-        <tr>
-            <td>{{res.pred.value}}</td>
-            <td>{{res.obj.value}}</td>
-        </tr>
-    {% endfor %}
+        {% for res in result.results.bindings %}
+            <tr>
+                <td>{{res.pred.value}}</td>
+                <td>{{res.obj.value}}</td>
+            </tr>
+        {% endfor %}
     </table>
 {% endblock %}

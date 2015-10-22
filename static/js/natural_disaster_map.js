@@ -1,9 +1,10 @@
 $(window).load(function()
 {
     /* Query to get all area's that are of a risk type with their latitude and longitude */
-    var query = "SELECT DISTINCT ?area ?risk ?lat ?long WHERE { VALUES ?risk " + 
+    var query = "SELECT DISTINCT ?area ?risk ?lat ?long ?areaTotal WHERE { VALUES ?risk " + 
                 "{:Very_High_Risk_Area :High_Risk_Area :Medium_Risk_Area :Low_Risk_Area}" +
-                " ?area rdf:type :Area ; rdf:type ?risk ; :lat ?lat ; :long ?long . }";
+                " ?area rdf:type :Area ; rdf:type ?risk ; :lat ?lat ; :long ?long . " +
+                "OPTIONAL { ?area <http://dbpedia.org/ontology/areaTotal> ?areaTotal } . }";
               
     /* Ajax call to get the results of the sparql query and draw them on the map afterwards */
     $.get("/sparql", data={'query': query}, function(data)
@@ -98,17 +99,27 @@ function initMapWithSearchBox()
 function initMapCircles(result) {
 
     var l = result.length;
-    var color;
+    var color, center_position, circle_radius;
 
     /* Loop through the results, creating a circle per risk area */
     for (var i = 0; i < l; i++)
     {
         color = returnColor(result[i]["risk"]["value"].split("#")[1]);
-        centerPosition = new google.maps.LatLng(result[i]["lat"]["value"], result[i]["long"]["value"]);
+        center_position = new google.maps.LatLng(result[i]["lat"]["value"], result[i]["long"]["value"]);
         
-        /* Create the circle with its position and color */
+        /* Determine the circle radius with a lower boundary by looking at the area total of the risk area */
+        if (typeof(result[i]["areaTotal"]) !== 'undefined')
+            circle_radius = result[i]["areaTotal"]["value"] / 100000.0;
+            //console.log(circle_radius); 
+            //if (circle_radius < 2000.0)
+            //    circle_radius = 2000.0;
+        else
+            circle_radius = 18362.55489862987;
+        
+        /* Create the circle with its position, radius and color, and set the z index
+         * so that circles with a smaller radius are in front of circles with a bigger radius */
         var circle = new google.maps.Circle({
-            center: centerPosition,
+            center: center_position,
             map: window['map'],
             fillColor: color,
             fillOpacity: 1.0,
@@ -116,8 +127,9 @@ function initMapCircles(result) {
             strokeOpacity: 1.0,
             strokeWeight: 1,
             draggable: false,
-            radius: 18362.55489862987,
-            id: "circle" + i
+            radius: circle_radius,
+            id: "circle" + i,
+            zIndex: circle_radius * -1
         });
         
         /* Add a hidden link that will be activated when clicking on the corresponding circle*/

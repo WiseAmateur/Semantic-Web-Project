@@ -35,6 +35,12 @@ dbo:country rdf:type owl:ObjectProperty ;
 #################################################################
 
 
+###  http://dbpedia.org/ontology/areaTotal
+
+dbo:areaTotal rdf:type owl:DatatypeProperty .
+
+
+
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#lat
 
 :lat rdf:type owl:DatatypeProperty .
@@ -48,11 +54,18 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 
 
+
 #################################################################
 #
 #    Classes
 #
 #################################################################
+
+
+###  http://dbpedia.org/ontology/Country
+
+dbo:Country rdf:type owl:Class .
+
 
 
 
@@ -66,10 +79,368 @@ dbo:country rdf:type owl:ObjectProperty ;
 
     :Kostanay_Region :lat "53.2"^^xsd:float ;
     :long "63.63333333333333"^^xsd:float ;
-    dbo:country :Kazakhstan .
+    dbo:country :Kazakhstan ;
+    dbo:areaTotal "1.96001e+11"^^xsd:double .
     :Belgrade :lat "44.81666666666667"^^xsd:float ;
     :long "20.466666666666665"^^xsd:float ;
-    dbo:country :Serbia .
+    dbo:country :Serbia ;
+    dbo:areaTotal "3.5996e+08"^^xsd:double .
+    :Irkutsk_Oblast :lat "57.36666666666667"^^xsd:float ;
+    :long "106.0"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "7.679e+11"^^xsd:double .
+    :Oklahoma_City :lat "35.48222222222222"^^xsd:float ;
+    :long "-97.535"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.6088e+09"^^xsd:double .
+    :Oklahoma_City :lat "35.48222222222222"^^xsd:float ;
+    :long "-97.535"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.6089e+09"^^xsd:double .
+    :Santo_Domingo :lat "18.466666666666665"^^xsd:float ;
+    :long "-69.95"^^xsd:float ;
+    dbo:country :Dominican_Republic ;
+    dbo:areaTotal "1.0444e+08"^^xsd:double .
+    :Alto_Hospicio :lat "-20.25"^^xsd:float ;
+    :long "-70.11666666666666"^^xsd:float ;
+    dbo:country :Chile ;
+    dbo:areaTotal "5.932e+08"^^xsd:double .
+    :Benghazi :lat "32.11666666666667"^^xsd:float ;
+    :long "20.066666666666666"^^xsd:float ;
+    dbo:country :Libya ;
+    dbo:areaTotal "3.14e+08"^^xsd:double .
+    :Cromer :lat "52.931"^^xsd:float ;
+    :long "1.302"^^xsd:float ;
+    dbo:country :Norfolk ;
+    dbo:areaTotal "4.66e+06"^^xsd:double .
+    :Cromer :lat "52.931"^^xsd:float ;
+    :long "1.302"^^xsd:float ;
+    dbo:country :United_Kingdom ;
+    dbo:areaTotal "4.66e+06"^^xsd:double .
+    :Abuja :lat "9.066666666666666"^^xsd:float ;
+    :long "7.483333333333333"^^xsd:float ;
+    dbo:country :Nigeria ;
+    dbo:areaTotal "7.13e+08"^^xsd:double .
+    :Baotou :lat "40.65"^^xsd:float ;
+    :long "109.83333333333333"^^xsd:float ;
+    dbo:country :China ;
+    dbo:areaTotal "2.7768e+10"^^xsd:double .
+    :Barcelona :lat "41.38333333333333"^^xsd:float ;
+    :long "2.183333333333333"^^xsd:float ;
+    dbo:country :Spain ;
+    dbo:areaTotal "1.019e+08"^^xsd:double .
+    :Bashkortostan :lat "54.46666666666667"^^xsd:float ;
+    :long "56.266666666666666"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "1.436e+11"^^xsd:double .
+    :Bohol :lat "9.833333333333334"^^xsd:float ;
+    :long "124.16666666666667"^^xsd:float ;
+    dbo:country :Philippines ;
+    dbo:areaTotal "4.82095e+09"^^xsd:double .
+    :Brazzaville :lat "-4.267777777777778"^^xsd:float ;
+    :long "15.291944444444445"^^xsd:float ;
+    dbo:country :Republic_of_the_Congo ;
+    dbo:areaTotal "2.639e+08"^^xsd:double .
+    :Brindisi :lat "40.63333333333333"^^xsd:float ;
+    :long "17.933333333333334"^^xsd:float ;
+    dbo:country :Italy ;
+    dbo:areaTotal "3.28e+08"^^xsd:double .
+    :Bushehr_Province :lat "28.9184"^^xsd:float ;
+    :long "50.8382"^^xsd:float ;
+    dbo:country :Iran ;
+    dbo:areaTotal "2.2743e+10"^^xsd:double .
+    :Cebu :lat "10.316666666666666"^^xsd:float ;
+    :long "123.75"^^xsd:float ;
+    dbo:country :Philippines ;
+    dbo:areaTotal "4.94372e+09"^^xsd:double .
+    :Chiapas :lat "16.416666666666668"^^xsd:float ;
+    :long "-92.41666666666667"^^xsd:float ;
+    dbo:country :Mexico ;
+    dbo:areaTotal "7.3311e+10"^^xsd:double .
+    :Chongqing :lat "29.558333333333334"^^xsd:float ;
+    :long "106.56666666666666"^^xsd:float ;
+    dbo:country :China ;
+    dbo:areaTotal "8.2403e+10"^^xsd:double .
+    :Cologne :lat "50.93638888888889"^^xsd:float ;
+    :long "6.9527777777777775"^^xsd:float ;
+    dbo:country :Germany ;
+    dbo:areaTotal "4.0515e+08"^^xsd:double .
+    :Dalian :lat "38.920833333333334"^^xsd:float ;
+    :long "121.63916666666667"^^xsd:float ;
+    dbo:country :China ;
+    dbo:areaTotal "1.3237e+10"^^xsd:double .
+    :Dallas :lat "32.77583333333333"^^xsd:float ;
+    :long "-96.79666666666667"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "9.993e+08"^^xsd:double .
+    :Denver :lat "39.76185"^^xsd:float ;
+    :long "-104.881105"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "4.01448e+08"^^xsd:double .
+    :Düsseldorf :lat "51.233333333333334"^^xsd:float ;
+    :long "6.783333333333333"^^xsd:float ;
+    dbo:country :Germany ;
+    dbo:areaTotal "2.17e+08"^^xsd:double .
+    :Essen :lat "51.450833333333335"^^xsd:float ;
+    :long "7.013055555555556"^^xsd:float ;
+    dbo:country :Germany ;
+    dbo:areaTotal "2.1032e+08"^^xsd:double .
+    :Florence :lat "43.78333333333333"^^xsd:float ;
+    :long "11.25"^^xsd:float ;
+    dbo:country :Italy ;
+    dbo:areaTotal "1.0241e+08"^^xsd:double .
+    :Glasgow :lat "55.858"^^xsd:float ;
+    :long "-4.259"^^xsd:float ;
+    dbo:country :Scotland ;
+    dbo:areaTotal "1.755e+08"^^xsd:double .
+    :Glasgow :lat "55.858"^^xsd:float ;
+    :long "-4.259"^^xsd:float ;
+    dbo:country :United_Kingdom ;
+    dbo:areaTotal "1.755e+08"^^xsd:double .
+    :Guerrero :lat "17.616666666666667"^^xsd:float ;
+    :long "-99.95"^^xsd:float ;
+    dbo:country :Mexico ;
+    dbo:areaTotal "6.3596e+10"^^xsd:double .
+    :Huehuetenango_Department :lat "15.314166666666667"^^xsd:float ;
+    :long "-91.47583333333333"^^xsd:float ;
+    dbo:country :Guatemala ;
+    dbo:areaTotal "7.403e+09"^^xsd:double .
+    :Iquique_Province :lat "-20.21388888888889"^^xsd:float ;
+    :long "-70.1525"^^xsd:float ;
+    dbo:country :Chile ;
+    dbo:areaTotal "2.8353e+09"^^xsd:double .
+    :Kaduna :lat "10.523055555555555"^^xsd:float ;
+    :long "7.440277777777778"^^xsd:float ;
+    dbo:country :Nigeria ;
+    dbo:areaTotal "3.08e+09"^^xsd:double .
+    :Kampot_Province :lat "10.6"^^xsd:float ;
+    :long "104.16666666666667"^^xsd:float ;
+    dbo:country :Cambodia ;
+    dbo:areaTotal "4.873e+09"^^xsd:double .
+    :Kaohsiung :lat "22.633333333333333"^^xsd:float ;
+    :long "120.26666666666667"^^xsd:float ;
+    dbo:country :Taiwan ;
+    dbo:areaTotal "2.94625e+09"^^xsd:double .
+    :Karachi :lat "24.86"^^xsd:float ;
+    :long "67.01"^^xsd:float ;
+    dbo:country :Pakistan ;
+    dbo:areaTotal "3.527e+09"^^xsd:double .
+    :Kinshasa :lat "-4.325"^^xsd:float ;
+    :long "15.322222222222223"^^xsd:float ;
+    dbo:country :The_Democratic_Republic_Of_Congo ;
+    dbo:areaTotal "9.965e+09"^^xsd:double .
+    :Krefeld :lat "51.333333333333336"^^xsd:float ;
+    :long "6.566666666666666"^^xsd:float ;
+    dbo:country :Germany ;
+    dbo:areaTotal "1.3768e+08"^^xsd:double .
+    :Las_Palmas :lat "28.15"^^xsd:float ;
+    :long "-15.416666666666666"^^xsd:float ;
+    dbo:country :Spain ;
+    dbo:areaTotal "1.0055e+08"^^xsd:double .
+    :Los_Angeles :lat "34.05"^^xsd:float ;
+    :long "-118.25"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.302e+09"^^xsd:double .
+    :Los_Angeles :lat "34.05"^^xsd:float ;
+    :long "-118.25"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.30276e+09"^^xsd:double .
+    :Mariupol :lat "47.09583333333333"^^xsd:float ;
+    :long "37.54944444444445"^^xsd:float ;
+    dbo:country :Ukraine ;
+    dbo:areaTotal "2.44e+08"^^xsd:double .
+    :Mariupol :lat "47.09583333333333"^^xsd:float ;
+    :long "37.54944444444445"^^xsd:float ;
+    dbo:country :Donetsk_Oblast ;
+    dbo:areaTotal "2.44e+08"^^xsd:double .
+    :Medan :lat "3.5833333333333335"^^xsd:float ;
+    :long "98.66666666666667"^^xsd:float ;
+    dbo:country :Indonesia ;
+    dbo:areaTotal "2.651e+08"^^xsd:double .
+    :Medolla :lat "44.85"^^xsd:float ;
+    :long "11.066666666666666"^^xsd:float ;
+    dbo:country :Italy ;
+    dbo:areaTotal "2.68e+07"^^xsd:double .
+    :Meerut :lat "28.99"^^xsd:float ;
+    :long "77.7"^^xsd:float ;
+    dbo:country :India ;
+    dbo:areaTotal "1.4189e+08"^^xsd:double .
+    :Milan :lat "45.46666666666667"^^xsd:float ;
+    :long "9.183333333333334"^^xsd:float ;
+    dbo:country :Italy ;
+    dbo:areaTotal "1.8167e+08"^^xsd:double .
+    :Modena :lat "44.65"^^xsd:float ;
+    :long "10.933333333333334"^^xsd:float ;
+    dbo:country :Italy ;
+    dbo:areaTotal "1.8323e+08"^^xsd:double .
+    :Mogadishu :lat "2.033333333333333"^^xsd:float ;
+    :long "45.35"^^xsd:float ;
+    dbo:country :Somalia ;
+    dbo:areaTotal "1.657e+09"^^xsd:double .
+    :Mombasa :lat "-4.05"^^xsd:float ;
+    :long "39.666666666666664"^^xsd:float ;
+    dbo:country :Kenya ;
+    dbo:areaTotal "2.947e+08"^^xsd:double .
+    :Nairobi :lat "-1.2833333333333332"^^xsd:float ;
+    :long "36.81666666666667"^^xsd:float ;
+    dbo:country :Kenya ;
+    dbo:areaTotal "6.96e+08"^^xsd:double .
+    :Negros_Oriental :lat "9.75"^^xsd:float ;
+    :long "123.0"^^xsd:float ;
+    dbo:country :Philippines ;
+    dbo:areaTotal "5.38553e+09"^^xsd:double .
+    :North_Rhine-Westphalia :lat "51.46666666666667"^^xsd:float ;
+    :long "7.55"^^xsd:float ;
+    dbo:country :Germany ;
+    dbo:areaTotal "3.40841e+10"^^xsd:double .
+    :Penghu :lat "23.583333333333332"^^xsd:float ;
+    :long "119.58333333333333"^^xsd:float ;
+    dbo:country :Taiwan ;
+    dbo:areaTotal "1.41052e+08"^^xsd:double .
+    :Philadelphia :lat "39.95"^^xsd:float ;
+    :long "-75.16666666666667"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "3.66742e+08"^^xsd:double .
+    :Queens :lat "40.75"^^xsd:float ;
+    :long "-73.86666666666666"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "4.61018e+08"^^xsd:double .
+    :Quiché_Department :lat "15.03"^^xsd:float ;
+    :long "-91.15"^^xsd:float ;
+    dbo:country :Guatemala ;
+    dbo:areaTotal "8.378e+09"^^xsd:double .
+    :Santiago :lat "-33.45"^^xsd:float ;
+    :long "-70.66666666666667"^^xsd:float ;
+    dbo:country :Chile ;
+    dbo:areaTotal "6.41281e+08"^^xsd:double .
+    :Santiago_de_Compostela :lat "42.87777777777778"^^xsd:float ;
+    :long "-8.544444444444444"^^xsd:float ;
+    dbo:country :Spain ;
+    dbo:areaTotal "2.2e+08"^^xsd:double .
+    :Skopje :lat "42.0"^^xsd:float ;
+    :long "21.433333333333334"^^xsd:float ;
+    dbo:country :Republic_of_Macedonia ;
+    dbo:areaTotal "5.7146e+08"^^xsd:double .
+    :Sololá_Department :lat "14.773888888888889"^^xsd:float ;
+    :long "-91.47583333333333"^^xsd:float ;
+    dbo:country :Guatemala ;
+    dbo:areaTotal "1.061e+09"^^xsd:double .
+    :Suchiate :lat "14.679166666666667"^^xsd:float ;
+    :long "-92.14972222222222"^^xsd:float ;
+    dbo:country :Mexico ;
+    dbo:areaTotal "6.061e+08"^^xsd:double .
+    :Surakarta :lat "-7.566666666666666"^^xsd:float ;
+    :long "110.81666666666666"^^xsd:float ;
+    dbo:country :Indonesia ;
+    dbo:areaTotal "4.403e+07"^^xsd:double .
+    :Tapachula :lat "14.9"^^xsd:float ;
+    :long "-92.26666666666667"^^xsd:float ;
+    dbo:country :Mexico ;
+    dbo:areaTotal "3.03e+08"^^xsd:double .
+    :Tokyo :lat "35.689505555555556"^^xsd:float ;
+    :long "139.6917"^^xsd:float ;
+    dbo:country :Japan ;
+    dbo:areaTotal "2.18766e+09"^^xsd:double .
+    :Totonicapán_Department :lat "14.9125"^^xsd:float ;
+    :long "-91.36"^^xsd:float ;
+    dbo:country :Guatemala ;
+    dbo:areaTotal "1.061e+09"^^xsd:double .
+    :Tunis :lat "36.8"^^xsd:float ;
+    :long "10.183333333333334"^^xsd:float ;
+    dbo:country :Tunisia ;
+    dbo:areaTotal "2.1263e+08"^^xsd:double .
+    :Valparaíso :lat "-33.05"^^xsd:float ;
+    :long "-71.61666666666666"^^xsd:float ;
+    dbo:country :Chile ;
+    dbo:areaTotal "4.016e+08"^^xsd:double .
+    :Ürümqi :lat "43.825"^^xsd:float ;
+    :long "87.6"^^xsd:float ;
+    dbo:country :China ;
+    dbo:areaTotal "1.4577e+10"^^xsd:double .
+    :Paramakudi :lat "9.544"^^xsd:float ;
+    :long "78.591"^^xsd:float ;
+    dbo:country :India ;
+    dbo:areaTotal "1.6e+07"^^xsd:double .
+    :Constanța_County :lat "44.27"^^xsd:float ;
+    :long "28.31"^^xsd:float ;
+    dbo:country :Romania ;
+    dbo:areaTotal "6.916e+09"^^xsd:double .
+    :Constanța_County :lat "44.27"^^xsd:float ;
+    :long "28.31"^^xsd:float ;
+    dbo:country :Romania ;
+    dbo:areaTotal "7.071e+09"^^xsd:double .
+    :Constanța_County :lat "44.27"^^xsd:float ;
+    :long "28.31"^^xsd:float ;
+    dbo:country :Kingdom_of_Romania ;
+    dbo:areaTotal "6.916e+09"^^xsd:double .
+    :Constanța_County :lat "44.27"^^xsd:float ;
+    :long "28.31"^^xsd:float ;
+    dbo:country :Kingdom_of_Romania ;
+    dbo:areaTotal "7.071e+09"^^xsd:double .
+    :Pitești :lat "44.86055555555556"^^xsd:float ;
+    :long "24.86777777777778"^^xsd:float ;
+    dbo:country :Romania ;
+    dbo:areaTotal "4.07e+07"^^xsd:double .
+    :Minneapolis :lat "44.983333333333334"^^xsd:float ;
+    :long "-93.26666666666667"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.51255e+08"^^xsd:double .
+    :Minneapolis :lat "44.983333333333334"^^xsd:float ;
+    :long "-93.26666666666667"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "1.513e+08"^^xsd:double .
+    :Bassersdorf :lat "47.45"^^xsd:float ;
+    :long "8.633333333333333"^^xsd:float ;
+    dbo:country :Switzerland ;
+    dbo:areaTotal "9.02e+06"^^xsd:double .
+    :Guatemala_City :lat "14.613333333333333"^^xsd:float ;
+    :long "-90.53527777777778"^^xsd:float ;
+    dbo:country :Guatemala ;
+    dbo:areaTotal "6.92e+08"^^xsd:double .
+    :Aktobe_Region :lat "50.28333333333333"^^xsd:float ;
+    :long "57.166666666666664"^^xsd:float ;
+    dbo:country :Kazakhstan ;
+    dbo:areaTotal "3.00629e+11"^^xsd:double .
+    :Chelyabinsk_Oblast :lat "54.53333333333333"^^xsd:float ;
+    :long "60.333333333333336"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "8.79e+10"^^xsd:double .
+    :East_Azerbaidjan :lat "38.0766"^^xsd:float ;
+    :long "46.28"^^xsd:float ;
+    dbo:country :Iran ;
+    dbo:areaTotal "4.565e+10"^^xsd:double .
+    :Manaus :lat "-3.1"^^xsd:float ;
+    :long "-60.016666666666666"^^xsd:float ;
+    dbo:country :Brazil ;
+    dbo:areaTotal "1.1401e+10"^^xsd:double .
+    :Manaus :lat "-3.1"^^xsd:float ;
+    :long "-60.016666666666666"^^xsd:float ;
+    dbo:country :Brazil ;
+    dbo:areaTotal "1.14011e+10"^^xsd:double .
+    :Orenburg_Oblast :lat "52.13333333333333"^^xsd:float ;
+    :long "55.6"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "1.24e+11"^^xsd:double .
+    :Rostov_Oblast :lat "47.86666666666667"^^xsd:float ;
+    :long "41.18333333333333"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "1.008e+11"^^xsd:double .
+    :South_Sumatra :lat "-2.75"^^xsd:float ;
+    :long "103.83333333333333"^^xsd:float ;
+    dbo:country :Indonesia ;
+    dbo:areaTotal "9.15924e+10"^^xsd:double .
+    :Staten_Island :lat "40.576280555555556"^^xsd:float ;
+    :long "-74.14483888888888"^^xsd:float ;
+    dbo:country :United_States ;
+    dbo:areaTotal "2.64179e+08"^^xsd:double .
+    :Tula_Oblast :lat "53.916666666666664"^^xsd:float ;
+    :long "37.583333333333336"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "2.57e+10"^^xsd:double .
+    :Tyumen_Oblast :lat "57.833333333333336"^^xsd:float ;
+    :long "69.0"^^xsd:float ;
+    dbo:country :Russia ;
+    dbo:areaTotal "1.4352e+12"^^xsd:double .
     :Great_Plains :lat "37.0"^^xsd:float ;
     :long "-97.0"^^xsd:float ;
     dbo:country :Canada .
@@ -79,306 +450,57 @@ dbo:country rdf:type owl:ObjectProperty ;
     :Great_Plains :lat "37.0"^^xsd:float ;
     :long "-97.0"^^xsd:float ;
     dbo:country :United_States .
-    :Irkutsk_Oblast :lat "57.36666666666667"^^xsd:float ;
-    :long "106.0"^^xsd:float ;
-    dbo:country :Russia .
-    :Oklahoma_City :lat "35.48222222222222"^^xsd:float ;
-    :long "-97.535"^^xsd:float ;
-    dbo:country :United_States .
-    :Santo_Domingo :lat "18.466666666666665"^^xsd:float ;
-    :long "-69.95"^^xsd:float ;
-    dbo:country :Dominican_Republic .
     :London :lat "51.507222222222225"^^xsd:float ;
     :long "-0.1275"^^xsd:float ;
-    dbo:country :United_Kingdom .
-    :Alto_Hospicio :lat "-20.25"^^xsd:float ;
-    :long "-70.11666666666666"^^xsd:float ;
-    dbo:country :Chile .
-    :Benghazi :lat "32.11666666666667"^^xsd:float ;
-    :long "20.066666666666666"^^xsd:float ;
-    dbo:country :Libya .
-    :Cromer :lat "52.931"^^xsd:float ;
-    :long "1.302"^^xsd:float ;
-    dbo:country :Norfolk .
-    :Cromer :lat "52.931"^^xsd:float ;
-    :long "1.302"^^xsd:float ;
     dbo:country :United_Kingdom .
     :Aalborg :lat "57.05"^^xsd:float ;
     :long "9.916666666666666"^^xsd:float ;
     dbo:country :Denmark .
-    :Abuja :lat "9.066666666666666"^^xsd:float ;
-    :long "7.483333333333333"^^xsd:float ;
-    dbo:country :Nigeria .
     :Awaran :lat "26.27"^^xsd:float ;
     :long "65.14"^^xsd:float ;
     dbo:country :Pakistan .
-    :Baotou :lat "40.65"^^xsd:float ;
-    :long "109.83333333333333"^^xsd:float ;
-    dbo:country :China .
-    :Barcelona :lat "41.38333333333333"^^xsd:float ;
-    :long "2.183333333333333"^^xsd:float ;
-    dbo:country :Spain .
-    :Bashkortostan :lat "54.46666666666667"^^xsd:float ;
-    :long "56.266666666666666"^^xsd:float ;
-    dbo:country :Russia .
     :Bendigo :lat "36.75"^^xsd:float ;
     :long "144.26666666666668"^^xsd:float ;
     dbo:country :Australia .
     :Blace :lat "43.29578333333333"^^xsd:float ;
     :long "21.28595"^^xsd:float ;
     dbo:country :Serbia .
-    :Bohol :lat "9.833333333333334"^^xsd:float ;
-    :long "124.16666666666667"^^xsd:float ;
-    dbo:country :Philippines .
-    :Brazzaville :lat "-4.267777777777778"^^xsd:float ;
-    :long "15.291944444444445"^^xsd:float ;
-    dbo:country :Republic_of_the_Congo .
-    :Brindisi :lat "40.63333333333333"^^xsd:float ;
-    :long "17.933333333333334"^^xsd:float ;
-    dbo:country :Italy .
-    :Bushehr_Province :lat "28.9184"^^xsd:float ;
-    :long "50.8382"^^xsd:float ;
-    dbo:country :Iran .
-    :Cebu :lat "10.316666666666666"^^xsd:float ;
-    :long "123.75"^^xsd:float ;
-    dbo:country :Philippines .
-    :Chiapas :lat "16.416666666666668"^^xsd:float ;
-    :long "-92.41666666666667"^^xsd:float ;
-    dbo:country :Mexico .
-    :Chongqing :lat "29.558333333333334"^^xsd:float ;
-    :long "106.56666666666666"^^xsd:float ;
-    dbo:country :China .
-    :Cologne :lat "50.93638888888889"^^xsd:float ;
-    :long "6.9527777777777775"^^xsd:float ;
-    dbo:country :Germany .
-    :Dalian :lat "38.920833333333334"^^xsd:float ;
-    :long "121.63916666666667"^^xsd:float ;
-    dbo:country :China .
-    :Dallas :lat "32.77583333333333"^^xsd:float ;
-    :long "-96.79666666666667"^^xsd:float ;
-    dbo:country :United_States .
-    :Denver :lat "39.76185"^^xsd:float ;
-    :long "-104.881105"^^xsd:float ;
-    dbo:country :United_States .
-    :Düsseldorf :lat "51.233333333333334"^^xsd:float ;
-    :long "6.783333333333333"^^xsd:float ;
-    dbo:country :Germany .
-    :Essen :lat "51.450833333333335"^^xsd:float ;
-    :long "7.013055555555556"^^xsd:float ;
-    dbo:country :Germany .
-    :Florence :lat "43.78333333333333"^^xsd:float ;
-    :long "11.25"^^xsd:float ;
-    dbo:country :Italy .
-    :Glasgow :lat "55.858"^^xsd:float ;
-    :long "-4.259"^^xsd:float ;
-    dbo:country :Scotland .
-    :Glasgow :lat "55.858"^^xsd:float ;
-    :long "-4.259"^^xsd:float ;
-    dbo:country :United_Kingdom .
-    :Guerrero :lat "17.616666666666667"^^xsd:float ;
-    :long "-99.95"^^xsd:float ;
-    dbo:country :Mexico .
-    :Huehuetenango_Department :lat "15.314166666666667"^^xsd:float ;
-    :long "-91.47583333333333"^^xsd:float ;
-    dbo:country :Guatemala .
-    :Iquique_Province :lat "-20.21388888888889"^^xsd:float ;
-    :long "-70.1525"^^xsd:float ;
-    dbo:country :Chile .
     :Jos :lat "9.933333333333334"^^xsd:float ;
     :long "8.883333333333333"^^xsd:float ;
-    dbo:country :Nigeria .
-    :Kaduna :lat "10.523055555555555"^^xsd:float ;
-    :long "7.440277777777778"^^xsd:float ;
     dbo:country :Nigeria .
     :Kamloops :lat "50.67611111111111"^^xsd:float ;
     :long "-120.34083333333334"^^xsd:float ;
     dbo:country :Canada .
-    :Kampot_Province :lat "10.6"^^xsd:float ;
-    :long "104.16666666666667"^^xsd:float ;
-    dbo:country :Cambodia .
-    :Kaohsiung :lat "22.633333333333333"^^xsd:float ;
-    :long "120.26666666666667"^^xsd:float ;
-    dbo:country :Taiwan .
-    :Karachi :lat "24.86"^^xsd:float ;
-    :long "67.01"^^xsd:float ;
-    dbo:country :Pakistan .
-    :Kinshasa :lat "-4.325"^^xsd:float ;
-    :long "15.322222222222223"^^xsd:float ;
-    dbo:country :The_Democratic_Republic_Of_Congo .
-    :Krefeld :lat "51.333333333333336"^^xsd:float ;
-    :long "6.566666666666666"^^xsd:float ;
-    dbo:country :Germany .
     :Lagos :lat "6.453055555555555"^^xsd:float ;
     :long "3.3958333333333335"^^xsd:float ;
     dbo:country :Nigeria .
-    :Las_Palmas :lat "28.15"^^xsd:float ;
-    :long "-15.416666666666666"^^xsd:float ;
-    dbo:country :Spain .
-    :Los_Angeles :lat "34.05"^^xsd:float ;
-    :long "-118.25"^^xsd:float ;
-    dbo:country :United_States .
     :Machakos :lat "-1.5166666666666666"^^xsd:float ;
     :long "37.266666666666666"^^xsd:float ;
     dbo:country :Kenya .
     :Machiques :lat "10.066666666666666"^^xsd:float ;
     :long "-72.56666666666666"^^xsd:float ;
     dbo:country :Venezuela .
-    :Mariupol :lat "47.09583333333333"^^xsd:float ;
-    :long "37.54944444444445"^^xsd:float ;
-    dbo:country :Ukraine .
-    :Mariupol :lat "47.09583333333333"^^xsd:float ;
-    :long "37.54944444444445"^^xsd:float ;
-    dbo:country :Donetsk_Oblast .
-    :Medan :lat "3.5833333333333335"^^xsd:float ;
-    :long "98.66666666666667"^^xsd:float ;
-    dbo:country :Indonesia .
-    :Medolla :lat "44.85"^^xsd:float ;
-    :long "11.066666666666666"^^xsd:float ;
-    dbo:country :Italy .
-    :Meerut :lat "28.99"^^xsd:float ;
-    :long "77.7"^^xsd:float ;
-    dbo:country :India .
-    :Milan :lat "45.46666666666667"^^xsd:float ;
-    :long "9.183333333333334"^^xsd:float ;
-    dbo:country :Italy .
-    :Modena :lat "44.65"^^xsd:float ;
-    :long "10.933333333333334"^^xsd:float ;
-    dbo:country :Italy .
-    :Mogadishu :lat "2.033333333333333"^^xsd:float ;
-    :long "45.35"^^xsd:float ;
-    dbo:country :Somalia .
-    :Mombasa :lat "-4.05"^^xsd:float ;
-    :long "39.666666666666664"^^xsd:float ;
-    dbo:country :Kenya .
-    :Nairobi :lat "-1.2833333333333332"^^xsd:float ;
-    :long "36.81666666666667"^^xsd:float ;
-    dbo:country :Kenya .
-    :Negros_Oriental :lat "9.75"^^xsd:float ;
-    :long "123.0"^^xsd:float ;
-    dbo:country :Philippines .
-    :North_Rhine-Westphalia :lat "51.46666666666667"^^xsd:float ;
-    :long "7.55"^^xsd:float ;
-    dbo:country :Germany .
     :Paris :lat "48.8567"^^xsd:float ;
     :long "2.3508"^^xsd:float ;
     dbo:country :France .
     :Patna :lat "25.611"^^xsd:float ;
     :long "85.144"^^xsd:float ;
     dbo:country :India .
-    :Penghu :lat "23.583333333333332"^^xsd:float ;
-    :long "119.58333333333333"^^xsd:float ;
-    dbo:country :Taiwan .
-    :Philadelphia :lat "39.95"^^xsd:float ;
-    :long "-75.16666666666667"^^xsd:float ;
-    dbo:country :United_States .
-    :Queens :lat "40.75"^^xsd:float ;
-    :long "-73.86666666666666"^^xsd:float ;
-    dbo:country :United_States .
     :Quetzaltenango_Department :lat "14.845833333333333"^^xsd:float ;
     :long "-91.5188888888889"^^xsd:float ;
     dbo:country :Guatemala .
-    :Quiché_Department :lat "15.03"^^xsd:float ;
-    :long "-91.15"^^xsd:float ;
-    dbo:country :Guatemala .
-    :Santiago :lat "-33.45"^^xsd:float ;
-    :long "-70.66666666666667"^^xsd:float ;
-    dbo:country :Chile .
-    :Santiago_de_Compostela :lat "42.87777777777778"^^xsd:float ;
-    :long "-8.544444444444444"^^xsd:float ;
-    dbo:country :Spain .
-    :Skopje :lat "42.0"^^xsd:float ;
-    :long "21.433333333333334"^^xsd:float ;
-    dbo:country :Republic_of_Macedonia .
-    :Sololá_Department :lat "14.773888888888889"^^xsd:float ;
-    :long "-91.47583333333333"^^xsd:float ;
-    dbo:country :Guatemala .
-    :Suchiate :lat "14.679166666666667"^^xsd:float ;
-    :long "-92.14972222222222"^^xsd:float ;
-    dbo:country :Mexico .
-    :Surakarta :lat "-7.566666666666666"^^xsd:float ;
-    :long "110.81666666666666"^^xsd:float ;
-    dbo:country :Indonesia .
     :São_Paulo :lat "-23.55"^^xsd:float ;
     :long "-46.63333333333333"^^xsd:float ;
     dbo:country :Brazil .
-    :Tapachula :lat "14.9"^^xsd:float ;
-    :long "-92.26666666666667"^^xsd:float ;
-    dbo:country :Mexico .
     :Tehran :lat "35.69611111111111"^^xsd:float ;
     :long "51.42305555555556"^^xsd:float ;
     dbo:country :Iran .
-    :Tokyo :lat "35.689505555555556"^^xsd:float ;
-    :long "139.6917"^^xsd:float ;
-    dbo:country :Japan .
-    :Totonicapán_Department :lat "14.9125"^^xsd:float ;
-    :long "-91.36"^^xsd:float ;
-    dbo:country :Guatemala .
-    :Tunis :lat "36.8"^^xsd:float ;
-    :long "10.183333333333334"^^xsd:float ;
-    dbo:country :Tunisia .
-    :Valparaíso :lat "-33.05"^^xsd:float ;
-    :long "-71.61666666666666"^^xsd:float ;
-    dbo:country :Chile .
-    :Ürümqi :lat "43.825"^^xsd:float ;
-    :long "87.6"^^xsd:float ;
-    dbo:country :China .
-    :Paramakudi :lat "9.544"^^xsd:float ;
-    :long "78.591"^^xsd:float ;
-    dbo:country :India .
-    :Constanța_County :lat "44.27"^^xsd:float ;
-    :long "28.31"^^xsd:float ;
-    dbo:country :Romania .
-    :Constanța_County :lat "44.27"^^xsd:float ;
-    :long "28.31"^^xsd:float ;
-    dbo:country :Kingdom_of_Romania .
-    :Pitești :lat "44.86055555555556"^^xsd:float ;
-    :long "24.86777777777778"^^xsd:float ;
-    dbo:country :Romania .
-    :Minneapolis :lat "44.983333333333334"^^xsd:float ;
-    :long "-93.26666666666667"^^xsd:float ;
-    dbo:country :United_States .
-    :Bassersdorf :lat "47.45"^^xsd:float ;
-    :long "8.633333333333333"^^xsd:float ;
-    dbo:country :Switzerland .
-    :Guatemala_City :lat "14.613333333333333"^^xsd:float ;
-    :long "-90.53527777777778"^^xsd:float ;
-    dbo:country :Guatemala .
-    :Aktobe_Region :lat "50.28333333333333"^^xsd:float ;
-    :long "57.166666666666664"^^xsd:float ;
-    dbo:country :Kazakhstan .
-    :Chelyabinsk_Oblast :lat "54.53333333333333"^^xsd:float ;
-    :long "60.333333333333336"^^xsd:float ;
-    dbo:country :Russia .
     :Durban :lat "29.883333333333333"^^xsd:float ;
     :long "31.05"^^xsd:float ;
     dbo:country :South_Africa .
-    :East_Azerbaidjan :lat "38.0766"^^xsd:float ;
-    :long "46.28"^^xsd:float ;
-    dbo:country :Iran .
     :Gonesse :lat "48.9875"^^xsd:float ;
     :long "2.4494"^^xsd:float ;
     dbo:country :France .
-    :Manaus :lat "-3.1"^^xsd:float ;
-    :long "-60.016666666666666"^^xsd:float ;
-    dbo:country :Brazil .
-    :Orenburg_Oblast :lat "52.13333333333333"^^xsd:float ;
-    :long "55.6"^^xsd:float ;
-    dbo:country :Russia .
-    :Rostov_Oblast :lat "47.86666666666667"^^xsd:float ;
-    :long "41.18333333333333"^^xsd:float ;
-    dbo:country :Russia .
-    :South_Sumatra :lat "-2.75"^^xsd:float ;
-    :long "103.83333333333333"^^xsd:float ;
-    dbo:country :Indonesia .
-    :Staten_Island :lat "40.576280555555556"^^xsd:float ;
-    :long "-74.14483888888888"^^xsd:float ;
-    dbo:country :United_States .
-    :Tula_Oblast :lat "53.916666666666664"^^xsd:float ;
-    :long "37.583333333333336"^^xsd:float ;
-    dbo:country :Russia .
-    :Tyumen_Oblast :lat "57.833333333333336"^^xsd:float ;
-    :long "69.0"^^xsd:float ;
-    dbo:country :Russia .
     :Kafr_Zita :lat "35.37361111111111"^^xsd:float ;
     :long "36.60166666666667"^^xsd:float ;
     dbo:country :Syria .
@@ -394,6 +516,213 @@ dbo:country rdf:type owl:ObjectProperty ;
     :Reyhanlı :lat "36.26916666666666"^^xsd:float ;
     :long "36.56722222222222"^^xsd:float ;
     dbo:country :Turkey .
+    :Costa_Rica :lat "9.933333333333334"^^xsd:float ;
+    :long "-84.08333333333333"^^xsd:float ;
+    dbo:areaTotal "5.0901e+10"^^xsd:double .
+    :Costa_Rica :lat "9.933333333333334"^^xsd:float ;
+    :long "-84.08333333333333"^^xsd:float ;
+    dbo:areaTotal "5.11e+10"^^xsd:double .
+    :Somalia :lat "2.033333333333333"^^xsd:float ;
+    :long "45.35"^^xsd:float ;
+    dbo:areaTotal "6.37655e+11"^^xsd:double .
+    :Somalia :lat "2.033333333333333"^^xsd:float ;
+    :long "45.35"^^xsd:float ;
+    dbo:areaTotal "6.37657e+11"^^xsd:double .
+    :Christchurch :lat "-43.53"^^xsd:float ;
+    :long "172.62027777777777"^^xsd:float ;
+    dbo:areaTotal "1.426e+09"^^xsd:double .
+    :Lahore :lat "31.549722222222222"^^xsd:float ;
+    :long "74.34361111111112"^^xsd:float ;
+    dbo:areaTotal "1.77155e+09"^^xsd:double .
+    :Lahore :lat "31.549722222222222"^^xsd:float ;
+    :long "74.34361111111112"^^xsd:float ;
+    dbo:areaTotal "1.772e+09"^^xsd:double .
+    :Afghanistan :lat "34.53333333333333"^^xsd:float ;
+    :long "69.13333333333334"^^xsd:float ;
+    dbo:areaTotal "6.52229e+11"^^xsd:double .
+    :Afghanistan :lat "34.53333333333333"^^xsd:float ;
+    :long "69.13333333333334"^^xsd:float ;
+    dbo:areaTotal "6.52864e+11"^^xsd:double .
+    :Bosnia_and_Herzegovina :lat "43.86666666666667"^^xsd:float ;
+    :long "18.416666666666668"^^xsd:float ;
+    dbo:areaTotal "5.1129e+10"^^xsd:double .
+    :Bosnia_and_Herzegovina :lat "43.86666666666667"^^xsd:float ;
+    :long "18.416666666666668"^^xsd:float ;
+    dbo:areaTotal "5.1197e+10"^^xsd:double .
+    :Bulgaria :lat "42.68333333333333"^^xsd:float ;
+    :long "23.316666666666666"^^xsd:float ;
+    dbo:areaTotal "1.10911e+11"^^xsd:double .
+    :Bulgaria :lat "42.68333333333333"^^xsd:float ;
+    :long "23.316666666666666"^^xsd:float ;
+    dbo:areaTotal "1.10994e+11"^^xsd:double .
+    :Chile :lat "-33.43333333333333"^^xsd:float ;
+    :long "-70.66666666666667"^^xsd:float ;
+    dbo:areaTotal "7.56096e+11"^^xsd:double .
+    :Chile :lat "-33.43333333333333"^^xsd:float ;
+    :long "-70.66666666666667"^^xsd:float ;
+    dbo:areaTotal "7.56096e+11"^^xsd:double .
+    :Dominican_Republic :lat "19.0"^^xsd:float ;
+    :long "-70.66666666666667"^^xsd:float ;
+    dbo:areaTotal "4.8442e+10"^^xsd:double .
+    :Greece :lat "37.96666666666667"^^xsd:float ;
+    :long "23.716666666666665"^^xsd:float ;
+    dbo:areaTotal "1.31957e+11"^^xsd:double .
+    :Greece :lat "37.96666666666667"^^xsd:float ;
+    :long "23.716666666666665"^^xsd:float ;
+    dbo:areaTotal "1.31957e+11"^^xsd:double .
+    :Guatemala :lat "14.633333333333333"^^xsd:float ;
+    :long "-90.5"^^xsd:float ;
+    dbo:areaTotal "1.08888e+11"^^xsd:double .
+    :Guatemala :lat "14.633333333333333"^^xsd:float ;
+    :long "-90.5"^^xsd:float ;
+    dbo:areaTotal "1.08889e+11"^^xsd:double .
+    :Guinea :lat "9.516666666666667"^^xsd:float ;
+    :long "-13.7"^^xsd:float ;
+    dbo:areaTotal "2.45836e+11"^^xsd:double .
+    :Guinea :lat "9.516666666666667"^^xsd:float ;
+    :long "-13.7"^^xsd:float ;
+    dbo:areaTotal "2.45857e+11"^^xsd:double .
+    :India :lat "28.613333333333333"^^xsd:float ;
+    :long "77.20833333333333"^^xsd:float ;
+    dbo:areaTotal "3.28759e+12"^^xsd:double .
+    :India :lat "28.613333333333333"^^xsd:float ;
+    :long "77.20833333333333"^^xsd:float ;
+    dbo:areaTotal "3.28759e+12"^^xsd:double .
+    :Indonesia :lat "-6.175"^^xsd:float ;
+    :long "106.82833333333333"^^xsd:float ;
+    dbo:areaTotal "1.90457e+12"^^xsd:double .
+    :Indonesia :lat "-6.175"^^xsd:float ;
+    :long "106.82833333333333"^^xsd:float ;
+    dbo:areaTotal "1.90457e+12"^^xsd:double .
+    :Iran :lat "35.68333333333333"^^xsd:float ;
+    :long "51.416666666666664"^^xsd:float ;
+    dbo:areaTotal "1.6482e+12"^^xsd:double .
+    :Iran :lat "35.68333333333333"^^xsd:float ;
+    :long "51.416666666666664"^^xsd:float ;
+    dbo:areaTotal "1.6482e+12"^^xsd:double .
+    :Japan :lat "35.68333333333333"^^xsd:float ;
+    :long "139.76666666666668"^^xsd:float ;
+    dbo:areaTotal "3.77944e+11"^^xsd:double .
+    :Kazakhstan :lat "51.166666666666664"^^xsd:float ;
+    :long "71.41666666666667"^^xsd:float ;
+    dbo:areaTotal "2.72489e+12"^^xsd:double .
+    :Kazakhstan :lat "51.166666666666664"^^xsd:float ;
+    :long "71.41666666666667"^^xsd:float ;
+    dbo:areaTotal "2.7249e+12"^^xsd:double .
+    :Liberia :lat "6.316666666666666"^^xsd:float ;
+    :long "-10.8"^^xsd:float ;
+    dbo:areaTotal "1.11369e+11"^^xsd:double .
+    :Liberia :lat "6.316666666666666"^^xsd:float ;
+    :long "-10.8"^^xsd:float ;
+    dbo:areaTotal "1.11369e+11"^^xsd:double .
+    :Madagascar :lat "-18.916666666666668"^^xsd:float ;
+    :long "47.516666666666666"^^xsd:float ;
+    dbo:areaTotal "5.86884e+11"^^xsd:double .
+    :Madagascar :lat "-18.916666666666668"^^xsd:float ;
+    :long "47.516666666666666"^^xsd:float ;
+    dbo:areaTotal "5.87041e+11"^^xsd:double .
+    :Maldives :lat "4.166666666666667"^^xsd:float ;
+    :long "73.5"^^xsd:float ;
+    dbo:areaTotal "2.97849e+08"^^xsd:double .
+    :Maldives :lat "4.166666666666667"^^xsd:float ;
+    :long "73.5"^^xsd:float ;
+    dbo:areaTotal "2.98e+08"^^xsd:double .
+    :Mali :lat "12.65"^^xsd:float ;
+    :long "-8.0"^^xsd:float ;
+    dbo:areaTotal "1.24019e+12"^^xsd:double .
+    :Mali :lat "12.65"^^xsd:float ;
+    :long "-8.0"^^xsd:float ;
+    dbo:areaTotal "1.24019e+12"^^xsd:double .
+    :Mexico :lat "19.433333333333334"^^xsd:float ;
+    :long "-99.13333333333334"^^xsd:float ;
+    dbo:areaTotal "1.97255e+12"^^xsd:double .
+    :Mexico :lat "19.433333333333334"^^xsd:float ;
+    :long "-99.13333333333334"^^xsd:float ;
+    dbo:areaTotal "1.97255e+12"^^xsd:double .
+    :New_Zealand :lat "-41.28333333333333"^^xsd:float ;
+    :long "174.45"^^xsd:float ;
+    dbo:areaTotal "2.6802e+11"^^xsd:double .
+    :New_Zealand :lat "-41.28333333333333"^^xsd:float ;
+    :long "174.45"^^xsd:float ;
+    dbo:areaTotal "2.68021e+11"^^xsd:double .
+    :Nigeria :lat "9.066666666666666"^^xsd:float ;
+    :long "7.483333333333333"^^xsd:float ;
+    dbo:areaTotal "9.23763e+11"^^xsd:double .
+    :Nigeria :lat "9.066666666666666"^^xsd:float ;
+    :long "7.483333333333333"^^xsd:float ;
+    dbo:areaTotal "9.23768e+11"^^xsd:double .
+    :Peru :lat "-12.043333333333333"^^xsd:float ;
+    :long "-77.02833333333334"^^xsd:float ;
+    dbo:areaTotal "1.28522e+12"^^xsd:double .
+    :Peru :lat "-12.043333333333333"^^xsd:float ;
+    :long "-77.02833333333334"^^xsd:float ;
+    dbo:areaTotal "1.28522e+12"^^xsd:double .
+    :Samoa :lat "-13.833333333333334"^^xsd:float ;
+    :long "-171.75"^^xsd:float ;
+    dbo:areaTotal "2.84122e+09"^^xsd:double .
+    :Samoa :lat "-13.833333333333334"^^xsd:float ;
+    :long "-171.75"^^xsd:float ;
+    dbo:areaTotal "2.842e+09"^^xsd:double .
+    :Senegal :lat "14.666666666666666"^^xsd:float ;
+    :long "-17.416666666666668"^^xsd:float ;
+    dbo:areaTotal "1.96712e+11"^^xsd:double .
+    :Senegal :lat "14.666666666666666"^^xsd:float ;
+    :long "-17.416666666666668"^^xsd:float ;
+    dbo:areaTotal "1.96839e+11"^^xsd:double .
+    :Serbia :lat "44.8"^^xsd:float ;
+    :long "20.466666666666665"^^xsd:float ;
+    dbo:areaTotal "8.8361e+10"^^xsd:double .
+    :Sierra_Leone :lat "8.48445"^^xsd:float ;
+    :long "-13.23445"^^xsd:float ;
+    dbo:areaTotal "7.174e+10"^^xsd:double .
+    :Sierra_Leone :lat "8.48445"^^xsd:float ;
+    :long "-13.23445"^^xsd:float ;
+    dbo:areaTotal "7.17401e+10"^^xsd:double .
+    :Solomon_Islands :lat "-9.466666666666667"^^xsd:float ;
+    :long "159.81666666666666"^^xsd:float ;
+    dbo:areaTotal "2.83992e+10"^^xsd:double .
+    :Solomon_Islands :lat "-9.466666666666667"^^xsd:float ;
+    :long "159.81666666666666"^^xsd:float ;
+    dbo:areaTotal "2.84e+10"^^xsd:double .
+    :Sri_Lanka :lat "6.933333333333334"^^xsd:float ;
+    :long "79.83333333333333"^^xsd:float ;
+    dbo:areaTotal "6.56096e+10"^^xsd:double .
+    :Sri_Lanka :lat "6.933333333333334"^^xsd:float ;
+    :long "79.83333333333333"^^xsd:float ;
+    dbo:areaTotal "6.561e+10"^^xsd:double .
+    :Taiwan :lat "25.033333333333335"^^xsd:float ;
+    :long "121.63333333333334"^^xsd:float ;
+    dbo:areaTotal "3.61925e+10"^^xsd:double .
+    :Taiwan :lat "25.033333333333335"^^xsd:float ;
+    :long "121.63333333333334"^^xsd:float ;
+    dbo:areaTotal "3.6193e+10"^^xsd:double .
+    :Thailand :lat "13.75"^^xsd:float ;
+    :long "100.48333333333333"^^xsd:float ;
+    dbo:areaTotal "5.13115e+11"^^xsd:double .
+    :Thailand :lat "13.75"^^xsd:float ;
+    :long "100.48333333333333"^^xsd:float ;
+    dbo:areaTotal "5.1312e+11"^^xsd:double .
+    :Tonga :lat "-21.133333333333333"^^xsd:float ;
+    :long "-175.2"^^xsd:float ;
+    dbo:areaTotal "7.48e+08"^^xsd:double .
+    :Tonga :lat "-21.133333333333333"^^xsd:float ;
+    :long "-175.2"^^xsd:float ;
+    dbo:areaTotal "7.48507e+08"^^xsd:double .
+    :Turkey :lat "39.916666666666664"^^xsd:float ;
+    :long "32.833333333333336"^^xsd:float ;
+    dbo:areaTotal "7.83562e+11"^^xsd:double .
+    :Turkey :lat "39.916666666666664"^^xsd:float ;
+    :long "32.833333333333336"^^xsd:float ;
+    dbo:areaTotal "7.83562e+11"^^xsd:double .
+    :Vanuatu :lat "-17.75"^^xsd:float ;
+    :long "168.3"^^xsd:float ;
+    dbo:areaTotal "1.219e+10"^^xsd:double .
+    :Venezuela :lat "10.5"^^xsd:float ;
+    :long "-66.96666666666667"^^xsd:float ;
+    dbo:areaTotal "9.16444e+11"^^xsd:double .
+    :Venezuela :lat "10.5"^^xsd:float ;
+    :long "-66.96666666666667"^^xsd:float ;
+    dbo:areaTotal "9.16445e+11"^^xsd:double .
     :Amsterdam_Airport_Schiphol :lat "52.308055555555555"^^xsd:float ;
     :long "4.764166666666666"^^xsd:float .
     :Juanda_International_Airport :lat "-7.379722222222222"^^xsd:float ;
@@ -402,90 +731,16 @@ dbo:country rdf:type owl:ObjectProperty ;
     :long "-0.4613888888888889"^^xsd:float .
     :Bhilai :lat "21.21"^^xsd:float ;
     :long "81.38"^^xsd:float .
-    :Costa_Rica :lat "9.933333333333334"^^xsd:float ;
-    :long "-84.08333333333333"^^xsd:float .
-    :Somalia :lat "2.033333333333333"^^xsd:float ;
-    :long "45.35"^^xsd:float .
-    :Christchurch :lat "-43.53"^^xsd:float ;
-    :long "172.62027777777777"^^xsd:float .
     :Khartoum :lat "15.633333333333333"^^xsd:float ;
     :long "32.53333333333333"^^xsd:float .
-    :Lahore :lat "31.549722222222222"^^xsd:float ;
-    :long "74.34361111111112"^^xsd:float .
     :Sinjar :lat "36.3225"^^xsd:float ;
     :long "41.86416666666667"^^xsd:float .
     :Wellington :lat "-41.28888888888889"^^xsd:float ;
     :long "174.77722222222224"^^xsd:float .
     :Cumbal_Volcano :lat "0.949"^^xsd:float ;
     :long "-77.888"^^xsd:float .
-    :Afghanistan :lat "34.53333333333333"^^xsd:float ;
-    :long "69.13333333333334"^^xsd:float .
-    :Bosnia_and_Herzegovina :lat "43.86666666666667"^^xsd:float ;
-    :long "18.416666666666668"^^xsd:float .
-    :Bulgaria :lat "42.68333333333333"^^xsd:float ;
-    :long "23.316666666666666"^^xsd:float .
-    :Chile :lat "-33.43333333333333"^^xsd:float ;
-    :long "-70.66666666666667"^^xsd:float .
-    :Dominican_Republic :lat "19.0"^^xsd:float ;
-    :long "-70.66666666666667"^^xsd:float .
-    :Greece :lat "37.96666666666667"^^xsd:float ;
-    :long "23.716666666666665"^^xsd:float .
-    :Guatemala :lat "14.633333333333333"^^xsd:float ;
-    :long "-90.5"^^xsd:float .
-    :Guinea :lat "9.516666666666667"^^xsd:float ;
-    :long "-13.7"^^xsd:float .
-    :India :lat "28.613333333333333"^^xsd:float ;
-    :long "77.20833333333333"^^xsd:float .
-    :Indonesia :lat "-6.175"^^xsd:float ;
-    :long "106.82833333333333"^^xsd:float .
-    :Iran :lat "35.68333333333333"^^xsd:float ;
-    :long "51.416666666666664"^^xsd:float .
-    :Japan :lat "35.68333333333333"^^xsd:float ;
-    :long "139.76666666666668"^^xsd:float .
-    :Kazakhstan :lat "51.166666666666664"^^xsd:float ;
-    :long "71.41666666666667"^^xsd:float .
-    :Liberia :lat "6.316666666666666"^^xsd:float ;
-    :long "-10.8"^^xsd:float .
-    :Madagascar :lat "-18.916666666666668"^^xsd:float ;
-    :long "47.516666666666666"^^xsd:float .
-    :Maldives :lat "4.166666666666667"^^xsd:float ;
-    :long "73.5"^^xsd:float .
-    :Mali :lat "12.65"^^xsd:float ;
-    :long "-8.0"^^xsd:float .
-    :Mexico :lat "19.433333333333334"^^xsd:float ;
-    :long "-99.13333333333334"^^xsd:float .
-    :New_Zealand :lat "-41.28333333333333"^^xsd:float ;
-    :long "174.45"^^xsd:float .
-    :Nigeria :lat "9.066666666666666"^^xsd:float ;
-    :long "7.483333333333333"^^xsd:float .
-    :Peru :lat "-12.043333333333333"^^xsd:float ;
-    :long "-77.02833333333334"^^xsd:float .
     :Philippines :lat "14.583333333333334"^^xsd:float ;
     :long "120.96666666666667"^^xsd:float .
-    :Samoa :lat "-13.833333333333334"^^xsd:float ;
-    :long "-171.75"^^xsd:float .
-    :Senegal :lat "14.666666666666666"^^xsd:float ;
-    :long "-17.416666666666668"^^xsd:float .
-    :Serbia :lat "44.8"^^xsd:float ;
-    :long "20.466666666666665"^^xsd:float .
-    :Sierra_Leone :lat "8.48445"^^xsd:float ;
-    :long "-13.23445"^^xsd:float .
-    :Solomon_Islands :lat "-9.466666666666667"^^xsd:float ;
-    :long "159.81666666666666"^^xsd:float .
-    :Sri_Lanka :lat "6.933333333333334"^^xsd:float ;
-    :long "79.83333333333333"^^xsd:float .
-    :Taiwan :lat "25.033333333333335"^^xsd:float ;
-    :long "121.63333333333334"^^xsd:float .
-    :Thailand :lat "13.75"^^xsd:float ;
-    :long "100.48333333333333"^^xsd:float .
-    :Tonga :lat "-21.133333333333333"^^xsd:float ;
-    :long "-175.2"^^xsd:float .
-    :Turkey :lat "39.916666666666664"^^xsd:float ;
-    :long "32.833333333333336"^^xsd:float .
-    :Vanuatu :lat "-17.75"^^xsd:float ;
-    :long "168.3"^^xsd:float .
-    :Venezuela :lat "10.5"^^xsd:float ;
-    :long "-66.96666666666667"^^xsd:float .
     :World_Trade_Center :lat "40.711666666666666"^^xsd:float ;
     :long "-74.0125"^^xsd:float .
     :Naha_Airport :lat "26.195833333333333"^^xsd:float ;
@@ -520,8 +775,6 @@ dbo:country rdf:type owl:ObjectProperty ;
     :long "22.970833333333335"^^xsd:float .
     :Vilnius_Airport :lat "54.636944444444445"^^xsd:float ;
     :long "25.287777777777777"^^xsd:float .
-
- 
 
 
 
