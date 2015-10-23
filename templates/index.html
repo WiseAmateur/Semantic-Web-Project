@@ -2,7 +2,7 @@
  Semantic Web Project
  Name: Daan Siepelinga & Julien Benistant
  Student id: 2584178 & 2543043
- Date: TODO add date at end of project
+ Date: 23 October 2015
  
  This file contains the main views of the application
 -->
@@ -11,13 +11,41 @@
 {% block includes %}
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Ztoe2tqPAYIem7iITlvPrDmYNpAljcY&libraries=places&callback=initMapWithSearchBox" async defer></script>
     <script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>
-    <!--<script src='{{ url_for("static", filename="js/infobox.js") }}' type='text/javascript'></script>-->
 	<script src='{{ url_for("static", filename="js/natural_disaster_map.js") }}' type='text/javascript'></script>
+{% endblock %}
+
+{% block explanation %}
+    <h1>Natural Disaster Risk Viewer</h1>
+
+    <p>
+        The natural disaster risk viewer is a semantic web application that gives an overview of the world with 
+        circles in different colors and sizes on the areas where natural disasters
+        have occured. The areas hit by a natural disaster have been categorized into 4 categories of risk, the factors determining the category are
+        the impact of the natural disasters that have hit the area and the income level of the country that the area is located in. Different categories
+        of risk have different colors of circles on the map, the size of the circle is only dependent on the area size.
+    </p>
+    <p>
+        Three data sources where used to create the natural disaster risk viewer. The freebase disaster dataset was used as the main source
+        of data, containing data about natural disasters. Secondly the World Bank dataset was used to get data about the country income levels.
+        Lastly dbpedia was used to gather more data about the areas that were hit by the natural disasters from the freebase dataset, like geolocation data,
+        area size and the country of the area.
+    </p>
+    <p>
+        The map allows you to freely look around, zoom in and out, and search on the location you're interested in. You can also click on the circles
+        to go to the overview page of the corresponsing area which contains more information about the area and its relations with other entities.
+    </p>
 {% endblock %}
 	
 {% block content %}
-    Enjoy the long loading time...<br /><br />
-
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-	<div id="map"></div>
+    <div class="map_container">
+        <h2>Natural Disaster Risk Viewer</h2>
+        <div id="map"></div>
+        <ul class="legenda">
+            <li><div class="legenda_item very_high_risk"></div> Very High Risk Area</li>
+            <li><div class="legenda_item high_risk"></div> High Risk Area</li>
+            <li><div class="legenda_item medium_risk"></div> Medium Risk Area</li>
+            <li><div class="legenda_item low_risk"></div> Low Risk Area</li>
+        </ul>
+    </div>
 {% endblock %}

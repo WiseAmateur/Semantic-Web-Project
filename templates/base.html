@@ -2,9 +2,9 @@
  Semantic Web Project
  Name: Daan Siepelinga & Julien Benistant
  Student id: 2584178 & 2543043
- Date: TODO add date at end of project
+ Date: 23 October 2015
  
- This file contains the html structure of the application.
+ This file contains the basic html structure of all pages from the application.
 -->
 
 <!DOCTYPE html>
@@ -22,8 +22,17 @@
         {% block includes %}{% endblock %}
     </head>
     <body>
-        <div class="container">
-            {% block content %}{% endblock %}
+        <!-- Title/explanation row -->
+        <div class="first_row">
+            <div class="container">
+                {% block explanation %}{% endblock %}
+            </div>
+        </div>
+        <!-- Content row -->
+        <div class="second_row">
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
         </div>
     </body>
 </html>

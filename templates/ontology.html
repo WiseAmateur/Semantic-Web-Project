@@ -2,7 +2,7 @@
  Semantic Web Project
  Name: Daan Siepelinga & Julien Benistant
  Student id: 2584178 & 2543043
- Date: TODO add date at end of project
+ Date: 23 October 2015
  
  This file contains the template of the individual instance pages
 -->
@@ -11,18 +11,29 @@
 {% block includes %}
     <script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>		
 {% endblock %}
-    
+
+{% block explanation %}
+    <a class="main_view_button" href="/">Main view</a>
+    <h1>{{thing|replace("_", " ")}}</h1>
+{% endblock %}
+
 {% block content %}
-    <h1><p>Subject of interest: {{thing}}</p></h1>
     <table>
         <tr>
-            <th>Predicaat</th>
+            <th>Predicate</th>
             <th>Object</th>
         </tr>
         {% for res in result.results.bindings %}
             <tr>
                 <td>{{res.pred.value}}</td>
-                <td>{{res.obj.value}}</td>
+                <!-- Replace our ontology's URL from the object, and check if the object has changed.
+                     If it has changed, add a link to the object instance page -->
+                {% set object = res.obj.value|replace("http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#", "") %}
+                {% if (object|length != res.obj.value|length)%}
+                    <td><a href="/ontology/{{object}}">{{object|replace("_", " ")}}</a></td>
+                {% else %}
+                    <td>{{res.obj.value|replace("_", " ")}}</td>
+                {% endif %}
             </tr>
         {% endfor %}
     </table>

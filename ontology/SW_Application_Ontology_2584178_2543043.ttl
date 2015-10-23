@@ -32,37 +32,21 @@ dbo:country rdf:type owl:ObjectProperty ;
 
 
 
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#directlyHitBy
-
-:directlyHitBy rdf:type owl:ObjectProperty ;
-               
-               rdfs:subPropertyOf :hitBy .
-
-
-
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hit
 
 :hit rdf:type owl:ObjectProperty ;
      
-     owl:inverseOf :directlyHitBy .
+     owl:inverseOf :hitBy .
 
 
 
 ###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#hitBy
 
-:hitBy rdf:type owl:ObjectProperty .
-
-
-
-###  http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#indirectlyHitBy
-
-:indirectlyHitBy rdf:type owl:ObjectProperty ;
-                 
-                 rdfs:subPropertyOf :hitBy ;
-                 
-                 owl:propertyChainAxiom ( dbo:country
-                                          :directlyHitBy
-                                        ) .
+:hitBy rdf:type owl:ObjectProperty ;
+       
+       owl:propertyChainAxiom ( dbo:country
+                                :hitBy
+                              ) .
 
 
 
@@ -266,11 +250,11 @@ dbo:Country rdf:type owl:Class .
            
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tropical cyclone"^^xsd:string
+                                 owl:hasValue "Tornado"^^xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :disaster_type ;
-                                 owl:hasValue "Tornado"^^xsd:string
+                                 owl:hasValue "Tropical cyclone"^^xsd:string
                                ] ;
            
            rdfs:subClassOf :Natural_Disaster .
@@ -343,10 +327,10 @@ dbo:Country rdf:type owl:Class .
                   
                   owl:equivalentClass [ rdf:type owl:Class ;
                                         owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                               owl:unionOf ( :Middle_Income_Country
+                                                               owl:unionOf ( :Low_Income_Country
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty dbo:country ;
-                                                                               owl:someValuesFrom :Middle_Income_Country
+                                                                               owl:someValuesFrom :Low_Income_Country
                                                                              ]
                                                                            )
                                                              ]
@@ -358,10 +342,10 @@ dbo:Country rdf:type owl:Class .
                                       ] ,
                                       [ rdf:type owl:Class ;
                                         owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                               owl:unionOf ( :Low_Income_Country
+                                                               owl:unionOf ( :Middle_Income_Country
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty dbo:country ;
-                                                                               owl:someValuesFrom :Low_Income_Country
+                                                                               owl:someValuesFrom :Middle_Income_Country
                                                                              ]
                                                                            )
                                                              ]
@@ -396,10 +380,10 @@ dbo:Country rdf:type owl:Class .
                      
                      owl:equivalentClass [ rdf:type owl:Class ;
                                            owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                  owl:unionOf ( :Low_Income_Country
+                                                                  owl:unionOf ( :Middle_Income_Country
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty dbo:country ;
-                                                                                  owl:someValuesFrom :Low_Income_Country
+                                                                                  owl:someValuesFrom :Middle_Income_Country
                                                                                 ]
                                                                               )
                                                                 ]
@@ -411,10 +395,10 @@ dbo:Country rdf:type owl:Class .
                                          ] ,
                                          [ rdf:type owl:Class ;
                                            owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                  owl:unionOf ( :Middle_Income_Country
+                                                                  owl:unionOf ( :Low_Income_Country
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty dbo:country ;
-                                                                                  owl:someValuesFrom :Middle_Income_Country
+                                                                                  owl:someValuesFrom :Low_Income_Country
                                                                                 ]
                                                                               )
                                                                 ]
