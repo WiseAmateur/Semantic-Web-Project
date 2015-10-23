@@ -80,3 +80,5 @@ tr{ width: 100%; }
 
 tr:nth-child(even)		{ background-color:#eee; }
 tr:nth-child(odd)		{ background-color:#fff; }
+
+tbody{ width: 100%; }
