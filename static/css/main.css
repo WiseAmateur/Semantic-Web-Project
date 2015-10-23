@@ -1,7 +1,7 @@
 /* Semantic Web Final Project
  * Name: Daan Siepelinga & Julien Benistant
  * Student id: 2584178 & 2543043
- * Date: TODO date
+ * Date: 23 October 2015
  *
  * Here the css that styles the html of the web application is defined 
  */
@@ -14,12 +14,69 @@ html, body {
     height: 100%;
 }
 
+.first_row {
+    display: inline-block;
+    width: 100%;
+    min-height: 30%;
+    margin: 0;
+    color: #F3F3F3;
+    background: #000000;
+}
+
+.second_row {
+    display: block;
+    min-height: 70%;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background: #F3F3F3;
+}
+
 .container {
     max-width: 1000px;
     min-width: 360px;
     margin: 0 auto;
     padding: 0 10px;
     font-family: "DejaVu Serif", "Arial";
+}
+
+.map_container {
+    border: 1px solid #000000;
+    background: #000000;
+    color: #F3F3F3;
+}
+
+.map_container h2 {
+    text-align: center;
+}
+
+.legenda {
+    display: block;
+    list-style-type: none;
+    width: 100%;
+}
+
+.legenda_item {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    border: 1px solid #FFFFFF;
+}
+
+.very_high_risk {
+    background: #190707;
+}
+
+.high_risk {
+    background: #FF0000;
+}
+
+.medium_risk {
+    background: #FF8000;
+}
+
+.low_risk {
+    background: #FFFF00;
 }
 
 /* Map */

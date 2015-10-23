@@ -1,7 +1,7 @@
 # Semantic Web final project
 # Name: Daan Siepelinga & Julien Benistant
 # Student id: 2584178 & 2543043
-# Date: TODO add date at end of project
+# Date: 23 October 2015
 #
 # In this file the web application gets started using Flask on port 4000.
 
@@ -103,20 +103,6 @@ def sparql(query=False):
         return jsonify({"result": "Error"})
 
 
-# Freebase disaster query
-#
-#[{
-#  "type": "/event/disaster",
-#  "name": null,
-#  "type_of_disaster": [],
-#  "areas_affected": [],
-#  "fatalities": null,
-#  "injuries": null,
-#  "damage": null,
-#  "/time/event/start_date>=": "2000",
-#  "/time/event/start_date": null,
-#  "/time/event/end_date": null
-#}]
 def sendSparqlQuery(query, endpoint, json=False):
     sparql = SPARQLWrapper(endpoint)
         
@@ -125,8 +111,6 @@ def sendSparqlQuery(query, endpoint, json=False):
     sparql.setReturnFormat(JSON)
     sparql.addParameter("Accept","application/sparql-results+json")
 
-    #sparql.addParameter("reasoning",True)
-    
     try:
         response = sparql.query().convert()
 

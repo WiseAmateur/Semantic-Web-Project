@@ -2,7 +2,7 @@
  Semantic Web Project
  Name: Daan Siepelinga & Julien Benistant
  Student id: 2584178 & 2543043
- Date: TODO add date at end of project
+ Date: 23 October 2015
  
  This file contains the main views of the application
 -->
@@ -14,10 +14,27 @@
     <!--<script src='{{ url_for("static", filename="js/infobox.js") }}' type='text/javascript'></script>-->
 	<script src='{{ url_for("static", filename="js/natural_disaster_map.js") }}' type='text/javascript'></script>
 {% endblock %}
+
+{% block explanation %}
+    <h1>Natural Disaster Risk Viewer</h1>
+
+    <p>
+        The natural disaster risk viewer gives an overview of the dangerousness of areas when it comes to natural disasters.
+        Below a map is shown, with circles of different colors depending on the risk of the area and size depending on the size of the area.
+        The color of a circle is determined by the impact of the disasters that hit the area and by the income level of the country of the area.
+    </p>	
+{% endblock %}
 	
 {% block content %}
-    Enjoy the long loading time...<br /><br />
-
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-	<div id="map"></div>
+    <div class="map_container">
+        <h2>Natural Disaster Risk Viewer</h2>
+        <div id="map"></div>
+        <ul class="legenda">
+            <li><div class="legenda_item very_high_risk"></div> Very High Risk Area</li>
+            <li><div class="legenda_item high_risk"></div> High Risk Area</li>
+            <li><div class="legenda_item medium_risk"></div> Medium Risk Area</li>
+            <li><div class="legenda_item low_risk"></div> Low Risk Area</li>
+        </ul>
+    </div>
 {% endblock %}

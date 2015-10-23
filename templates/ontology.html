@@ -2,7 +2,7 @@
  Semantic Web Project
  Name: Daan Siepelinga & Julien Benistant
  Student id: 2584178 & 2543043
- Date: TODO add date at end of project
+ Date: 23 October 2015
  
  This file contains the template of the individual instance pages
 -->
@@ -11,9 +11,12 @@
 {% block includes %}
     <script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>		
 {% endblock %}
-    
-{% block content %}
+
+{% block explanation %}
     <h1><p>Subject of interest: {{thing}}</p></h1>
+{% endblock %}
+
+{% block content %}
     <table>
         <tr>
             <th>Predicaat</th>
