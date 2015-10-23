@@ -13,19 +13,27 @@
 {% endblock %}
 
 {% block explanation %}
-    <h1><p>Subject of interest: {{thing}}</p></h1>
+    <a class="main_view_button" href="/">Main view</a>
+    <h1>{{thing|replace("_", " ")}}</h1>
 {% endblock %}
 
 {% block content %}
     <table>
         <tr>
-            <th>Predicaat</th>
+            <th>Predicate</th>
             <th>Object</th>
         </tr>
         {% for res in result.results.bindings %}
             <tr>
                 <td>{{res.pred.value}}</td>
-                <td>{{res.obj.value}}</td>
+                <!-- Replace our ontology's URL from the object, and check if the object has changed.
+                     If it has changed, add a link to the object instance page -->
+                {% set object = res.obj.value|replace("http://www.semanticweb.org/daan_julien/ontologies/natural_disaster_risk#", "") %}
+                {% if (object|length != res.obj.value|length)%}
+                    <td><a href="/ontology/{{object}}">{{object|replace("_", " ")}}</a></td>
+                {% else %}
+                    <td>{{res.obj.value|replace("_", " ")}}</td>
+                {% endif %}
             </tr>
         {% endfor %}
     </table>
